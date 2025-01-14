@@ -1,15 +1,14 @@
 # Discord Theme to have the laggiest experience ever! (uses [surCord](https://github.com/SlippingGittys-Discord-Themes/surCord)).
 
-
 DMs             |  Servers
 :-------------------------:|:-------------------------:
 ![Shows the DMs and Groups with the style applied](https://github.com/user-attachments/assets/cb11d17f-3d49-4e33-ac17-c90d54d708a4)  |  ![Shows a random channel in a server with the style applied](https://github.com/user-attachments/assets/b0d8fd7e-3431-4dee-86ba-61a848484049)
 
 # CODE CAN BE A LITTLE BIT BROKEN: file an issue if so (please follow the template). 
+I will try to optimize the theme when I have more time on my hand, however, I don't even understand my own code, so this will be fun.
 
 ### You can set your own avatar wrapper Image with this:
-It respects Discord's banner size (600 x 240px), and I tried to make it fit the wrapper, so custom sizes might be broken.
-
+It respects Discord's banners' size (600 x 240px). I tried to make it fit the wrapper, so custom sizes might be jamky.
 ```
 :root {
     --avatar-wrapper-background: /*YOUR OWN IMAGE*/;
