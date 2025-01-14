@@ -3,8 +3,12 @@
 @import url("https://raw.githubusercontent.com/KrstlSkll69/vc-snippets/main/OtherStuff/hideGlobalDiscovery.css");
 
 :root {
-    --avatar-wrapper-background: url(https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png);
+    --avatar-wrapper-background: url(https://usrbg.is-hardly.online/usrbg/v2/1013402777201938432?3097);
     --avatar-wrapper-background-size: 216px;
+}
+
+* {
+    font-family: "SF Compact Text" !important;
 }
 
 [class^=title_] {
@@ -42,26 +46,28 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     flex-flow: row wrap;
 }
 
-/*     Blue Pill      */
-[class^="iconVisibility_"]:has([style="color: var(--text-brand);"])>[class^="unread_"] {
-    background-color: var(--text-brand);
-}
+[class^="iconVisibility_"] {
+    &:has([style="color: var(--text-brand);"])>[class^="unread_"] {
+        background-color: var(--text-brand);
+    }
 
-/*     Red Pill      */
-[class^="iconVisibility_"]:has([class^="mentionsBadge_"])>[class^="unread_"] {
-    background-color: var(--status-danger);
+    &:has([class^="mentionsBadge_"])>[class^="unread_"] {
+        background-color: var(--status-danger);
+    }
 }
 
 /*     Modernized audio attachments      */
-[class^="mosaicItem"]>[class^="wrapperAudio"]>[class^="audioMetadata"] {
-    margin-bottom: 24px;
-}
+[class^="mosaicItem"]>[class^="wrapperAudio"] {
+    &>[class^="audioMetadata"] {
+        margin-bottom: 24px;
+    }
 
-[class^="mosaicItem"]>[class^="wrapperAudio"]>[class^="audioControls"] {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    border-radius: 0px 0px 8px 8px;
+    &>[class^="audioControls"] {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        border-radius: 0px 0px 8px 8px;
+    }
 }
 
 [class^=botTagCompact],
@@ -148,7 +154,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
                 opacity: 1;
             }
         }
-        
+
         &>[avatarDecoration] {
             opacity: 1 !important;
             visibility: visible !important;
@@ -202,7 +208,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 
     &>[class^=panels] {
         margin-top: -100px;
-        margin-left: 10px;
+        margin-left: 11px;
         margin-right: 19px;
         transition: all 0.4s 0.2s ease;
     }
@@ -245,7 +251,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         margin-top: -100px;
         transition: all 0.2s 0.2s;
     }
-    
+
     &>[class^=panels]:has([class^=panel_])>[class^=wrapper_]>[class^=container_] {
         visibility: hidden;
         opacity: 0;
@@ -270,7 +276,29 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 
     &>[class^=container_] {
-        &>[class^=scroller_]>[class^=content_]>li>[class^=container_]{
+        [class^=scroller_]>[aria-label="Channels"]>[class^=containerDefault_]>[class^=list_] {
+            visibility: hidden;
+            opacity: 0;
+            margin-top: -8px;
+            transition: visibility 0.2s 0.2s, opacity 0.3s 0.2s ease;
+
+            &>[class^=draggable] {
+                margin-top: -100px;
+                transition: margin-top 0.2s 0.2s ease;
+            }
+        }
+
+        &:hover>[class^=scroller_]>[aria-label="Channels"]>[class^=containerDefault_]>[class^=list_] {
+            visibility: visible;
+            margin-top: 0;
+            opacity: 1;
+
+            &>[class^=draggable] {
+                margin-top: 0;
+            }
+        }
+
+        &>[class^=scroller_]>[class^=content_]>li>[class^=container_] {
             visibility: hidden;
             opacity: 0;
             transition: visibility 0.3s 0.2s, opacity 0.4s 0.2s, margin-top 0.5s 0.2s ease;
@@ -295,6 +323,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
             margin-top: 100px;
             box-shadow: none;
         }
+
         &>[class^=container_]:has([class^=animated]) {
             margin-top: -100px;
             transition: margin-top 0.8s 0.2s ease;
@@ -337,7 +366,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         margin-left: 0 !important;
         width: 240px;
 
-       &>[class^=containerDefault_]:is([draggable=true]) {
+        &>[class^=containerDefault_]:is([draggable=true]) {
             opacity: 1 !important;
             margin-bottom: 0 !important;
         }
@@ -383,14 +412,38 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     width: 60px !important;
 }
 
-[class^=chat_]:not(:has([class^=wrapper]>[class^=callContainer])) {
-    [class^=subtitleContainer]>[class^=title] {
-        margin-top: -98px;
-        transition: margin-top 0.8s 0.2s ease;
+[class^=chat_] {
+    &:not(:has([class^=wrapper]>[class^=callContainer])) {
+        &>[class^=subtitleContainer]>[class^=title] {
+            margin-top: -98px;
+            transition: margin-top 0.8s 0.2s ease;
+        }
+
+        &:hover>[class^=subtitleContainer]>[class^=title] {
+            margin-top: 0;
+        }
     }
 
-    &:hover>[class^=subtitleContainer]>[aria-label="Channel header"] {
-        margin-top: 0;
+    &>[class^=content]>[class^=container_]:has([class^=membersWrap]) {
+        max-width: 61px !important;
+        transition: max-width 0.6s 0.2s, right 0.6s 0.2s ease !important;
+
+        &>[class^=membersWrap]>[class^=members_]>[class^=membersGroup_],
+        &>[class^=membersWrap]>[class^=members_]>[class^=content]>[class^=membersGroup_] {
+            opacity: 0 !important;
+            margin-bottom: -35px !important;
+            transition: opacity 1s 0.2s, margin-bottom 0.5s 0.2s ease;
+        }
+
+        &:hover {
+            max-width: 240px !important;
+
+            &>[class^=membersWrap]>[class^=members_]>[class^=membersGroup_],
+            &>[class^=membersWrap]>[class^=members_]>[class^=content]>[class^=membersGroup_] {
+                opacity: 1 !important;
+                margin-bottom: 0 !important;
+            }
+        }
     }
 }
 
@@ -476,56 +529,6 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     display: none;
 }
 
-/* Mac titlebar fixed 
-.scroller_fea3ef {
-    top: 26px;
-}
-
-.platform-win .typeWindows_a934d8 .wordmark_a934d8 g {
-    display: none;
-}
-
-.platform-win .typeWindows_a934d8 .winButtonClose_a934d8.winButton_a934d8 {
-    margin-left: 10.5px;
-}
-
-.platform-win .typeWindows_a934d8 .winButton_a934d8 {
-    width: 12px;
-    height: 12px;
-    margin-top: 8px;
-    margin-left: 8px;
-    border-radius: 15px;
-    background-color: #313338;
-    background-size: 0;
-}
-
-.platform-win .typeWindows_a934d8 .winButton_a934d8 svg {
-    display: none;
-}
-
-.platform-win.app-focused .typeWindows_a934d8:hover div.winButton_a934d8 {
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
-.platform-win.app-focused .typeWindows_a934d8 .winButtonClose_a934d8 {
-    background-color: hsl(2, 100%, 67%);
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUuMjkyODkgNkwyLjgxODAxIDMuNTI1MTNMMy41MjUxMiAyLjgxODAyTDUuOTk5OTkgNS4yOTI4OUw4LjQ3NDg3IDIuODE4MDJMOS4xODE5NyAzLjUyNTEzTDYuNzA3MSA2TDkuMTgxOTcgOC40NzQ4N0w4LjQ3NDg3IDkuMTgxOThMNS45OTk5OSA2LjcwNzExTDMuNTI1MTIgOS4xODE5OEwyLjgxODAxIDguNDc0ODdMNS4yOTI4OSA2WiIgZmlsbD0iI0EyMDAwOCIvPgo8L3N2Zz4=);
-}
-
-.platform-win.app-focused .typeWindows_a934d8 .winButtonMinMax_a934d8:nth-child(2n) {
-    background-color: hsl(40, 98%, 62%);
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDUuMzk5OTlIMlY2LjU5OTk5SDEwVjUuMzk5OTlaIiBmaWxsPSIjQjM3MTFBIi8+Cjwvc3ZnPg==);
-}
-
-.platform-win.app-focused .typeWindows_a934d8 .winButtonMinMax_a934d8:nth-child(3n) {
-    order: 3;
-    background-color: hsl(134, 68%, 47%);
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcuMzkyOTMgMy4wMDg5M0wzLjAwODg3IDcuMzkyOTlMMi44MTc5NSAyLjgxODAxTDcuMzkyOTMgMy4wMDg5M1oiIGZpbGw9IiMwMjZBMTUiLz4KPHBhdGggZD0iTTQuNjA2OTUgOC45OTEwMUw4Ljk5MTAxIDQuNjA2OTVMOS4xODE5MyA5LjE4MTkzTDQuNjA2OTUgOC45OTEwMVogIiBmaWxsPSIjMDI2QTE1Ii8+Cjwvc3ZnPg==);
-}
-*/
-
 /* Trying to make discord more compact to save space when the winwow is small */
 [class^=sidebar_]:not([class^=sidebarRegionScroller]>[class^=sidebar_]) {
     max-width: 72px;
@@ -536,27 +539,6 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 }
 
-[class^=chat_]>[class^=content]>[class^=container_]:has([class^=membersWrap]) {
-    max-width: 61px !important;
-    transition: max-width 0.6s 0.2s, right 0.6s 0.2s ease !important;
-
-    &>[class^=membersWrap]>[class^=members_]>[class^=membersGroup_],
-    [class^=membersWrap]>[class^=members_]>[class^=content]>[class^=membersGroup_] {
-        opacity: 0 !important;
-        margin-bottom: -35px !important;
-        transition: opacity 1s 0.2s, margin-bottom 0.5s 0.2s ease;
-    }
-
-    &:hover {
-        max-width: 240px !important;
-
-        [class^=membersWrap]>[class^=members_]>[class^=membersGroup_],
-        [class^=membersWrap]>[class^=members_]>[class^=content]>[class^=membersGroup_] {
-            opacity: 1 !important;
-            margin-bottom: 0 !important;
-        }
-    }
-}
 [class^='membersGroup']:has([role=button]),
 [class^='member'] [class^='container']:has([class*='badges']) {
     display: none;
@@ -570,36 +552,13 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     display: none;
 }
 
-[class^=container_] {
-    [class^=scroller_]>[aria-label="Channels"]>[class^=containerDefault_]>[class^=list_] {
-        visibility: hidden;
-        opacity: 0;
-        margin-top: -8px;
-        transition: visibility 0.2s 0.2s, opacity 0.3s 0.2s ease;
-
-        &>[class^=draggable] {
-            margin-top: -100px;
-            transition: margin-top 0.2s 0.2s ease;
-        }
-    }
-
-    &:hover>[class^=scroller_]>[aria-label="Channels"]>[class^=containerDefault_]>[class^=list_] {
-        visibility: visible;
-        margin-top: 0;
-        opacity: 1;
-        
-         &>[class^=draggable] {
-            margin-top: 0;
-        }
-    }
-}
-
 [class^=bar_] {
     display: none;
 }
 
-/*TRANSPARENCY!!!!!!!!!!!!!!*/
-[class^=chat_]>[class^=content]>[class^=container_], /* you can remove this too (fixes a background issue caused by the snippet)*/
+/* TRANSPARENCY!!!!!!!!!!!!!! */
+[class^=chat_]>[class^=content]>[class^=container_],
+/* you can remove this too (fixes a background issue caused by the snippet)*/
 [class^=member] {
     background-color: #29272c !important;
 }
