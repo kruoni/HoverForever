@@ -1,0 +1,635 @@
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css");
+@import url("https://raw.githubusercontent.com/ColynOrg/CSS-Snippets/main/UsernameSymbol.css");
+@import url("https://raw.githubusercontent.com/KrstlSkll69/vc-snippets/main/OtherStuff/hideGlobalDiscovery.css");
+
+:root {
+    --avatar-wrapper-background: url(https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png);
+    --avatar-wrapper-background-size: 216px;
+}
+
+[class^=title_] {
+    -webkit-app-region: none !important;
+}
+
+/* Hide copy message ID button */
+div[aria-label="Copy Message ID"] {
+    display: none;
+}
+
+/* Debloat */
+.expression-picker-chat-input-button:not(:last-child):not([class^=buttons]:has([class^=separator])>.expression-picker-chat-input-button:nth-last-child(2)),
+[aria-label="Send a gift"],
+[href="/shop"],
+[href="/store"],
+[aria-label="Help"],
+[aria-label="Inbox"],
+[aria-label="Apps"],
+[aria-label="Start Video Call"],
+[aria-label="Start An Activity"],
+[aria-label="Play Activities here"],
+[class^=linkTop]>[class^=children] {
+    display: none;
+}
+
+/* Make servers with pings slide up above the former */
+nav[class^="wrapper_"] div[class^="listItem_"]:has(div > div > div > div[class^="lowerBadge_"]),
+div[class^="wrapper_"]:has(div > div > div > div[class^="lowerBadge_"]) {
+    order: -2;
+}
+
+nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/*     Blue Pill      */
+[class^="iconVisibility_"]:has([style="color: var(--text-brand);"])>[class^="unread_"] {
+    background-color: var(--text-brand);
+}
+
+/*     Red Pill      */
+[class^="iconVisibility_"]:has([class^="mentionsBadge_"])>[class^="unread_"] {
+    background-color: var(--status-danger);
+}
+
+/*     Modernized audio attachments      */
+[class^="mosaicItem"]>[class^="wrapperAudio"]>[class^="audioMetadata"] {
+    margin-bottom: 24px;
+}
+
+[class^="mosaicItem"]>[class^="wrapperAudio"]>[class^="audioControls"] {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    border-radius: 0px 0px 8px 8px;
+}
+
+[class^=botTagCompact],
+/* reorder tegs in replies */
+[class^=repliedTextPreview],
+/* reorder message in replies */
+[class^=repliedTextContentTrailingIcon]
+
+/* reorder icon that can come after the message in replies */
+    {
+    order: 1 !important;
+    /* default order is 0 so putting it to 1 put it after */
+}
+
+/* Unfuck the camera preview */
+.media-engine-video[class^=mirror_] {
+    transform: none
+}
+
+[class^=panels]>[class^=container]
+
+/* User area redesign */
+    {
+    height: unset !important;
+    /* Height being dynamic is fine */
+    align-items: unset !important;
+    /* Don't need that */
+    padding: 4px 8px !important;
+    /* Let those boxes breathe */
+    flex-direction: column-reverse !important;
+    /* instead of going one next to the other, go stacked */
+    gap: 2px !important;
+    /* Again let them breathe */
+}
+
+[class^=avatarWrapper]
+
+/* Change the user box */
+    {
+    margin-right: unset !important;
+    /* Useless */
+    margin-left: unset !important;
+    /* Useless */
+    padding-left: 4px !important;
+    /* Make it slightly bigger for consistency with the right side */
+}
+
+[class^=container]>[class^=buttons]
+
+/* Change the quick actions */
+    {
+    justify-content: space-evenly !important;
+    /* Let them breathe */
+}
+
+/* Change the Avatar Decoration behavior by making it disappear on hover (avatar wrapper not included) */
+[class^=wrapper],
+[class^=contents] {
+    [class^=avatarDecoration] {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transition: visibility 0.3s, opacity 0.3s ease !important;
+    }
+
+    &:hover>[class^=avatarDecoration] {
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+}
+
+/* Edit the avatar Wrapper */
+[class^=sidebar] {
+    &>[class^=panels]>[class^=container_]>[class^=avatarWrapper] {
+        height: 0 !important;
+        background: var(--avatar-wrapper-background) !important;
+        background-size: 0 !important;
+        transition: height 0.4s 0.2s, transform 0.6s, opacity 1s, background-size 0s 0.2s linear !important;
+        border-radius: 16px !important;
+
+        & {
+            transform: scale(1) !important;
+
+            &>[class^=wrapper_] {
+                opacity: 1;
+            }
+        }
+        
+        &>[avatarDecoration] {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transition: visibility 0.3s, opacity 0.3s ease !important;
+        }
+
+        &:hover>[class^=wrapper_]>[avatarDecoration] {
+            opacity: 0 !important;
+            visibility: hidden !important;
+        }
+    }
+
+    &:hover>[class^=panels]>[class^=container_]>[class^=avatarWrapper] {
+        background-size: var(--avatar-wrapper-background-size) !important;
+        height: 75px !important;
+        border-radius: 16px !important;
+
+        &:hover {
+            transform: scale(1.05) !important;
+
+            &>[class^=wrapper_] {
+                opacity: 0.1;
+            }
+        }
+    }
+
+    &>[class^=panels]>[class^=container_]>[class^=flex] {
+        visibility: hidden;
+        opacity: 0;
+        justify-content: center;
+        gap: 30px;
+        transition: all 0.2s 0.2s linear;
+    }
+
+    &:hover>[class^=panels]>[class^=container_]>[class^=flex] {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &>[class^=panels]>[class^=container_]>[class^=avatarWrapper]>[class^=wrapper] {
+        margin-left: -8px;
+        margin-top: -34px;
+        animation: 4s ease-out infinite rotating;
+        transition: all 0.2s 0.2s linear;
+    }
+
+    &:hover>[class^=panels]>[class^=container_]>[class^=avatarWrapper]>[class^=wrapper] {
+        margin-left: 1px;
+        margin-top: 34px;
+    }
+
+    &>[class^=panels] {
+        margin-top: -100px;
+        margin-left: 10px;
+        margin-right: 19px;
+        transition: all 0.4s 0.2s ease;
+    }
+
+    &:hover>[class^=panels] {
+        margin-left: 2px;
+        margin-top: 0;
+        margin-right: 5px;
+    }
+
+    &>[class^=panels]>[class^=container_]>[class^=avatarWrapper]>[class^=nameTag_] {
+        visibility: hidden;
+        opacity: 0;
+        margin-top: 30px;
+        margin-left: -100px;
+        transition: visibility 0s 0.2s, opacity 0.1s 0.2s, margin-left 0.1s 0.2s ease;
+
+        &>div>* {
+            color: rgb(255, 255, 255);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+        }
+    }
+
+    &:hover>[class^=panels]>[class^=container_]>[class^=avatarWrapper]>[class^=nameTag_] {
+        visibility: visible;
+        opacity: 1;
+        margin-top: 30px;
+        margin-left: 0;
+    }
+
+    &>[class^=panels]>[class^=container_]>[class^=avatarWrapper]:hover>[class^=nameTag_] {
+        opacity: 0.1;
+        transition: opacity 1s;
+    }
+
+    &>[class^=panels]:not(:has([class^=panel_]))>[class^=wrapper_]>[class^=container_] {
+        visibility: hidden;
+        opacity: 0;
+        border-radius: 16px;
+        margin-top: -100px;
+        transition: all 0.2s 0.2s;
+    }
+    
+    &>[class^=panels]:has([class^=panel_])>[class^=wrapper_]>[class^=container_] {
+        visibility: hidden;
+        opacity: 0;
+        margin-top: -100px;
+        transition: all 0.2s 0.2s;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+
+    &>[class^=panels]>[class^=panel_] {
+        visibility: hidden;
+        opacity: 0;
+        margin-top: -50px;
+        transition: all 0.2s 0.2s;
+    }
+
+    &:hover>[class^=panels]>[class^=wrapper_]>[class^=container_],
+    &:hover>[class^=panels]>[class^=panel_] {
+        visibility: visible;
+        margin-top: 0;
+        opacity: 1;
+    }
+
+    &>[class^=container_] {
+        &>[class^=scroller_]>[class^=content_]>li>[class^=container_]{
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s 0.2s, opacity 0.4s 0.2s, margin-top 0.5s 0.2s ease;
+            margin-top: -69px;
+        }
+
+        &>[class^=container_]>[class^=header_] {
+            visibility: hidden;
+            transition: visibility 0.3s 0.2s, opacity 0.4s 0.2s ease;
+            opacity: 0;
+        }
+
+        &>[class^=container_]>[class^=animated]>[class^=bannerImage_]>[class^=bannerImg_] {
+            max-width: 72px !important;
+            transition: max-width 1s 0.2s, height 1s 0.2s ease;
+            height: auto;
+        }
+
+        &>[class^=container_]>[class^=animated] {
+            background: none;
+            transition: margin-top 0.8s 0.2s ease;
+            margin-top: 100px;
+            box-shadow: none;
+        }
+        &>[class^=container_]:has([class^=animated]) {
+            margin-top: -100px;
+            transition: margin-top 0.8s 0.2s ease;
+        }
+
+        &:not(:has([class^=animated]))>[class^=container_]:not(:has([class^=scroller_]>[class^=content_]>li>[class^=container_])) {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.7s 0.2s, opacity 0.8s 0.2s, margin-top 0.6s 0.2s ease;
+            margin-top: -50px;
+        }
+    }
+
+    &:hover>[class^=container_]>*,
+    &:hover>[class^=container_]>*>*>*>*,
+    &:hover>[class^=container_]>[class^=container_]>[class^=animated]>[class^=bannerImage_]>[class^=bannerImg_],
+    &:hover>[class^=container_]>[class^=animated],
+    &:hover>[class^=container_]>[class^=container_]>[class^=header_],
+    &:hover>[class^=container_]>[class^=container_]>[class^=animated],
+    &:hover>[class^=container_]>[class^=container_]:has([class^=animated]) {
+        visibility: visible !important;
+        margin-top: 0 !important;
+        opacity: 1 !important;
+        max-width: 240px !important;
+    }
+
+    &>[class^=container_]>[class^=scroller_]>[aria-label="Channels"] {
+        margin-left: 7px !important;
+        width: 50px;
+        transition: margin-left 0.6s 0.2s, width 0.6s 0.2s ease;
+
+        &>[class^=containerDefault_]:is([draggable=true]) {
+            opacity: 0 !important;
+            margin-bottom: -40px !important;
+            transition: all 0.4s 0.2s ease;
+        }
+    }
+
+    &:hover>[class^=container_]>[class^=scroller_]>[aria-label="Channels"] {
+        margin-left: 0 !important;
+        width: 240px;
+
+       &>[class^=containerDefault_]:is([draggable=true]) {
+            opacity: 1 !important;
+            margin-bottom: 0 !important;
+        }
+    }
+
+    &>[aria-label="Private channels"] {
+        margin-top: -104px;
+        transition: margin-top 0.6s 0.2s ease;
+
+        &>[class^=scroller]>[class^=content_]>[class^=privateChannelsHeader] {
+            opacity: 0;
+            margin-bottom: -40px !important;
+            transition: opacity 1s 0.2s, margin-bottom 0.5s 0.2s ease;
+        }
+    }
+
+    &:hover>[aria-label="Private channels"] {
+        margin-top: -50px;
+
+        &>[class^=scroller]>[class^=content_]>[class^=privateChannelsHeader] {
+            margin-bottom: 0px !important;
+            opacity: 1;
+        }
+    }
+}
+
+/* anim is used in the code above this */
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    40% {
+        transform: rotate(360deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+[class^=typeWindows_] {
+    width: 60px !important;
+}
+
+[class^=chat_]:not(:has([class^=wrapper]>[class^=callContainer])) {
+    [class^=subtitleContainer]>[class^=title] {
+        margin-top: -98px;
+        transition: margin-top 0.8s 0.2s ease;
+    }
+
+    &:hover>[class^=subtitleContainer]>[aria-label="Channel header"] {
+        margin-top: 0;
+    }
+}
+
+[class^=tabBody],
+[class^=content] {
+
+    &>[class^=nowPlayingColumn],
+    &>[class^=outer_] {
+        margin-right: -360px;
+        visibility: hidden;
+        opacity: 0;
+        transition: margin-right 0.7s 0.2s, visibility 0.6s 0.2s, opacity 0.5s 0.2s ease;
+    }
+
+    &:hover>[class^=nowPlayingColumn],
+    &:hover>[class^=outer_] {
+        margin-right: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+/* Make media clickable in replies */
+[class^=repliedTextContentTrailingIcon_] {
+    position: absolute;
+    right: 0;
+    pointer-events: none;
+}
+
+[class^=repliedTextPreview_] {
+    padding-right: 25px;
+}
+
+/* Unclamp bio length in user popout */
+[class^="userPopoutInner_"] [class^="descriptionClamp_"] {
+    -webkit-line-clamp: unset;
+    max-height: unset;
+
+    &+[class^="viewFullBio_"] {
+        display: none;
+    }
+}
+
+/* Unclamp status bubble size in user popout */
+[class^="userPopoutInner_"] [class^="statusBubble_"] [class*="clamp_"] {
+    -webkit-line-clamp: unset;
+    max-height: unset !important;
+}
+
+/* Allow scrolling in your user popout if it's too large (next to settings) */
+[class^=userPopoutInner_]>[class^=body_] {
+    overflow-y: auto;
+}
+
+/* bio scrollbar + unclamp */
+[class^="descriptionClamp_"] {
+    -webkit-line-clamp: unset;
+    max-height: 1080px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        border: 2px solid var(--scrollbar-thin-track);
+        background-color: var(--scrollbar-thin-track);
+        border-color: var(--scrollbar-thin-track);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--profile-body-divider-color);
+        background-clip: padding-box;
+        border: 2px solid transparent;
+        border-radius: 4px;
+        min-height: 40px;
+    }
+}
+
+[class^=contents]>[class^=text-xs] {
+    display: none;
+}
+
+/* Mac titlebar fixed 
+.scroller_fea3ef {
+    top: 26px;
+}
+
+.platform-win .typeWindows_a934d8 .wordmark_a934d8 g {
+    display: none;
+}
+
+.platform-win .typeWindows_a934d8 .winButtonClose_a934d8.winButton_a934d8 {
+    margin-left: 10.5px;
+}
+
+.platform-win .typeWindows_a934d8 .winButton_a934d8 {
+    width: 12px;
+    height: 12px;
+    margin-top: 8px;
+    margin-left: 8px;
+    border-radius: 15px;
+    background-color: #313338;
+    background-size: 0;
+}
+
+.platform-win .typeWindows_a934d8 .winButton_a934d8 svg {
+    display: none;
+}
+
+.platform-win.app-focused .typeWindows_a934d8:hover div.winButton_a934d8 {
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.platform-win.app-focused .typeWindows_a934d8 .winButtonClose_a934d8 {
+    background-color: hsl(2, 100%, 67%);
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUuMjkyODkgNkwyLjgxODAxIDMuNTI1MTNMMy41MjUxMiAyLjgxODAyTDUuOTk5OTkgNS4yOTI4OUw4LjQ3NDg3IDIuODE4MDJMOS4xODE5NyAzLjUyNTEzTDYuNzA3MSA2TDkuMTgxOTcgOC40NzQ4N0w4LjQ3NDg3IDkuMTgxOThMNS45OTk5OSA2LjcwNzExTDMuNTI1MTIgOS4xODE5OEwyLjgxODAxIDguNDc0ODdMNS4yOTI4OSA2WiIgZmlsbD0iI0EyMDAwOCIvPgo8L3N2Zz4=);
+}
+
+.platform-win.app-focused .typeWindows_a934d8 .winButtonMinMax_a934d8:nth-child(2n) {
+    background-color: hsl(40, 98%, 62%);
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDUuMzk5OTlIMlY2LjU5OTk5SDEwVjUuMzk5OTlaIiBmaWxsPSIjQjM3MTFBIi8+Cjwvc3ZnPg==);
+}
+
+.platform-win.app-focused .typeWindows_a934d8 .winButtonMinMax_a934d8:nth-child(3n) {
+    order: 3;
+    background-color: hsl(134, 68%, 47%);
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcuMzkyOTMgMy4wMDg5M0wzLjAwODg3IDcuMzkyOTlMMi44MTc5NSAyLjgxODAxTDcuMzkyOTMgMy4wMDg5M1oiIGZpbGw9IiMwMjZBMTUiLz4KPHBhdGggZD0iTTQuNjA2OTUgOC45OTEwMUw4Ljk5MTAxIDQuNjA2OTVMOS4xODE5MyA5LjE4MTkzTDQuNjA2OTUgOC45OTEwMVogIiBmaWxsPSIjMDI2QTE1Ii8+Cjwvc3ZnPg==);
+}
+*/
+
+/* Trying to make discord more compact to save space when the winwow is small */
+[class^=sidebar_]:not([class^=sidebarRegionScroller]>[class^=sidebar_]) {
+    max-width: 72px;
+    transition: max-width 0.6s ease 0.2s;
+
+    &:hover {
+        max-width: 240px;
+    }
+}
+
+[class^=chat_]>[class^=content]>[class^=container_]:has([class^=membersWrap]) {
+    max-width: 61px !important;
+    transition: max-width 0.6s 0.2s, right 0.6s 0.2s ease !important;
+
+    &>[class^=membersWrap]>[class^=members_]>[class^=membersGroup_],
+    [class^=membersWrap]>[class^=members_]>[class^=content]>[class^=membersGroup_] {
+        opacity: 0 !important;
+        margin-bottom: -35px !important;
+        transition: opacity 1s 0.2s, margin-bottom 0.5s 0.2s ease;
+    }
+
+    &:hover {
+        max-width: 240px !important;
+
+        [class^=membersWrap]>[class^=members_]>[class^=membersGroup_],
+        [class^=membersWrap]>[class^=members_]>[class^=content]>[class^=membersGroup_] {
+            opacity: 1 !important;
+            margin-bottom: 0 !important;
+        }
+    }
+}
+[class^='membersGroup']:has([role=button]),
+[class^='member'] [class^='container']:has([class*='badges']) {
+    display: none;
+}
+
+[class^=content]>[class^=chatContent] {
+    max-width: 100%;
+}
+
+[class^=voiceChannelsButton_] {
+    display: none;
+}
+
+[class^=container_] {
+    [class^=scroller_]>[aria-label="Channels"]>[class^=containerDefault_]>[class^=list_] {
+        visibility: hidden;
+        opacity: 0;
+        margin-top: -8px;
+        transition: visibility 0.2s 0.2s, opacity 0.3s 0.2s ease;
+
+        &>[class^=draggable] {
+            margin-top: -100px;
+            transition: margin-top 0.2s 0.2s ease;
+        }
+    }
+
+    &:hover>[class^=scroller_]>[aria-label="Channels"]>[class^=containerDefault_]>[class^=list_] {
+        visibility: visible;
+        margin-top: 0;
+        opacity: 1;
+        
+         &>[class^=draggable] {
+            margin-top: 0;
+        }
+    }
+}
+
+[class^=bar_] {
+    display: none;
+}
+
+/*TRANSPARENCY!!!!!!!!!!!!!!*/
+[class^=chat_]>[class^=content]>[class^=container_], /* you can remove this too (fixes a background issue caused by the snippet)*/
+[class^=member] {
+    background-color: #29272c !important;
+}
+
+.theme-dark {
+    --background-secondary: rgba(0, 0, 0, 0.4);
+}
+
+.app_a01fb1,
+.itemsContainer_fea3ef>*,
+.bg_d4b6c5,
+.appMount_ea7e65,
+.wrapper_fea3ef,
+.containerDefault_f6f816,
+.messageContainer_ddb5b4,
+.channelHeader_f3978e,
+.messages_c06487,
+.scroller_c47fa9,
+.privateChannels_f0963d,
+#app-mount .container_ee69e0,
+.sidebar_a4d4d9,
+.sidebarRegionScroller_c25c6d,
+.fieldList_b69b77,
+.header_fd6364,
+.children_fc4f04:after {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+.header_fd6364 {
+    box-shadow: none !important;
+    border: none !important;
+}
