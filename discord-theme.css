@@ -3,12 +3,12 @@
 @import url("https://raw.githubusercontent.com/KrstlSkll69/vc-snippets/main/OtherStuff/hideGlobalDiscovery.css");
 
 :root {
-    --avatar-wrapper-background: url(https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png);
+    --avatar-wrapper-background: url(https://usrbg.is-hardly.online/usrbg/v2/1013402777201938432?3097);
     --avatar-wrapper-background-size: 216px;
 }
 
 [class^=title_] {
-    -webkit-app-region: none !important;
+    -webkit-app-region: none ;
 }
 
 /* Hide copy message ID button */
@@ -67,15 +67,9 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 }
 
 [class^=botTagCompact],
-/* reorder tegs in replies */
 [class^=repliedTextPreview],
-/* reorder message in replies */
-[class^=repliedTextContentTrailingIcon]
-
-/* reorder icon that can come after the message in replies */
-    {
-    order: 1 !important;
-    /* default order is 0 so putting it to 1 put it after */
+[class^=repliedTextContentTrailingIcon] {
+    order: 1 ;
 }
 
 /* Unfuck the camera preview */
@@ -83,68 +77,46 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     transform: none
 }
 
-[class^=panels]>[class^=container]
-
-/* User area redesign */
-    {
-    height: unset !important;
-    /* Height being dynamic is fine */
-    align-items: unset !important;
-    /* Don't need that */
-    padding: 4px 8px !important;
-    /* Let those boxes breathe */
-    flex-direction: column-reverse !important;
-    /* instead of going one next to the other, go stacked */
-    gap: 2px !important;
-    /* Again let them breathe */
+[class^=panels]>[class^=container] {
+    height: unset ;
+    align-items: unset ;
+    padding: 4px 8px ;
+    flex-direction: column-reverse ;
+    gap: 2px ;
 }
 
-[class^=avatarWrapper]
-
-/* Change the user box */
-    {
-    margin-right: unset !important;
-    /* Useless */
-    margin-left: unset !important;
-    /* Useless */
-    padding-left: 4px !important;
-    /* Make it slightly bigger for consistency with the right side */
-}
-
-[class^=container]>[class^=buttons]
-
-/* Change the quick actions */
-    {
-    justify-content: space-evenly !important;
-    /* Let them breathe */
+[class^=avatarWrapper] {
+    margin-right: unset ;
+    margin-left: unset ;
+    padding-left: 4px ;
 }
 
 /* Change the Avatar Decoration behavior by making it disappear on hover (avatar wrapper not included) */
 [class^=wrapper],
 [class^=contents] {
     [class^=avatarDecoration] {
-        opacity: 1 !important;
-        visibility: visible !important;
-        transition: visibility 0.3s, opacity 0.3s ease !important;
+        opacity: 1 ;
+        visibility: visible ;
+        transition: visibility 0.3s, opacity 0.3s ease ;
     }
 
     &:hover>[class^=avatarDecoration] {
-        opacity: 0 !important;
-        visibility: hidden !important;
+        opacity: 0 ;
+        visibility: hidden ;
     }
 }
 
 /* Edit the avatar Wrapper */
 [class^=sidebar] {
     &>[class^=panels]>[class^=container_]>[class^=avatarWrapper] {
-        height: 0 !important;
-        background: var(--avatar-wrapper-background) !important;
-        background-size: 0 !important;
-        transition: height 0.4s 0.2s, transform 0.6s, opacity 1s, background-size 0s 0.2s linear !important;
-        border-radius: 16px !important;
+        height: 0 ;
+        background: var(--avatar-wrapper-background) ;
+        background-size: 0 ;
+        transition: height 0.4s 0.2s, transform 0.6s, opacity 1s, background-size 0s 0.2s linear ;
+        border-radius: 16px ;
 
         & {
-            transform: scale(1) !important;
+            transform: scale(1) ;
 
             &>[class^=wrapper_] {
                 opacity: 1;
@@ -152,24 +124,24 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         }
 
         &>[avatarDecoration] {
-            opacity: 1 !important;
-            visibility: visible !important;
-            transition: visibility 0.3s, opacity 0.3s ease !important;
+            opacity: 1 ;
+            visibility: visible ;
+            transition: visibility 0.3s, opacity 0.3s ease ;
         }
 
         &:hover>[class^=wrapper_]>[avatarDecoration] {
-            opacity: 0 !important;
-            visibility: hidden !important;
+            opacity: 0 ;
+            visibility: hidden ;
         }
     }
 
     &:hover>[class^=panels]>[class^=container_]>[class^=avatarWrapper] {
-        background-size: var(--avatar-wrapper-background-size) !important;
-        height: 75px !important;
-        border-radius: 16px !important;
+        background-size: var(--avatar-wrapper-background-size) ;
+        height: 75px ;
+        border-radius: 16px ;
 
         &:hover {
-            transform: scale(1.05) !important;
+            transform: scale(1.05) ;
 
             &>[class^=wrapper_] {
                 opacity: 0.1;
@@ -192,7 +164,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 
     &>[class^=panels]>[class^=container_]>[class^=avatarWrapper]>[class^=wrapper] {
         margin-left: -8px;
-        margin-top: -34px;
+        margin-top: -35.5px;
         animation: 4s ease-out infinite rotating;
         transition: all 0.2s 0.2s linear;
     }
@@ -205,7 +177,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     &>[class^=panels] {
         margin-top: -100px;
         margin-left: 11px;
-        margin-right: 19px;
+        margin-right: 18px;
         transition: all 0.4s 0.2s ease;
     }
 
@@ -308,7 +280,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         }
 
         &>[class^=container_]>[class^=animated]>[class^=bannerImage_]>[class^=bannerImg_] {
-            max-width: 72px !important;
+            max-width: 72px ;
             transition: max-width 1s 0.2s, height 1s 0.2s ease;
             height: auto;
         }
@@ -329,42 +301,44 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
             visibility: hidden;
             opacity: 0;
             transition: visibility 0.7s 0.2s, opacity 0.8s 0.2s, margin-top 0.6s 0.2s ease;
-            margin-top: -50px;
+            margin-top: -20px;
         }
     }
 
-    &:hover>[class^=container_]>*,
-    &:hover>[class^=container_]>*>*>*>*,
-    &:hover>[class^=container_]>[class^=container_]>[class^=animated]>[class^=bannerImage_]>[class^=bannerImg_],
-    &:hover>[class^=container_]>[class^=animated],
-    &:hover>[class^=container_]>[class^=container_]>[class^=header_],
-    &:hover>[class^=container_]>[class^=container_]>[class^=animated],
-    &:hover>[class^=container_]>[class^=container_]:has([class^=animated]) {
-        visibility: visible !important;
-        margin-top: 0 !important;
-        opacity: 1 !important;
-        max-width: 240px !important;
+    &:hover>[class^=container_] {
+        &>*,
+        &>*>*>*>*,
+        &>[class^=container_]>[class^=animated]>[class^=bannerImage_]>[class^=bannerImg_],
+        &>[class^=animated],
+        &>[class^=container_]>[class^=header_],
+        &>[class^=container_]>[class^=animated],
+        &>[class^=container_]:has([class^=animated]) {
+            visibility: visible !important;
+            margin-top: 0 !important;
+            opacity: 1 !important;
+            max-width: 240px;
+        }
     }
 
     &>[class^=container_]>[class^=scroller_]>[aria-label="Channels"] {
-        margin-left: 7px !important;
+        margin-left: 7px ;
         width: 50px;
         transition: margin-left 0.6s 0.2s, width 0.6s 0.2s ease;
 
         &>[class^=containerDefault_]:is([draggable=true]) {
-            opacity: 0 !important;
-            margin-bottom: -40px !important;
+            opacity: 0 ;
+            margin-bottom: -40px ;
             transition: all 0.4s 0.2s ease;
         }
     }
 
     &:hover>[class^=container_]>[class^=scroller_]>[aria-label="Channels"] {
-        margin-left: 0 !important;
+        margin-left: 0 ;
         width: 240px;
 
         &>[class^=containerDefault_]:is([draggable=true]) {
-            opacity: 1 !important;
-            margin-bottom: 0 !important;
+            opacity: 1 ;
+            margin-bottom: 0 ;
         }
     }
 
@@ -374,7 +348,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 
         &>[class^=scroller]>[class^=content_]>[class^=privateChannelsHeader] {
             opacity: 0;
-            margin-bottom: -40px !important;
+            margin-bottom: -40px ;
             transition: opacity 1s 0.2s, margin-bottom 0.5s 0.2s ease;
         }
     }
@@ -383,7 +357,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         margin-top: -50px;
 
         &>[class^=scroller]>[class^=content_]>[class^=privateChannelsHeader] {
-            margin-bottom: 0px !important;
+            margin-bottom: 0px ;
             opacity: 1;
         }
     }
@@ -405,11 +379,10 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 }
 
 [class^=typeWindows_] {
-    width: 60px !important;
+    width: 60px ;
 }
 
 [class^=chat_] {
-    &:not(:has([class^=wrapper]>[class^=callContainer])) {
         &>[class^=subtitleContainer]>[class^=title] {
             margin-top: -98px;
             transition: margin-top 0.8s 0.2s ease;
@@ -418,26 +391,25 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         &:hover>[class^=subtitleContainer]>[class^=title] {
             margin-top: 0;
         }
-    }
 
     &>[class^=content]>[class^=container_]:has([class^=membersWrap]) {
-        max-width: 61px !important;
-        transition: max-width 0.6s 0.2s, right 0.6s 0.2s ease !important;
+        max-width: 61px ;
+        transition: max-width 0.6s 0.2s, right 0.6s 0.2s ease ;
 
         &>[class^=membersWrap]>[class^=members_]>[class^=membersGroup_],
         &>[class^=membersWrap]>[class^=members_]>[class^=content]>[class^=membersGroup_] {
-            opacity: 0 !important;
-            margin-bottom: -35px !important;
+            opacity: 0 ;
+            margin-bottom: -35px ;
             transition: opacity 1s 0.2s, margin-bottom 0.5s 0.2s ease;
         }
 
         &:hover {
-            max-width: 240px !important;
+            max-width: 240px ;
 
             &>[class^=membersWrap]>[class^=members_]>[class^=membersGroup_],
             &>[class^=membersWrap]>[class^=members_]>[class^=content]>[class^=membersGroup_] {
-                opacity: 1 !important;
-                margin-bottom: 0 !important;
+                opacity: 1 ;
+                margin-bottom: 0 ;
             }
         }
     }
@@ -486,7 +458,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 /* Unclamp status bubble size in user popout */
 [class^="userPopoutInner_"] [class^="statusBubble_"] [class*="clamp_"] {
     -webkit-line-clamp: unset;
-    max-height: unset !important;
+    max-height: unset;
 }
 
 /* Allow scrolling in your user popout if it's too large (next to settings) */
@@ -525,7 +497,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     display: none;
 }
 
-/* Trying to make discord more compact to save space when the winwow is small */
+
 [class^=sidebar_]:not([class^=sidebarRegionScroller]>[class^=sidebar_]) {
     max-width: 72px;
     transition: max-width 0.6s ease 0.2s;
@@ -552,11 +524,15 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     display: none;
 }
 
+[class^=listItemContents]>[class^=actions_]>[aria-label="Message"]>[class^=icon_] {
+    margin-left: 1px;
+}
+
 /* TRANSPARENCY!!!!!!!!!!!!!! */
 [class^=chat_]>[class^=content]>[class^=container_],
 /* you can remove this too (fixes a background issue caused by the snippet)*/
 [class^=member] {
-    background-color: #29272c !important;
+    background-color: #29272c;
 }
 
 .theme-dark {
