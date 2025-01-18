@@ -165,11 +165,13 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         margin-top: -35.5px;
         animation: 4s ease-out infinite rotating;
         transition: all 0.2s 0.2s linear;
+        scale: 0.9;
     }
 
     &:hover>[class^=panels]>[class^=container_]>[class^=avatarWrapper]>[class^=wrapper] {
         margin-left: 1px;
         margin-top: 34px;
+        scale: 1;
     }
 
     &>[class^=panels] {
@@ -545,6 +547,11 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 .children_fc4f04:after {
     background-color: transparent !important;
     background: transparent !important;
+}
+
+.header_fd6364 {
+    box-shadow: none !important;
+    border: none !important;
 }
 
 .header_fd6364 {
