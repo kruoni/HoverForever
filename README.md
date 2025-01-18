@@ -5,6 +5,8 @@ DMs           |  Servers
 ![Shows the DMs and Groups with the style applied](https://github.com/user-attachments/assets/cb11d17f-3d49-4e33-ac17-c90d54d708a4)  |  ![Shows a random channel in a server with the style applied](https://github.com/user-attachments/assets/b0d8fd7e-3431-4dee-86ba-61a848484049)
 
 *Preview might be prone to change.
+
+I do plan to merge this to completely replace main-surcord so I don't have to rely on SlippingGittys's theme.
 # How To Install:
 1- With QuickCSS (or any CSS editors from your client):
 `import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/edge-default-discord/discord-theme.css")`
