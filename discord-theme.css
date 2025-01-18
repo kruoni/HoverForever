@@ -509,7 +509,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     display: none;
 }
 
-[class^=bar_] {
+[class^=containerPadding_]>[class^=bar_] {
     display: none;
 }
 
