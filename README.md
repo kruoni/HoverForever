@@ -5,7 +5,9 @@ DMs           |  Servers
 ![Shows the DMs and Groups with the style applied](https://github.com/user-attachments/assets/cb11d17f-3d49-4e33-ac17-c90d54d708a4)  |  ![Shows a random channel in a server with the style applied](https://github.com/user-attachments/assets/b0d8fd7e-3431-4dee-86ba-61a848484049)
 
 *Preview might be prone to change.
-I do plan to make it compatible with the default discord theme so I don't have to rely on SlippingGitty's code.
+
+> [!NOTE]
+> I do plan to make it compatible with the default discord theme so I don't have to rely on SlippingGitty's code.
 
 # How To Install:
 1- With QuickCSS (or any CSS editors from your client):
@@ -34,5 +36,6 @@ It respects Discord's banners' size (600x240px). I tried to make it fit the wrap
 
 To remove it, you have to remove the part all the way at the bottom of the code.
 
-## CODE CAN BE A LITTLE BIT BROKEN: file an issue if so (please follow the template). 
-I will try to optimize the theme when I have more time on my hand, however, I don't even understand my own code, so this will be fun (and im **not** really keen to do a full rewrite).
+> [!WARNING]
+> ## CODE CAN BE A LITTLE BIT BROKEN: file an issue if so (please follow the template). 
+> I will try to optimize the theme when I have more time on my hand, however, I don't even understand my own code, so this will be fun (and im **not** really keen to do a full rewrite).
