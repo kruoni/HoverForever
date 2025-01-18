@@ -1,6 +1,7 @@
 @import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css");
 @import url("https://raw.githubusercontent.com/ColynOrg/CSS-Snippets/main/UsernameSymbol.css");
 @import url("https://raw.githubusercontent.com/KrstlSkll69/vc-snippets/main/OtherStuff/hideGlobalDiscovery.css");
+@import url("https://discord-extensions.github.io/macos-titlebar/src/source.css");
 
 :root {
     --avatar-wrapper-background: url(https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png);
@@ -83,6 +84,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     padding: 4px 8px ;
     flex-direction: column-reverse ;
     gap: 2px ;
+    
 }
 
 [class^=avatarWrapper] {
@@ -107,7 +109,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 
 [class^=sidebar] {
     &>[class^=panels]>[class^=container_]>[class^=avatarWrapper] {
-        height: 0 ;
+        height: 1px;
         background: var(--avatar-wrapper-background) ;
         background-size: 0 ;
         transition: height 0.4s 0.2s, transform 0.6s, opacity 1s, background-size 0s 0.2s linear ;
@@ -161,28 +163,46 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 
     &>[class^=panels]>[class^=container_]>[class^=avatarWrapper]>[class^=wrapper] {
-        margin-left: -8px;
-        margin-top: -35.5px;
+        margin-left: -7px;
+        margin-top: -34px;
         animation: 4s ease-out infinite rotating;
         transition: all 0.2s 0.2s linear;
+        scale: 0.9;
     }
 
     &:hover>[class^=panels]>[class^=container_]>[class^=avatarWrapper]>[class^=wrapper] {
         margin-left: 1px;
         margin-top: 34px;
+        scale: 1;
     }
 
     &>[class^=panels] {
         margin-top: -100px;
-        margin-left: 11px;
-        margin-right: 18px;
+        margin-left: 12px;
+        border-radius: 24px ;
         transition: all 0.4s 0.2s ease;
+        background-color: transparent;
     }
 
     &:hover>[class^=panels] {
         margin-left: 2px;
         margin-top: 0;
         margin-right: 5px;
+    }
+
+    &>[class^=panels]>[class^=container_] {
+        background-color: #232328;
+        margin-bottom: 3px;
+        border-radius: 32px;
+        margin-right: 17.5px;
+        transition: all 0.4s 0.2s ease;
+    }
+
+     &:hover>[class^=panels]>[class^=container_] {
+        background-color: #232328;
+        margin-bottom: 10px;
+        border-radius: 16px;
+        margin-right: 0;
     }
 
     &>[class^=panels]>[class^=container_]>[class^=avatarWrapper]>[class^=nameTag_] {
