@@ -6,8 +6,18 @@ DMs           |  Servers
 
 *Preview might be prone to change.
 
+# How To Install:
+1- With QuickCSS (or any CSS editors from your client):
+`import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main/discord-theme.css")`
+
+2- With the raw link (to use with Vencord's online theme):
+`https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main/discord-theme.css`
+
+3- Save the raw file
+Same link as before (`https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main/discord-theme.css`) but here you can save the page as a file, recommended if you want to make changes to the theme without polluting your quick css, but you'll have to check for updates.
+
 ## Customization
-### You can change the Image that appears on the 
+### You can change the Image that appears on the avatar Wrapper.
 It respects Discord's banners' size (600x240px). I tried to make it fit the wrapper, so custom sizes might be jamky.
 ```
 :root {
