@@ -1,21 +1,19 @@
-# Discord Theme to have the laggiest experience ever! (uses [surCord](https://github.com/SlippingGittys-Discord-Themes/surCord) for the time being).
+# Discord Theme to have the laggiest experience ever!
 
 DMs           |  Servers
 :-------------------------:|:-------------------------:
 ![Shows the DMs and Groups with the style applied](https://github.com/user-attachments/assets/cb11d17f-3d49-4e33-ac17-c90d54d708a4)  |  ![Shows a random channel in a server with the style applied](https://github.com/user-attachments/assets/b0d8fd7e-3431-4dee-86ba-61a848484049)
 
 *Preview might be prone to change.
-I do plan to make it compatible with the default discord theme so I don't have to rely on SlippingGittys's code.
-
 # How To Install:
 1- With QuickCSS (or any CSS editors from your client):
-`import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main/discord-theme.css")`
+`import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/edge-default-discord/discord-theme.css")`
 
 2- With the raw link (for use with Vencord's online theme):
-`https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main/discord-theme.css`
+`https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/edge-default-discord/discord-theme.css`
 
 3- Save the raw file
-Same link as before (`https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main/discord-theme.css`) but here you can save the page as a file, recommended if you want to make changes to the theme without polluting your quick css, but you'll have to check for updates.
+Same link as before (`https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/edge-default-discord/discord-theme.css`) but here you can save the page as a file, recommended if you want to make changes to the theme without polluting your quick css, but you'll have to check for updates.
 
 ## Customization
 ### You can change the Image that appears on the avatar Wrapper.
