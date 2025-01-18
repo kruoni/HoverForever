@@ -6,11 +6,9 @@ DMs           |  Servers
 
 *Preview might be prone to change.
 
-# CODE CAN BE A LITTLE BIT BROKEN: file an issue if so (please follow the template). 
-I will try to optimize the theme when I have more time on my hand, however, I don't even understand my own code, so this will be fun.
-
-### You can set your own avatar wrapper Image with this:
-It respects Discord's banners' size (600 x 240px). I tried to make it fit the wrapper, so custom sizes might be jamky.
+## Customization
+### You can change the Image that appears on the 
+It respects Discord's banners' size (600x240px). I tried to make it fit the wrapper, so custom sizes might be jamky.
 ```
 :root {
     --avatar-wrapper-background: /*YOUR OWN IMAGE*/;
@@ -24,3 +22,6 @@ It respects Discord's banners' size (600 x 240px). I tried to make it fit the wr
 ![image](https://github.com/user-attachments/assets/68ba8a8b-aac5-48a2-b02a-0b69cc38506e)
 
 To remove it, you have to remove the part all the way at the bottom of the code.
+
+## CODE CAN BE A LITTLE BIT BROKEN: file an issue if so (please follow the template). 
+I will try to optimize the theme when I have more time on my hand, however, I don't even understand my own code, so this will be fun (and im **not** really keen to do a full rewrite).
