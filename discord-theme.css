@@ -8,15 +8,18 @@
 }
 
 [class^=title_] {
-    -webkit-app-region: none ;
+    -webkit-app-region: none;
 }
 
-/* Hide copy message ID button */
+[class^=typeWindows_] {
+    width: 60px !important;
+}
+
+
 div[aria-label="Copy Message ID"] {
     display: none;
 }
 
-/* Debloat */
 .expression-picker-chat-input-button:not(:last-child):not([class^=buttons]:has([class^=separator])>.expression-picker-chat-input-button:nth-last-child(2)),
 [aria-label="Send a gift"],
 [href="/shop"],
@@ -31,7 +34,6 @@ div[aria-label="Copy Message ID"] {
     display: none;
 }
 
-/* Make servers with pings slide up above the former */
 nav[class^="wrapper_"] div[class^="listItem_"]:has(div > div > div > div[class^="lowerBadge_"]),
 div[class^="wrapper_"]:has(div > div > div > div[class^="lowerBadge_"]) {
     order: -2;
@@ -52,7 +54,6 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 }
 
-/*     Modernized audio attachments      */
 [class^="mosaicItem"]>[class^="wrapperAudio"] {
     &>[class^="audioMetadata"] {
         margin-bottom: 24px;
@@ -72,7 +73,6 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     order: 1 ;
 }
 
-/* Unfuck the camera preview */
 .media-engine-video[class^=mirror_] {
     transform: none
 }
@@ -91,7 +91,6 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     padding-left: 4px ;
 }
 
-/* Change the Avatar Decoration behavior by making it disappear on hover (avatar wrapper not included) */
 [class^=wrapper],
 [class^=contents] {
     [class^=avatarDecoration] {
@@ -106,7 +105,6 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 }
 
-/* Edit the avatar Wrapper */
 [class^=sidebar] {
     &>[class^=panels]>[class^=container_]>[class^=avatarWrapper] {
         height: 0 ;
@@ -225,8 +223,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         opacity: 0;
         margin-top: -100px;
         transition: all 0.2s 0.2s;
-        border-bottom-left-radius: 16px;
-        border-bottom-right-radius: 16px;
+        border-radius: 0px 0px 16px 16px;
     }
 
     &>[class^=panels]>[class^=panel_] {
@@ -328,7 +325,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         &>[class^=containerDefault_]:is([draggable=true]) {
             opacity: 0 ;
             margin-bottom: -40px ;
-            transition: all 0.4s 0.2s ease;
+            transition: opacity 1s 0.2s, margin-bottom 0.7s 0.4s ease;
         }
     }
 
@@ -343,13 +340,13 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 
     &>[aria-label="Private channels"] {
-        margin-top: -104px;
-        transition: margin-top 0.6s 0.2s ease;
+        margin-top: -100px;
+        transition: margin-top 0.8s 0.2s ease;
 
         &>[class^=scroller]>[class^=content_]>[class^=privateChannelsHeader] {
             opacity: 0;
             margin-bottom: -40px ;
-            transition: opacity 1s 0.2s, margin-bottom 0.5s 0.2s ease;
+            transition: opacity 1s 0.2s, margin-bottom 0.7s 0.4s ease;
         }
     }
 
@@ -363,7 +360,6 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 }
 
-/* anim is used in the code above this */
 @keyframes rotating {
     0% {
         transform: rotate(0deg);
@@ -378,10 +374,6 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 }
 
-[class^=typeWindows_] {
-    width: 60px ;
-}
-
 [class^=chat_] {
         &>[class^=subtitleContainer]>[class^=title] {
             margin-top: -98px;
@@ -394,13 +386,13 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 
     &>[class^=content]>[class^=container_]:has([class^=membersWrap]) {
         max-width: 61px ;
-        transition: max-width 0.6s 0.2s, right 0.6s 0.2s ease ;
+        transition: max-width 0.6s 0.2s;
 
         &>[class^=membersWrap]>[class^=members_]>[class^=membersGroup_],
         &>[class^=membersWrap]>[class^=members_]>[class^=content]>[class^=membersGroup_] {
             opacity: 0 ;
             margin-bottom: -35px ;
-            transition: opacity 1s 0.2s, margin-bottom 0.5s 0.2s ease;
+            transition: opacity 1s 0.2s, margin-bottom 0.7s 0.4s ease;
         }
 
         &:hover {
@@ -434,7 +426,6 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 }
 
-/* Make media clickable in replies */
 [class^=repliedTextContentTrailingIcon_] {
     position: absolute;
     right: 0;
@@ -445,7 +436,6 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     padding-right: 25px;
 }
 
-/* Unclamp bio length in user popout */
 [class^="userPopoutInner_"] [class^="descriptionClamp_"] {
     -webkit-line-clamp: unset;
     max-height: unset;
@@ -455,18 +445,15 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 }
 
-/* Unclamp status bubble size in user popout */
 [class^="userPopoutInner_"] [class^="statusBubble_"] [class*="clamp_"] {
     -webkit-line-clamp: unset;
     max-height: unset;
 }
 
-/* Allow scrolling in your user popout if it's too large (next to settings) */
 [class^=userPopoutInner_]>[class^=body_] {
     overflow-y: auto;
 }
 
-/* bio scrollbar + unclamp */
 [class^="descriptionClamp_"] {
     -webkit-line-clamp: unset;
     max-height: 1080px;
@@ -493,10 +480,14 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 }
 
-[class^=contents]>[class^=text-xs] {
+[class^=content] {
+&>[class^=text-xs] {
     display: none;
 }
-
+&>[class^=chatContent] {
+    max-width: 100%;
+} 
+}
 
 [class^=sidebar_]:not([class^=sidebarRegionScroller]>[class^=sidebar_]) {
     max-width: 72px;
@@ -510,10 +501,6 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 [class^='membersGroup']:has([role=button]),
 [class^='member'] [class^='container']:has([class*='badges']) {
     display: none;
-}
-
-[class^=content]>[class^=chatContent] {
-    max-width: 100%;
 }
 
 [class^=voiceChannelsButton_] {
