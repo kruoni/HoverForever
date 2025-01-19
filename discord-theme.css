@@ -554,7 +554,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 [class^=chat_]>[class^=content]>[class^=container_],
 /* you can remove this too (fixes a background issue caused by the snippet)*/
 [class^=member] {
-    background-color: #29272c;
+    background-color: #2a2d31;
 }
 
 .theme-dark {
