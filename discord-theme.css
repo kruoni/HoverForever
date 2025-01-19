@@ -432,7 +432,8 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 
     &>[class^=nowPlayingColumn],
     &>[class^=outer_] {
-        margin-right: -360px;
+        margin-right: -30%;
+        max-width: 30%;
         visibility: hidden;
         opacity: 0;
         transition: margin-right 0.7s 0.2s, visibility 0.6s 0.2s, opacity 0.5s 0.2s ease;
