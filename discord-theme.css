@@ -232,25 +232,39 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 
     &>[class^=panels]:not(:has([class^=panel_]))>[class^=wrapper_]>[class^=container_] {
         visibility: hidden;
+        background-color: #232328;
         opacity: 0;
-        border-radius: 16px;
+        border-radius: 16px 16px 0 0;
         margin-top: -100px;
-        transition: all 0.2s 0.2s;
+        border: 0px;
+        transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s ease;
     }
 
     &>[class^=panels]:has([class^=panel_])>[class^=wrapper_]>[class^=container_] {
         visibility: hidden;
+        background-color: #232328;
         opacity: 0;
         margin-top: -100px;
-        transition: all 0.2s 0.2s;
-        border-radius: 0px 0px 16px 16px;
+        transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s ease;
+        border-radius: 0 0 0 0;
+        border: 0px;
     }
 
     &>[class^=panels]>[class^=panel_] {
         visibility: hidden;
+        background-color: #232328;
         opacity: 0;
+        border-radius: 16px 16px 0 0 !important;
         margin-top: -50px;
-        transition: all 0.2s 0.2s;
+        transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s ease;
+        border: 0px;
+    }
+
+    &:hover>[class^=panels]:not(:has([class^=panel_]))>[class^=container_] {
+        border-radius: 0 0 16px 16px;
+    }
+    &:hover>[class^=panels]:has([class^=panel_])>[class^=container_] {
+        border-radius: 0 0 16px 16px;
     }
 
     &:hover>[class^=panels]>[class^=wrapper_]>[class^=container_],
