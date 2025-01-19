@@ -191,15 +191,16 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 
     &>[class^=panels]>[class^=container_] {
-        background-color: #232328;
+        background-color: #232328 !important;
         margin-bottom: 3px;
         border-radius: 32px;
         margin-right: 17.5px;
         transition: all 0.4s 0.2s ease;
+        outline: 1px rgb(192, 192, 192) solid;
     }
 
      &:hover>[class^=panels]>[class^=container_] {
-        background-color: #232328;
+        background-color: #232328 !important;
         margin-bottom: 10px;
         border-radius: 16px;
         margin-right: 0;
@@ -232,40 +233,46 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 
     &>[class^=panels]:not(:has([class^=panel_]))>[class^=wrapper_]>[class^=container_] {
         visibility: hidden;
-        background-color: #232328;
+        background-color: #232328 !important;
         opacity: 0;
         border-radius: 16px 16px 0 0;
         margin-top: -100px;
-        border: 0px;
+        outline: 1px rgb(192, 192, 192) solid;
         transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s ease;
     }
 
     &>[class^=panels]:has([class^=panel_])>[class^=wrapper_]>[class^=container_] {
         visibility: hidden;
-        background-color: #232328;
+        background-color: #232328 !important;
         opacity: 0;
         margin-top: -100px;
         transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s ease;
         border-radius: 0 0 0 0;
-        border: 0px;
+    outline: 1px rgb(192, 192, 192) solid;
     }
 
     &>[class^=panels]>[class^=panel_] {
         visibility: hidden;
-        background-color: #232328;
+        background-color: #232328 !important;
         opacity: 0;
-        border-radius: 16px 16px 0 0 !important;
+        border-radius: 16px 16px 0 0;
         margin-top: -50px;
         transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s ease;
-        border: 0px;
+        outline: 1px rgb(192, 192, 192) solid;
     }
 
     &:hover>[class^=panels]:not(:has([class^=panel_]))>[class^=container_] {
         border-radius: 0 0 16px 16px;
     }
+    
     &:hover>[class^=panels]:has([class^=panel_])>[class^=container_] {
         border-radius: 0 0 16px 16px;
     }
+
+    &:hover>[class^=panels]:not(:has([class^=wrapper]>[class^=container_]>[class^=flex]))>[class^=container_] {
+        border-radius: 16px;
+    }
+
 
     &:hover>[class^=panels]>[class^=wrapper_]>[class^=container_],
     &:hover>[class^=panels]>[class^=panel_] {
@@ -408,10 +415,22 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 }
 
+[class^=content]>[class^=chat] {
+    background-color: #1a1a1d;
+}
+[class^=peopleColumn] {
+    background-color: #1a1a1d;
+}
+
+[class^=container_]>[class^=theme-dark]{
+    background-color: #232328 !important;
+}
+
 [class^=chat_] {
         &>[class^=subtitleContainer]>[class^=title] {
             margin-top: -98px;
             transition: margin-top 0.8s 0.2s ease;
+            background-color: #232328 !important;
         }
 
         &:hover>[class^=subtitleContainer]>[class^=title] {
@@ -448,16 +467,15 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     &>[class^=outer_] {
         margin-right: -30%;
         max-width: 30%;
-        visibility: hidden;
-        opacity: 0;
-        transition: margin-right 0.7s 0.2s, visibility 0.6s 0.2s, opacity 0.5s 0.2s ease;
+        transition: margin-right 0.7s 0.2s ease;
+    }
+    &>[class^=nowPlayingColumn]>[class^=container_] {
+        background-color: #232328 !important;
     }
 
     &:hover>[class^=nowPlayingColumn],
     &:hover>[class^=outer_] {
         margin-right: 0;
-        visibility: visible;
-        opacity: 1;
     }
 }
 
@@ -515,6 +533,13 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 }
 
+[class^=menu_] {
+    outline: 1px rgb(192, 192, 192) solid;
+    border-radius: 16px;
+    background-color: #232328b7;
+    backdrop-filter: blur(16px);
+}
+
 [class^=content] {
 &>[class^=text-xs] {
     display: none;
@@ -550,11 +575,16 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     margin-left: 1px;
 }
 
+[class^=channelTextArea_]>[class^=scrollableContainer] {
+    background-color: #232328 !important;
+    outline: 1px rgb(192, 192, 192) solid;
+}
+
 /* TRANSPARENCY!!!!!!!!!!!!!! */
 [class^=chat_]>[class^=content]>[class^=container_],
 /* you can remove this too (fixes a background issue caused by the snippet)*/
 [class^=member] {
-    background-color: #2a2d31;
+    background-color: #232328 !important;
 }
 
 .theme-dark {
