@@ -6,6 +6,7 @@
 :root {
     --avatar-wrapper-background: url(https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png);
     --avatar-wrapper-background-size: 216px;
+    --app-background: transparent; /* change to #232328 to remove transparency*/
 }
 
 [class^=title_] {
@@ -191,7 +192,8 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 
     &>[class^=panels]>[class^=container_] {
-        background-color: #232328 !important;
+        background-color: #232328b1 !important;
+        backdrop-filter: blur(3px);
         margin-bottom: 3px;
         border-radius: 32px;
         margin-right: 17.5px;
@@ -415,15 +417,8 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 }
 
-[class^=content]>[class^=chat] {
+[class^=content]>[class^=chat], [class^=peopleColumn]{
     background-color: #1a1a1d;
-}
-[class^=peopleColumn] {
-    background-color: #1a1a1d;
-}
-
-[class^=container_]>[class^=theme-dark]{
-    background-color: #232328 !important;
 }
 
 [class^=chat_] {
@@ -580,39 +575,34 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     outline: 1px rgb(192, 192, 192) solid;
 }
 
-/* TRANSPARENCY!!!!!!!!!!!!!! */
-[class^=chat_]>[class^=content]>[class^=container_],
-/* you can remove this too (fixes a background issue caused by the snippet)*/
-[class^=member] {
+[class^=container_]>[class^=theme-dark],[class^=member], [class^=background_]>[class^=fieldList_],[class^=accountProfile]>[class^=background_], [class^=chat_]>[class^=content]>[class^=container_], [class^=layer_]>[class^=standardSidebarView_], [class^=contentRegion_]>[class^=contentTransitionWrap_]>[class^=contentRegionScroller_] {
     background-color: #232328 !important;
+}
+
+[class^=focusLock_]>[class^=popout_]>[class^=flex], [class^=focusLock_]>[class^=popout_] {
+    background-color: #232328 !important;
+    outline: 1px rgb(192, 192, 192) solid;
 }
 
 .theme-dark {
     --background-secondary: rgba(0, 0, 0, 0.4);
 }
 
-.app_a01fb1,
-.itemsContainer_fea3ef>*,
-.bg_d4b6c5,
-.appMount_ea7e65,
-.wrapper_fea3ef,
-.containerDefault_f6f816,
-.messageContainer_ddb5b4,
-.channelHeader_f3978e,
-.messages_c06487,
-.scroller_c47fa9,
-.privateChannels_f0963d,
-#app-mount .container_ee69e0,
-.sidebar_a4d4d9,
-.sidebarRegionScroller_c25c6d,
-.fieldList_b69b77,
-.header_fd6364,
-.children_fc4f04:after {
-    background-color: transparent !important;
-    background: transparent !important;
+[class^=app_],
+[class^=app_]>[class^=bg_],
+[class^=appMount_],
+[class^=layer_]>[class^=container]>[class^=wrapper_],
+[class^=privateChannels]>[class^=scroller_],
+[class^=privateChannels_],
+[class^=sidebar_]>[class^=container_],
+[class^=sidebar_],
+[class^=sidebarRegion_]>[class^=sidebarRegionScroller_],
+[class^=container_]>[class^=header_] {
+    background-color: var(--app-background) !important;
+    background: var(--app-background) !important;
 }
 
-.header_fd6364 {
+[class^=container_]>[class^=header_] {
     box-shadow: none !important;
     border: none !important;
-}
+} 
