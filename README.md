@@ -4,14 +4,14 @@ DMs           |  Servers
 :-------------------------:|:-------------------------:
 ![Shows the DMs and Groups with the style applied](https://github.com/user-attachments/assets/cb11d17f-3d49-4e33-ac17-c90d54d708a4)  |  ![Shows a random channel in a server with the style applied](https://github.com/user-attachments/assets/b0d8fd7e-3431-4dee-86ba-61a848484049)
 
-*Preview might be prone to change.
+*Preview might be prone to change. (I am not updating this branch anymore, however it will still be the main one until I feel like my theme is ready to be pushed)
 
 > [!NOTE]
 > I do plan to make it compatible with the default discord theme so I don't have to rely on SlippingGitty's code.
 
 # How To Install:
 1- With QuickCSS (or any CSS editors from your client):
-`import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main-surcord/discord-theme.css")`
+`@import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main-surcord/discord-theme.css")`
 
 2- With the raw link (for use with Vencord's online theme):
 `https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main-surcord/discord-theme.css`
