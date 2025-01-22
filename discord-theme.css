@@ -6,7 +6,8 @@
 :root {
     --avatar-wrapper-background: url(https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png);
     --avatar-wrapper-background-size: 216px;
-    --app-background: transparent; /* change to #232328 to remove transparency*/
+    --app-background: transparent;
+    /* change to #232328 to remove transparency*/
 }
 
 [class^=title_] {
@@ -16,7 +17,6 @@
 [class^=typeWindows_] {
     width: 60px !important;
 }
-
 
 div[aria-label="Copy Message ID"] {
     display: none;
@@ -72,7 +72,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 [class^=botTagCompact],
 [class^=repliedTextPreview],
 [class^=repliedTextContentTrailingIcon] {
-    order: 1 ;
+    order: 1;
 }
 
 .media-engine-video[class^=mirror_] {
@@ -80,44 +80,44 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 }
 
 [class^=panels]>[class^=container] {
-    height: unset ;
-    align-items: unset ;
-    padding: 4px 8px ;
-    flex-direction: column-reverse ;
-    gap: 2px ;
-    
+    height: unset;
+    align-items: unset;
+    padding: 4px 8px;
+    flex-direction: column-reverse;
+    gap: 2px;
+
 }
 
 [class^=avatarWrapper] {
-    margin-right: unset ;
-    margin-left: unset ;
-    padding-left: 4px ;
+    margin-right: unset;
+    margin-left: unset;
+    padding-left: 4px;
 }
 
 [class^=wrapper],
 [class^=contents] {
     [class^=avatarDecoration] {
-        opacity: 1 ;
-        visibility: visible ;
-        transition: visibility 0.3s, opacity 0.3s ease ;
+        opacity: 1;
+        visibility: visible;
+        transition: visibility 0.3s, opacity 0.3s ease;
     }
 
     &:hover>[class^=avatarDecoration] {
-        opacity: 0 ;
-        visibility: hidden ;
+        opacity: 0;
+        visibility: hidden;
     }
 }
 
 [class^=sidebar] {
     &>[class^=panels]>[class^=container_]>[class^=avatarWrapper] {
         height: 1px;
-        background: var(--avatar-wrapper-background) ;
-        background-size: 0 ;
-        transition: height 0.4s 0.2s, transform 0.6s, opacity 1s, background-size 0s 0.2s linear ;
-        border-radius: 16px ;
+        background: var(--avatar-wrapper-background);
+        background-size: 0;
+        transition: height 0.4s 0.2s, transform 0.6s, opacity 1s, background-size 0s 0.2s linear;
+        border-radius: 16px;
 
         & {
-            transform: scale(1) ;
+            transform: scale(1);
 
             &>[class^=wrapper_] {
                 opacity: 1;
@@ -125,24 +125,24 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         }
 
         &>[avatarDecoration] {
-            opacity: 1 ;
-            visibility: visible ;
-            transition: visibility 0.3s, opacity 0.3s ease ;
+            opacity: 1;
+            visibility: visible;
+            transition: visibility 0.3s, opacity 0.3s ease;
         }
 
         &:hover>[class^=wrapper_]>[avatarDecoration] {
-            opacity: 0 ;
-            visibility: hidden ;
+            opacity: 0;
+            visibility: hidden;
         }
     }
 
     &:hover>[class^=panels]>[class^=container_]>[class^=avatarWrapper] {
-        background-size: var(--avatar-wrapper-background-size) ;
-        height: 75px ;
-        border-radius: 16px ;
+        background-size: var(--avatar-wrapper-background-size);
+        height: 75px;
+        border-radius: 16px;
 
         &:hover {
-            transform: scale(1.05) ;
+            transform: scale(1.05);
 
             &>[class^=wrapper_] {
                 opacity: 0.1;
@@ -180,7 +180,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     &>[class^=panels] {
         margin-top: -100px;
         margin-left: 12px;
-        border-radius: 24px ;
+        border-radius: 24px;
         transition: all 0.4s 0.2s ease;
         background-color: transparent;
     }
@@ -192,7 +192,6 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 
     &>[class^=panels]>[class^=container_] {
-        background-color: #232328b1 !important;
         backdrop-filter: blur(3px);
         margin-bottom: 3px;
         border-radius: 32px;
@@ -201,8 +200,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         outline: 1px rgb(192, 192, 192) solid;
     }
 
-     &:hover>[class^=panels]>[class^=container_] {
-        background-color: #232328 !important;
+    &:hover>[class^=panels]>[class^=container_] {
         margin-bottom: 10px;
         border-radius: 16px;
         margin-right: 0;
@@ -235,7 +233,6 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 
     &>[class^=panels]:not(:has([class^=panel_]))>[class^=wrapper_]>[class^=container_] {
         visibility: hidden;
-        background-color: #232328 !important;
         opacity: 0;
         border-radius: 16px 16px 0 0;
         margin-top: -100px;
@@ -245,17 +242,15 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 
     &>[class^=panels]:has([class^=panel_])>[class^=wrapper_]>[class^=container_] {
         visibility: hidden;
-        background-color: #232328 !important;
         opacity: 0;
         margin-top: -100px;
         transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s ease;
         border-radius: 0 0 0 0;
-    outline: 1px rgb(192, 192, 192) solid;
+        outline: 1px rgb(192, 192, 192) solid;
     }
 
     &>[class^=panels]>[class^=panel_] {
         visibility: hidden;
-        background-color: #232328 !important;
         opacity: 0;
         border-radius: 16px 16px 0 0;
         margin-top: -50px;
@@ -266,7 +261,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     &:hover>[class^=panels]:not(:has([class^=panel_]))>[class^=container_] {
         border-radius: 0 0 16px 16px;
     }
-    
+
     &:hover>[class^=panels]:has([class^=panel_])>[class^=container_] {
         border-radius: 0 0 16px 16px;
     }
@@ -320,7 +315,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         }
 
         &>[class^=container_]>[class^=animated]>[class^=bannerImage_]>[class^=bannerImg_] {
-            max-width: 72px ;
+            max-width: 72px;
             transition: max-width 1s 0.2s, height 1s 0.2s ease;
             height: auto;
         }
@@ -346,6 +341,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 
     &:hover>[class^=container_] {
+
         &>*,
         &>*>*>*>*,
         &>[class^=container_]>[class^=animated]>[class^=bannerImage_]>[class^=bannerImg_],
@@ -361,24 +357,24 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 
     &>[class^=container_]>[class^=scroller_]>[aria-label="Channels"] {
-        margin-left: 7px ;
+        margin-left: 7px;
         width: 50px;
         transition: margin-left 0.6s 0.2s, width 0.6s 0.2s ease;
 
         &>[class^=containerDefault_]:is([draggable=true]) {
-            opacity: 0 ;
-            margin-bottom: -40px ;
+            opacity: 0;
+            margin-bottom: -40px;
             transition: opacity 1s 0.2s, margin-bottom 0.7s 0.4s ease;
         }
     }
 
     &:hover>[class^=container_]>[class^=scroller_]>[aria-label="Channels"] {
-        margin-left: 0 ;
+        margin-left: 0;
         width: 240px;
 
         &>[class^=containerDefault_]:is([draggable=true]) {
-            opacity: 1 ;
-            margin-bottom: 0 ;
+            opacity: 1;
+            margin-bottom: 0;
         }
     }
 
@@ -388,7 +384,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 
         &>[class^=scroller]>[class^=content_]>[class^=privateChannelsHeader] {
             opacity: 0;
-            margin-bottom: -40px ;
+            margin-bottom: -40px;
             transition: opacity 1s 0.2s, margin-bottom 0.7s 0.4s ease;
         }
     }
@@ -397,7 +393,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         margin-top: -50px;
 
         &>[class^=scroller]>[class^=content_]>[class^=privateChannelsHeader] {
-            margin-bottom: 0px ;
+            margin-bottom: 0px;
             opacity: 1;
         }
     }
@@ -417,39 +413,37 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 }
 
-[class^=content]>[class^=chat], [class^=peopleColumn]{
-    background-color: #1a1a1d;
-}
+
 
 [class^=chat_] {
-        &>[class^=subtitleContainer]>[class^=title] {
-            margin-top: -98px;
-            transition: margin-top 0.8s 0.2s ease;
-            background-color: #232328 !important;
-        }
+    &>[class^=subtitleContainer]>[class^=title] {
+        margin-top: -98px;
+        transition: margin-top 0.8s 0.2s ease;
+        background-color: #232328 !important;
+    }
 
-        &:hover>[class^=subtitleContainer]>[class^=title] {
-            margin-top: 0;
-        }
+    &:hover>[class^=subtitleContainer]>[class^=title] {
+        margin-top: 0;
+    }
 
     &>[class^=content]>[class^=container_]:has([class^=membersWrap]) {
-        max-width: 61px ;
+        max-width: 61px;
         transition: max-width 0.6s 0.2s;
 
         &>[class^=membersWrap]>[class^=members_]>[class^=membersGroup_],
         &>[class^=membersWrap]>[class^=members_]>[class^=content]>[class^=membersGroup_] {
-            opacity: 0 ;
-            margin-bottom: -35px ;
+            opacity: 0;
+            margin-bottom: -35px;
             transition: opacity 1s 0.2s, margin-bottom 0.7s 0.4s ease;
         }
 
         &:hover {
-            max-width: 240px ;
+            max-width: 240px;
 
             &>[class^=membersWrap]>[class^=members_]>[class^=membersGroup_],
             &>[class^=membersWrap]>[class^=members_]>[class^=content]>[class^=membersGroup_] {
-                opacity: 1 ;
-                margin-bottom: 0 ;
+                opacity: 1;
+                margin-bottom: 0;
             }
         }
     }
@@ -464,6 +458,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         max-width: 30%;
         transition: margin-right 0.7s 0.2s ease;
     }
+
     &>[class^=nowPlayingColumn]>[class^=container_] {
         background-color: #232328 !important;
     }
@@ -536,12 +531,13 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 }
 
 [class^=content] {
-&>[class^=text-xs] {
-    display: none;
-}
-&>[class^=chatContent] {
-    max-width: 100%;
-} 
+    &>[class^=text-xs] {
+        display: none;
+    }
+
+    &>[class^=chatContent] {
+        max-width: 100%;
+    }
 }
 
 [class^=sidebar_]:not([class^=sidebarRegionScroller]>[class^=sidebar_]) {
@@ -571,17 +567,34 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 }
 
 [class^=channelTextArea_]>[class^=scrollableContainer] {
+    outline: 1px rgb(192, 192, 192) solid;
+}
+
+[class^=container_]>[class^=theme-dark],
+[class^=member],
+[class^=background_]>[class^=fieldList_],
+[class^=accountProfile]>[class^=background_],
+[class^=chat_]>[class^=content]>[class^=container_],
+[class^=layer_]>[class^=standardSidebarView_],
+[class^=contentRegion_]>[class^=contentTransitionWrap_]>[class^=contentRegionScroller_] {
+    background-color: #232328 !important;
+}
+
+[class^=focusLock_]>[class^=popout_]>[class^=flex],
+[class^=focusLock_]>[class^=popout_] {
     background-color: #232328 !important;
     outline: 1px rgb(192, 192, 192) solid;
 }
 
-[class^=container_]>[class^=theme-dark],[class^=member], [class^=background_]>[class^=fieldList_],[class^=accountProfile]>[class^=background_], [class^=chat_]>[class^=content]>[class^=container_], [class^=layer_]>[class^=standardSidebarView_], [class^=contentRegion_]>[class^=contentTransitionWrap_]>[class^=contentRegionScroller_] {
-    background-color: #232328 !important;
-}
-
-[class^=focusLock_]>[class^=popout_]>[class^=flex], [class^=focusLock_]>[class^=popout_] {
-    background-color: #232328 !important;
-    outline: 1px rgb(192, 192, 192) solid;
+.theme-dark {
+    --background-accent: rgb(84, 20, 148);
+    --background-modifier-selected: rgba(84, 20, 148, 0.5);
+    --background-modifier-hover: rgba(214, 201, 226, 0.3);
+    --background-modifier-active: rgba(70, 15, 125, 0.5);
+    --channeltextarea-background: #232328;
+    --background-primary: #1a1a1d;
+    --background-floating: #232328;
+    --background-secondary-alt: #232328;
 }
 
 .theme-dark {
@@ -605,4 +618,4 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 [class^=container_]>[class^=header_] {
     box-shadow: none !important;
     border: none !important;
-} 
+}
