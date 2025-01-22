@@ -10,7 +10,7 @@ DMs           |  Servers
 # How To Install:
 
 1- With QuickCSS (or any CSS editors from your client):
-`import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/edge-default-discord/discord-theme.css")`
+`@import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/edge-default-discord/discord-theme.css")`
 
 2- With the raw link (for use with Vencord's online theme):
 `https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/edge-default-discord/discord-theme.css`
