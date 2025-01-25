@@ -595,6 +595,8 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     --background-primary: #1a1a1d;
     --background-floating: #232328;
     --background-secondary-alt: #232328;
+    --channels-default: rgb(221, 218, 224);
+    --channel-icon: crgb(200, 195, 204);
 }
 
 .theme-dark {
