@@ -7,7 +7,7 @@
     --avatar-wrapper-background: url(https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png);
     --avatar-wrapper-background-size: 216px;
     --app-background: transparent;
-    /* change to #232328 to remove transparency*/
+    /* change to #222228 to remove transparency*/
 }
 
 [class^=title_] {
@@ -196,9 +196,9 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         backdrop-filter: blur(3px);
         margin-bottom: 3px;
         border-radius: 32px;
-        margin-right: 17.5px;
+        margin-right: 16.5px;
         transition: all 0.4s 0.2s ease;
-        outline: 1px rgb(192, 192, 192) solid;
+        border: 1px rgb(192, 192, 192) solid;
     }
 
     &:hover>[class^=panels]>[class^=container_] {
@@ -237,7 +237,8 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         opacity: 0;
         border-radius: 16px 16px 0 0;
         margin-top: -100px;
-        outline: 1px rgb(192, 192, 192) solid;
+        border: rgb(192, 192, 192) solid;
+        border-width: 1px 1px 0px;
         transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s ease;
     }
 
@@ -247,7 +248,8 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         margin-top: -100px;
         transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s ease;
         border-radius: 0 0 0 0;
-        outline: 1px rgb(192, 192, 192) solid;
+        border: rgb(192, 192, 192) solid;
+        border-width: 0px 1px 0px;
     }
 
     &>[class^=panels]>[class^=panel_] {
@@ -256,19 +258,23 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         border-radius: 16px 16px 0 0;
         margin-top: -50px;
         transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s ease;
-        outline: 1px rgb(192, 192, 192) solid;
+        border: rgb(192, 192, 192) solid;
+        border-width: 1px 1px 0px;
     }
 
     &:hover>[class^=panels]:not(:has([class^=panel_]))>[class^=container_] {
         border-radius: 0 0 16px 16px;
+        border-width: 0px 1px 0px;
     }
 
     &:hover>[class^=panels]:has([class^=panel_])>[class^=container_] {
         border-radius: 0 0 16px 16px;
+        border-width: 0px 1px 1px;
     }
 
     &:hover>[class^=panels]:not(:has([class^=wrapper]>[class^=container_]>[class^=flex]))>[class^=container_] {
         border-radius: 16px;
+        border-width: 1px 1px 1px;
     }
 
 
@@ -300,19 +306,18 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 
     &>[class^=container] {
+        &>[class^=scroller_]>[aria-label="Channels"]>[class^=containerDefault_]>div>[class^=iconVisibility]>div>[class^=link_]>[class^=linkBottom]>[class^=text-xs] {
+            visibility: hidden;
+            opacity: 0;
+            margin-top: -16px;
+            transition: all 0.4s 0.2s ease;
+        }
 
-    &>[class^=scroller_]>[aria-label="Channels"]>[class^=containerDefault_]>div>[class^=iconVisibility]>div>[class^=link_]>[class^=linkBottom]>[class^=text-xs] {
-        visibility: hidden;
-        opacity: 0;
-        margin-top: -16gitpx;
-        transition: all 0.4s 0.2s ease;
-    }
-
-    &:hover>[class^=scroller_]>[aria-label="Channels"]>[class^=containerDefault_]>div>[class^=iconVisibility]>div>[class^=link_]>[class^=linkBottom]>[class^=text-xs] {
-        visibility: visible;
-        margin-top: 0;
-        opacity: 1;
-    }
+        &:hover>[class^=scroller_]>[aria-label="Channels"]>[class^=containerDefault_]>div>[class^=iconVisibility]>div>[class^=link_]>[class^=linkBottom]>[class^=text-xs] {
+            visibility: visible;
+            margin-top: 0;
+            opacity: 1;
+        }
 
         &>[class^=scroller_]>[class^=content_]>li>[class^=container_] {
             visibility: hidden;
@@ -429,7 +434,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     &>[class^=subtitleContainer]>[class^=title] {
         margin-top: -98px;
         transition: margin-top 0.8s 0.2s ease;
-        background-color: #232328 !important;
+        background-color: #222228 !important;
     }
 
     &:hover>[class^=subtitleContainer]>[class^=title] {
@@ -461,7 +466,6 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 
 [class^=tabBody],
 [class^=content] {
-
     &>[class^=nowPlayingColumn],
     &>[class^=outer_] {
         margin-right: -30%;
@@ -470,7 +474,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 
     &>[class^=nowPlayingColumn]>[class^=container_] {
-        background-color: #232328 !important;
+        background-color: #222228 !important;
     }
 
     &:hover>[class^=nowPlayingColumn],
@@ -534,12 +538,12 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 }
 
 [class^=menu_] {
-    outline: 1px rgb(192, 192, 192) solid;
+    border: 1px rgb(192, 192, 192) solid;
     border-radius: 16px;
 }
 
 [class^=submenu_] {
-    outline: 1px rgb(192, 192, 192) solid;
+    border: 1px rgb(192, 192, 192) solid;
     border-radius: 16px;
     margin-left: 3px;
 }
@@ -580,41 +584,60 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     margin-left: 1px;
 }
 
-[class^=channelTextArea_]>[class^=scrollableContainer] {
-    outline: 1px rgb(192, 192, 192) solid;
+[class^=channelTextArea_]:not(:has([class^=stacked]))>[class^=scrollableContainer] {
+    border: rgb(192, 192, 192) solid;
+    border-width: 1px 1px 1px;
+
+}
+[class^=channelTextArea_]:has([class^=stacked])>[class^=scrollableContainer] {
+    border: rgb(192, 192, 192) solid;
+    border-width: 0px 1px 1px;
+
 }
 
 [class^=container_]>[class^=theme-dark],
 [class^=member],
 [class^=background_]>[class^=fieldList_],
 [class^=accountProfile]>[class^=background_],
-[class^=chat_]>[class^=content]>[class^=container_]{
-    background-color: #232328 !important;
+[class^=chat_]>[class^=content]>[class^=container_],
+[class^=clipContainer]>[class^=container]>[class^=reply] {
+    background-color: #222228 !important;
 }
 
-[class^=focusLock_] {
-&>[class^=popout_]>[class^=flex],
-&>[class^=popout_] {
-    background-color: #232328 !important;
-    outline: 1px rgb(192, 192, 192) solid;
+[class^=popout] {
+    background-color: #222228 !important;
+    border: 1px rgb(192, 192, 192) solid;
+
+    &>[class^=flex_]:not([id^=":"]) {
+    background-color: #1a1a1d !important;   
+    }
 }
-}
+
 
 .theme-dark {
     --background-accent: rgb(221, 218, 224);
     --background-modifier-selected: rgba(104, 35, 174, 0.395);
     --background-modifier-hover: rgba(214, 201, 226, 0.3);
     --background-modifier-active: rgba(70, 15, 125, 0.5);
-    --channeltextarea-background: #232328;
+    --channeltextarea-background: #222228;
     --background-primary: #1a1a1d;
-    --background-floating: #232328;
-    --background-secondary-alt: #232328;
+    --background-floating: #222228;
+    --background-secondary-alt: #222228;
     --channels-default: rgb(221, 218, 224);
     --channel-icon: rgb(104, 35, 174);
+    --interactive-normal: rgb(221, 218, 224);
+    --menu-item-default-hover-bg: rgba(104, 35, 174, 0.395);
+    --menu-item-default-active-bg: rgba(70, 15, 125, 0.5);
 }
 
 .theme-dark {
     --background-secondary: rgba(0, 0, 0, 0.4);
+}
+
+[class^=stackedBars]>[class^=bar_] {
+    border:  rgb(192, 192, 192) solid;
+    border-width: 1px 1px 0px;
+    background-color: #222228;
 }
 
 [class^=app_],
@@ -637,18 +660,25 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 }
 
 [class^=peopleListItem_] {
-    background-color: #232328;
-    border-radius: 4px;
-    outline: 1px rgb(192, 192, 192) solid;
-    margin: 15px;
-    transition: all 0.3s ease;
-}
+    background-color: #222228;
+    border-radius: 8px;
+    margin: 15px 30px 15px 30px;
+    transition: all 0.5s ease;
 
-[class^=listItemContents_] {
-    margin: 15px;
+    &:hover {
+        background-color: #222228;
+        border-radius: 8px;
+        border: 1px rgb(192, 192, 192) solid;
+        margin: 15px 40px 15px 40px;
+    }
+    
+    &>[class^=listItemContents_] {
+        margin: 15px;
+    }
 }
 
 [class^=scroller_]>[role^=group]>[class^=item_],
 [role^=group]>div>[class^=item_] {
     border-radius: 8px;
 }
+
