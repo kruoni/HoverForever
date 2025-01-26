@@ -598,7 +598,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 
 .theme-dark {
     --background-accent: rgb(221, 218, 224);
-    --background-modifier-selected: rgba(84, 20, 148, 0.5);
+    --background-modifier-selected: rgba(104, 35, 174, 0.395);
     --background-modifier-hover: rgba(214, 201, 226, 0.3);
     --background-modifier-active: rgba(70, 15, 125, 0.5);
     --channeltextarea-background: #232328;
@@ -606,7 +606,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     --background-floating: #232328;
     --background-secondary-alt: #232328;
     --channels-default: rgb(221, 218, 224);
-    --channel-icon: rgb(226, 192, 255);
+    --channel-icon: rgb(104, 35, 174);
 }
 
 .theme-dark {
