@@ -1,4 +1,5 @@
 # Discord Theme to have the laggiest experience ever! (uses [surCord](https://github.com/SlippingGittys-Discord-Themes/surCord) for the time being).
+## Check the other branch for more frequent updates + a full theme without requiring surCord
 
 DMs           |  Servers
 :-------------------------:|:-------------------------:
