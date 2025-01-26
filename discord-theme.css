@@ -18,6 +18,7 @@
     width: 60px !important;
 }
 
+
 div[aria-label="Copy Message ID"] {
     display: none;
 }
@@ -278,28 +279,40 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         opacity: 1;
     }
 
-    &>[class^=container_] {
-        [class^=scroller_]>[aria-label="Channels"]>[class^=containerDefault_]>[class^=list_] {
-            visibility: hidden;
-            opacity: 0;
-            margin-top: -8px;
-            transition: visibility 0.2s 0.2s, opacity 0.3s 0.2s ease;
 
-            &>[class^=draggable] {
-                margin-top: -100px;
-                transition: margin-top 0.2s 0.2s ease;
+    &>[class^=container_]>[class^=scroller_]>[aria-label="Channels"]>[class^=containerDefault_]>[class^=list_] {
+        &>[class^=draggable] {
+            margin-left: -30px;
+                    
+            &>[class^=voiceUser]>[class^=content]>*:not([class^=userAvatar]) {
+                margin-left: 100px;
+                transition: margin-left 0.4s 0.2s;
             }
         }
+    }
 
-        &:hover>[class^=scroller_]>[aria-label="Channels"]>[class^=containerDefault_]>[class^=list_] {
-            visibility: visible;
-            margin-top: 0;
-            opacity: 1;
-
-            &>[class^=draggable] {
-                margin-top: 0;
+    &:hover>[class^=container_]>[class^=scroller_]>[aria-label="Channels"]>[class^=containerDefault_]>[class^=list_]  {
+        &>[class^=draggable] {
+            &>[class^=voiceUser]>[class^=content]>*:not([class^=userAvatar]) {
+                margin-left: 0;
             }
         }
+    }
+
+    &>[class^=container] {
+
+    &>[class^=scroller_]>[aria-label="Channels"]>[class^=containerDefault_]>div>[class^=iconVisibility]>div>[class^=link_]>[class^=linkBottom]>[class^=text-xs] {
+        visibility: hidden;
+        opacity: 0;
+        margin-top: -16gitpx;
+        transition: all 0.4s 0.2s ease;
+    }
+
+    &:hover>[class^=scroller_]>[aria-label="Channels"]>[class^=containerDefault_]>div>[class^=iconVisibility]>div>[class^=link_]>[class^=linkBottom]>[class^=text-xs] {
+        visibility: visible;
+        margin-top: 0;
+        opacity: 1;
+    }
 
         &>[class^=scroller_]>[class^=content_]>li>[class^=container_] {
             visibility: hidden;
@@ -341,7 +354,6 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 
     &:hover>[class^=container_] {
-
         &>*,
         &>*>*>*>*,
         &>[class^=container_]>[class^=animated]>[class^=bannerImage_]>[class^=bannerImg_],
@@ -413,8 +425,6 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 }
 
-
-
 [class^=chat_] {
     &>[class^=subtitleContainer]>[class^=title] {
         margin-top: -98px;
@@ -427,7 +437,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 
     &>[class^=content]>[class^=container_]:has([class^=membersWrap]) {
-        max-width: 61px;
+        max-width: 60px;
         transition: max-width 0.6s 0.2s;
 
         &>[class^=membersWrap]>[class^=members_]>[class^=membersGroup_],
@@ -574,20 +584,20 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 [class^=member],
 [class^=background_]>[class^=fieldList_],
 [class^=accountProfile]>[class^=background_],
-[class^=chat_]>[class^=content]>[class^=container_],
-[class^=layer_]>[class^=standardSidebarView_],
-[class^=contentRegion_]>[class^=contentTransitionWrap_]>[class^=contentRegionScroller_] {
+[class^=chat_]>[class^=content]>[class^=container_]{
     background-color: #232328 !important;
 }
 
-[class^=focusLock_]>[class^=popout_]>[class^=flex],
-[class^=focusLock_]>[class^=popout_] {
+[class^=focusLock_] {
+&>[class^=popout_]>[class^=flex],
+&>[class^=popout_] {
     background-color: #232328 !important;
     outline: 1px rgb(192, 192, 192) solid;
 }
+}
 
 .theme-dark {
-    --background-accent: rgb(84, 20, 148);
+    --background-accent: rgb(221, 218, 224);
     --background-modifier-selected: rgba(84, 20, 148, 0.5);
     --background-modifier-hover: rgba(214, 201, 226, 0.3);
     --background-modifier-active: rgba(70, 15, 125, 0.5);
@@ -596,7 +606,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     --background-floating: #232328;
     --background-secondary-alt: #232328;
     --channels-default: rgb(221, 218, 224);
-    --channel-icon: crgb(200, 195, 204);
+    --channel-icon: rgb(226, 192, 255);
 }
 
 .theme-dark {
