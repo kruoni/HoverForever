@@ -536,8 +536,12 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 [class^=menu_] {
     outline: 1px rgb(192, 192, 192) solid;
     border-radius: 16px;
-    background-color: #232328b7;
-    backdrop-filter: blur(16px);
+}
+
+[class^=submenu_] {
+    outline: 1px rgb(192, 192, 192) solid;
+    border-radius: 16px;
+    margin-left: 3px;
 }
 
 [class^=content] {
@@ -630,4 +634,21 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 [class^=container_]>[class^=header_] {
     box-shadow: none !important;
     border: none !important;
+}
+
+[class^=peopleListItem_] {
+    background-color: #232328;
+    border-radius: 4px;
+    outline: 1px rgb(192, 192, 192) solid;
+    margin: 15px;
+    transition: all 0.3s ease;
+}
+
+[class^=listItemContents_] {
+    margin: 15px;
+}
+
+[class^=scroller_]>[role^=group]>[class^=item_],
+[role^=group]>div>[class^=item_] {
+    border-radius: 8px;
 }
