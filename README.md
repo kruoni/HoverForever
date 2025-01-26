@@ -10,13 +10,16 @@ DMs           |  Servers
 # How To Install:
 
 1- With QuickCSS (or any CSS editors from your client):
+
 `@import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/edge-default-discord/discord-theme.css")`
 
 2- With the raw link (for use with Vencord's online theme):
+
 `https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/edge-default-discord/discord-theme.css`
 
 3- Save the raw file
-Same link as before (`https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/edge-default-discord/discord-theme.css`) but here you can save the page as a file, recommended if you want to make changes to the theme without polluting your quick css, but you'll have to check for updates.
+
+Save this link as a file and put it where your client wants its theme files to be `https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/edge-default-discord/discord-theme.css`
 
 ## Customization
 ### You can change the Image that appears on the avatar Wrapper.
