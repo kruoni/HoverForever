@@ -260,10 +260,13 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     &>[class^=panels]>[class^=container_] {
         backdrop-filter: blur(3px);
         margin-bottom: 3px;
+        background-color: #2222283d;
         border-radius: 32px;
         margin-right: 16.5px;
         transition: all 0.4s 0.2s ease;
-        border: 1px rgb(192, 192, 192) solid;
+        border: rgb(192, 192, 192) solid;
+        border-width: 1px 1px 1px;
+        box-shadow: 1px 1px 10px  rgba(0, 0, 0, 0.719);
     }
 
     &:hover>[class^=panels]>[class^=container_] {
