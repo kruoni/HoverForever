@@ -1,25 +1,15 @@
-@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css");
-@import url("https://raw.githubusercontent.com/ColynOrg/CSS-Snippets/main/UsernameSymbol.css");
-@import url("https://raw.githubusercontent.com/KrstlSkll69/vc-snippets/main/OtherStuff/hideGlobalDiscovery.css");
-@import url("https://Cinnab0nBak3ry.github.io/AppleFontsCSS/Apple-fonts.css");
-
 :root {
     --avatar-wrapper-background: url(https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png);
     --avatar-wrapper-background-size: 216px;
     --app-background: transparent;
     /* change to #222228 to remove transparency*/
 }
-
-[class*=codeContainer]>*,[class*=markup_]>code[class*=inline], [class*=inline] {
-  font-family: "SF Mono",mono,monospace;
+[class*=unreadMentionsFixedFooter_] {
+    bottom: 0px !important;
 }
 
-* {
-  --font-primary: -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
-  --font-display: -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
-  --font-headline: -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
-  text-rendering: optimizeLegibility;
-  letter-spacing: 0.015em;
+[class^=footer_]:has([class*=discoveryIcon_]) {
+    display: none; 
 }
 
 [class^=title_] {
@@ -748,4 +738,11 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 
 [id^=message-accessories] + [class^=buttonContainer] > [class^=buttons] {
     top: -27px !important; 
+}
+
+[class^="searchResultsWrap_"] [class^=container_]:has([class^=pageControlContainer_]){
+  position: sticky;
+  bottom: 0px;
+  z-index: 999;
+  background: #0f0f10;
 }
