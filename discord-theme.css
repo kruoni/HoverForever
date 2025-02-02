@@ -4,38 +4,31 @@
     --app-background: transparent;
     /* change to #222228 to remove transparency*/
 }
+
 [class*=unreadMentionsFixedFooter_] {
-    bottom: 0px !important;
+    bottom: 0px;
 }
 
 [class^=footer_]:has([class*=discoveryIcon_]) {
-    display: none; 
-}
-
-[class^=title_] {
-    -webkit-app-region: none;
+    display: none;
 }
 
 [class^=typeWindows_] {
     width: 60px !important;
-}
-
-[class^=typeWindows_] {
     z-index: 102;
     position: absolute;
     flex-direction: row;
     align-items: center;
     top: 1px;
-    width: 100%;
     margin: 0;
-    padding-top: 12px !important;
+    padding-top: 12px;
     padding-right: 9px;
     padding-left: 3px;
     -webkit-app-region: drag;
-    background: transparent !important;
+    background: transparent;
 }
 
-[class^=wordmark]  {
+[class^=wordmark] {
     display: none;
 }
 
@@ -48,6 +41,7 @@
     background-size: 0;
     -webkit-app-region: no-drag;
 }
+
 [class^=winButton] svg {
     display: none;
 }
@@ -62,10 +56,12 @@
     background-color: #ff5c57;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUuMjkyODkgNkwyLjgxODAxIDMuNTI1MTNMMy41MjUxMiAyLjgxODAyTDUuOTk5OTkgNS4yOTI4OUw4LjQ3NDg3IDIuODE4MDJMOS4xODE5NyAzLjUyNTEzTDYuNzA3MSA2TDkuMTgxOTcgOC40NzQ4N0w4LjQ3NDg3IDkuMTgxOThMNS45OTk5OSA2LjcwNzExTDMuNTI1MTIgOS4xODE5OEwyLjgxODAxIDguNDc0ODdMNS4yOTI4OSA2WiIgZmlsbD0iI0EyMDAwOCIvPgo8L3N2Zz4=);
 }
+
 [class*=app-focused]>body>[class^=appMount]>[class^=typeWindows]>[class^=winButtonMinMax]:nth-child(2n) {
     background-color: #fdbd3d;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDUuMzk5OTlIMlY2LjU5OTk5SDEwVjUuMzk5OTlaIiBmaWxsPSIjQjM3MTFBIi8+Cjwvc3ZnPg==);
 }
+
 [class*=app-focused]>body>[class^=appMount]>[class^=typeWindows]>[class^=winButtonMinMax]:nth-child(3n) {
     order: 3;
     background-color: #26c84b;
@@ -90,26 +86,6 @@
     display: none;
 }
 
-nav[class^="wrapper_"] div[class^="listItem_"]:has(div > div > div > div[class^="lowerBadge_"]),
-div[class^="wrapper_"]:has(div > div > div > div[class^="lowerBadge_"]) {
-    order: -2;
-}
-
-nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-[class^="iconVisibility_"] {
-    &:has([style="color: var(--text-brand);"])>[class^="unread_"] {
-        background-color: var(--text-brand);
-    }
-
-    &:has([class^="mentionsBadge_"])>[class^="unread_"] {
-        background-color: var(--status-danger);
-    }
-}
-
 [class^="mosaicItem"]>[class^="wrapperAudio"] {
     &>[class^="audioMetadata"] {
         margin-bottom: 24px;
@@ -123,29 +99,8 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 }
 
-[class^=botTagCompact],
-[class^=repliedTextPreview],
-[class^=repliedTextContentTrailingIcon] {
-    order: 1;
-}
-
 .media-engine-video[class^=mirror_] {
     transform: none
-}
-
-[class^=panels]>[class^=container] {
-    height: unset;
-    align-items: unset;
-    padding: 4px 8px;
-    flex-direction: column-reverse;
-    gap: 2px;
-
-}
-
-[class^=avatarWrapper] {
-    margin-right: unset;
-    margin-left: unset;
-    padding-left: 4px;
 }
 
 [class^=wrapper],
@@ -163,14 +118,26 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 }
 
 [class^=sidebar] {
-     border-radius: 0 !important;
+    border-radius: 0 !important;
+
+    &:not([class^=sidebarRegionScroller]>[class^=sidebar_], [class^=sidebarRegion]) {
+        max-width: 72px;
+        transition: max-width 0.6s 0.2s ease;
+
+        &:hover {
+            max-width: 240px;
+        }
+    }
 
     &>[class^=panels]>[class^=container_]>[class^=avatarWrapper] {
-        height: 1px;
+        height: 0px;
         background: var(--avatar-wrapper-background);
         background-size: 0;
         transition: height 0.4s 0.2s, transform 0.6s, opacity 1s, background-size 0s 0.2s linear;
-        border-radius: 16px;
+        border-radius: 32px;
+        margin-right: unset;
+        margin-left: unset;
+        padding-left: 4px;
 
         & {
             transform: scale(1);
@@ -179,23 +146,11 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
                 opacity: 1;
             }
         }
-
-        &>[avatarDecoration] {
-            opacity: 1;
-            visibility: visible;
-            transition: visibility 0.3s, opacity 0.3s ease;
-        }
-
-        &:hover>[class^=wrapper_]>[avatarDecoration] {
-            opacity: 0;
-            visibility: hidden;
-        }
     }
 
     &:hover>[class^=panels]>[class^=container_]>[class^=avatarWrapper] {
         background-size: var(--avatar-wrapper-background-size);
         height: 75px;
-        border-radius: 16px;
 
         &:hover {
             transform: scale(1.05);
@@ -211,7 +166,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         opacity: 0;
         justify-content: center;
         gap: 30px;
-        transition: all 0.2s 0.2s linear;
+        transition: visibility 0.3s 0.2s, opacity 0.2s 0.2s, gap 0.2s 0.2s linear;
     }
 
     &:hover>[class^=panels]>[class^=container_]>[class^=flex] {
@@ -222,55 +177,53 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     &>[class^=panels]>[class^=container_]>[class^=avatarWrapper]>[class^=wrapper] {
         margin-left: -7px;
         margin-top: -34px;
-        animation: 4s ease-out infinite rotating;
-        transition: all 0.2s 0.2s linear;
         scale: 0.9;
+        transition: all 0.2s 0.2s linear;
     }
 
     &:hover>[class^=panels]>[class^=container_]>[class^=avatarWrapper]>[class^=wrapper] {
-        margin-left: 1px;
-        margin-top: 34px;
+        margin-left: 5px;
+        margin-top: 33px;
         scale: 1;
     }
 
     &>[class^=panels] {
         margin-top: -100px;
         margin-left: 12px;
-        border-radius: 24px;
-        transition: all 0.4s 0.2s ease;
+        margin-right: 16px;
+        margin-bottom: 4px;
+        border-radius: 32px;
         background-color: transparent;
+        border: rgb(192, 192, 192) solid;
+        border-width: 1px 1px 1px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.719);
+        transition: border-radius 0.4s 0.2s, margin-left 0.4s 0.2s, margin-top 0.4s 0.2s, margin-right 0.4s 0.2s ease;
     }
 
     &:hover>[class^=panels] {
         margin-left: 2px;
-        margin-top: 0;
+        margin-top: 0px;
         margin-right: 5px;
+        border-radius: 32px;
     }
 
     &>[class^=panels]>[class^=container_] {
-        backdrop-filter: blur(3px);
-        margin-bottom: 3px;
-        background-color: #2222283d;
+        background-color: #222228a5;
         border-radius: 32px;
-        margin-right: 16.5px;
-        transition: all 0.4s 0.2s ease;
-        border: rgb(192, 192, 192) solid;
-        border-width: 1px 1px 1px;
-        box-shadow: 1px 1px 10px  rgba(0, 0, 0, 0.719);
-    }
-
-    &:hover>[class^=panels]>[class^=container_] {
-        margin-bottom: 10px;
-        border-radius: 16px;
-        margin-right: 0;
+        height: unset;
+        align-items: unset;
+        padding: 4px 8px;
+        flex-direction: column-reverse;
+        gap: 2px;
+        transition: border-radius 0.4s 0.2s ease;
     }
 
     &>[class^=panels]>[class^=container_]>[class^=avatarWrapper]>[class^=nameTag_] {
         visibility: hidden;
         opacity: 0;
-        margin-top: 30px;
-        margin-left: -100px;
-        transition: visibility 0s 0.2s, opacity 0.1s 0.2s, margin-left 0.1s 0.2s ease;
+        margin-top: 33px;
+        margin-left: -4px;
+        transition: visibility 0.1s 0.2s, opacity 0.2s 0.2s, margin-left 0.1s 0.2s ease;
 
         &>div>* {
             color: rgb(255, 255, 255);
@@ -281,43 +234,41 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     &:hover>[class^=panels]>[class^=container_]>[class^=avatarWrapper]>[class^=nameTag_] {
         visibility: visible;
         opacity: 1;
-        margin-top: 30px;
-        margin-left: 0;
     }
 
     &>[class^=panels]>[class^=container_]>[class^=avatarWrapper]:hover>[class^=nameTag_] {
-        opacity: 0.1;
+        opacity: 0;
         transition: opacity 1s;
     }
 
-    &>[class^=panels]:not(:has([class^=panel_]))>[class^=wrapper_]>[class^=container_] {
+    &>[class^=panels]>[class^=wrapper_]>[class^=container_] {
         visibility: hidden;
         opacity: 0;
         border-radius: 16px 16px 0 0;
         margin-top: -100px;
-        border: rgb(192, 192, 192) solid;
-        border-width: 1px 1px 0px;
         transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s ease;
     }
 
+    &>[class^=panels]:not(:has([class^=panel_]))>[class^=wrapper_]>[class^=container_] {
+        border-radius: 16px 16px 0 0;
+        border: none;
+        background-color: #222228a5;
+    }
+
     &>[class^=panels]:has([class^=panel_])>[class^=wrapper_]>[class^=container_] {
-        visibility: hidden;
-        opacity: 0;
-        margin-top: -100px;
-        transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s ease;
         border-radius: 0 0 0 0;
-        border: rgb(192, 192, 192) solid;
-        border-width: 0px 1px 0px;
+        border: none;
+        background-color: #222228a5;
     }
 
     &>[class^=panels]>[class^=panel_] {
         visibility: hidden;
+        background-color: #222228a5;
         opacity: 0;
         border-radius: 16px 16px 0 0;
         margin-top: -50px;
         transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s ease;
-        border: rgb(192, 192, 192) solid;
-        border-width: 1px 1px 0px;
+        border: none;
     }
 
     &:hover>[class^=panels]:not(:has([class^=panel_]))>[class^=container_] {
@@ -331,7 +282,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 
     &:hover>[class^=panels]:not(:has([class^=wrapper]>[class^=container_]>[class^=flex]))>[class^=container_] {
-        border-radius: 16px;
+        border-radius: 32px;
         border-width: 1px 1px 1px;
     }
 
@@ -343,32 +294,36 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         opacity: 1;
     }
 
-
     &>[class^=container_]>[class^=scroller_]>[aria-label="Channels"]>[class^=containerDefault_]>[class^=list_] {
         &>[class^=draggable] {
             margin-left: -30px;
-                    
+
             &>[class^=voiceUser]>[class^=content]>*:not([class^=userAvatar]) {
                 margin-left: 100px;
-                transition: margin-left 0.4s 0.2s;
+                transition: margin-left 0.6s 0.2s ease;
             }
         }
     }
 
-    &:hover>[class^=container_]>[class^=scroller_]>[aria-label="Channels"]>[class^=containerDefault_]>[class^=list_]  {
-        &>[class^=draggable] {
-            &>[class^=voiceUser]>[class^=content]>*:not([class^=userAvatar]) {
-                margin-left: 0;
-            }
-        }
+    &:hover>[class^=container_]>[class^=scroller_]>[aria-label="Channels"]>[class^=containerDefault_]>[class^=list_]>[class^=draggable]>[class^=voiceUser]>[class^=content]>*:not([class^=userAvatar]) {
+        margin-left: 0;
     }
 
     &>[class^=container] {
-        &>[class^=scroller_]>[aria-label="Channels"]>[class^=containerDefault_]>div>[class^=iconVisibility]>div>[class^=link_]>[class^=linkBottom]>[class^=text-xs] {
-            visibility: hidden;
-            opacity: 0;
-            margin-top: -16px;
-            transition: all 0.4s 0.2s ease;
+        &>[class^=scroller_] {
+            &>[aria-label="Channels"]>[class^=containerDefault_]>div>[class^=iconVisibility]>div>[class^=link_]>[class^=linkBottom]>[class^=text-xs] {
+                visibility: hidden;
+                opacity: 0;
+                margin-top: -16px;
+                transition: all 0.4s 0.2s ease;
+            }
+
+            &>[class^=content_]>li>[class^=container_] {
+                visibility: hidden;
+                opacity: 0;
+                margin-top: -69px;
+                transition: visibility 0.3s 0.2s, opacity 0.4s 0.2s, margin-top 0.5s 0.2s ease;
+            }
         }
 
         &:hover>[class^=scroller_]>[aria-label="Channels"]>[class^=containerDefault_]>div>[class^=iconVisibility]>div>[class^=link_]>[class^=linkBottom]>[class^=text-xs] {
@@ -377,57 +332,48 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
             opacity: 1;
         }
 
-        &>[class^=scroller_]>[class^=content_]>li>[class^=container_] {
-            visibility: hidden;
-            opacity: 0;
-            transition: visibility 0.3s 0.2s, opacity 0.4s 0.2s, margin-top 0.5s 0.2s ease;
-            margin-top: -69px;
-        }
+        &>[class^=container_] {
+            &>[class^=animated] {
+                background: none;
+                margin-top: 100px;
+                box-shadow: none;
+                transition: margin-top 1s 0.2s ease;
+                
+                &>[class^=bannerImage_]>[class^=bannerImg_] {
+                    max-width: 72px;
+                    height: auto;
+                    transition: max-width 0.8s 0.2s, height 1s 0.2s ease;
+                }
+            }
 
-        &>[class^=container_]>[class^=header_] {
-            visibility: hidden;
-            transition: visibility 0.3s 0.2s, opacity 0.4s 0.2s ease;
-            opacity: 0;
-        }
-
-        &>[class^=container_]>[class^=animated]>[class^=bannerImage_]>[class^=bannerImg_] {
-            max-width: 72px;
-            transition: max-width 1s 0.2s, height 1s 0.2s ease;
-            height: auto;
-        }
-
-        &>[class^=container_]>[class^=animated] {
-            background: none;
-            transition: margin-top 0.8s 0.2s ease;
-            margin-top: 100px;
-            box-shadow: none;
-        }
-
-        &>[class^=container_]:has([class^=animated]) {
-            margin-top: -100px;
-            transition: margin-top 0.8s 0.2s ease;
+            &:has([class^=animated]) {
+                margin-top: -100px;
+                transition: margin-top 1s 0.2s ease;
+            }
         }
 
         &:not(:has([class^=animated]))>[class^=container_]:not(:has([class^=scroller_]>[class^=content_]>li>[class^=container_])) {
             visibility: hidden;
             opacity: 0;
+            margin-top: -25px;
             transition: visibility 0.7s 0.2s, opacity 0.8s 0.2s, margin-top 0.6s 0.2s ease;
-            margin-top: -20px;
         }
     }
 
     &:hover>[class^=container_] {
-        &>*,
-        &>*>*>*>*,
         &>[class^=container_]>[class^=animated]>[class^=bannerImage_]>[class^=bannerImg_],
-        &>[class^=animated],
-        &>[class^=container_]>[class^=header_],
         &>[class^=container_]>[class^=animated],
         &>[class^=container_]:has([class^=animated]) {
-            visibility: visible !important;
-            margin-top: 0 !important;
-            opacity: 1 !important;
+            visibility: visible;
+            margin-top: 0px;
+            opacity: 1;
             max-width: 240px;
+        }
+
+        &:hover:not(:has([class^=animated]))>[class^=container_]:not(:has([class^=scroller_]>[class^=content_]>li>[class^=container_])) {
+            visibility: visible;
+            margin-top: 0px;
+            opacity: 1;
         }
     }
 
@@ -474,25 +420,11 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 }
 
-@keyframes rotating {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    40% {
-        transform: rotate(360deg)
-    }
-
-    100% {
-        transform: rotate(360deg)
-    }
-}
-
 [class^=chat_] {
     &>[class^=subtitleContainer]>[class^=title] {
         margin-top: -98px;
         transition: margin-top 0.8s 0.2s ease;
-        background-color: #222228 !important;
+        background-color: #222228;
     }
 
     &:hover>[class^=subtitleContainer]>[class^=title] {
@@ -524,6 +456,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 
 [class^=tabBody],
 [class^=content] {
+
     &>[class^=nowPlayingColumn],
     &>[class^=outer_] {
         margin-right: -30%;
@@ -532,7 +465,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 
     &>[class^=nowPlayingColumn]>[class^=container_] {
-        background-color: #222228 !important;
+        background-color: #222228;
     }
 
     &:hover>[class^=nowPlayingColumn],
@@ -616,15 +549,6 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     }
 }
 
-[class^=sidebar_]:not([class^=sidebarRegionScroller]>[class^=sidebar_]) {
-    max-width: 72px;
-    transition: max-width 0.6s ease 0.2s;
-
-    &:hover {
-        max-width: 240px;
-    }
-}
-
 [class^='membersGroup']:has([role=button]),
 [class^='member'] [class^='container']:has([class*='badges']) {
     display: none;
@@ -642,15 +566,23 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     margin-left: 1px;
 }
 
-[class^=channelTextArea_]:not(:has([class^=stacked]))>[class^=scrollableContainer] {
+[class^=channelTextArea_]:not(:has([class^=stacked]))>[class^=scrollableContainer], [class^=form_]>[class^=wrapper] {
     border: rgb(192, 192, 192) solid;
     border-width: 1px 1px 1px;
-
 }
+
 [class^=channelTextArea_]:has([class^=stacked])>[class^=scrollableContainer] {
     border: rgb(192, 192, 192) solid;
     border-width: 0px 1px 1px;
+}
 
+[class^=stackedBars]>div>div>div>[class^=replyBar_] {
+    border: rgb(192, 192, 192) solid;
+    border-width: 1px 1px 0px;
+}
+
+[class^=channelTextArea]>[class^=stackedBars_] {
+    background: transparent;
 }
 
 [class^=container_]>[class^=theme-dark],
@@ -659,15 +591,19 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 [class^=accountProfile]>[class^=background_],
 [class^=chat_]>[class^=content]>[class^=container_],
 [class^=clipContainer]>[class^=container]>[class^=reply] {
-    background-color: #222228 !important;
+    background-color: #222228;
+}
+
+[class^=memberSinceWrapper_], [class^=memberSinceWrapper]>*:not([class^=divider]) {
+    background: none;
 }
 
 [class^=popout] {
-    background-color: #222228 !important;
+    background-color: #222228;
     border: 1px rgb(192, 192, 192) solid;
 
     &>[class^=flex_]:not([id^=":"]) {
-    background-color: #1a1a1d !important;   
+        background-color: #1a1a1d;
     }
 }
 
@@ -685,13 +621,7 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     --interactive-normal: rgb(221, 218, 224);
     --menu-item-default-hover-bg: rgba(104, 35, 174, 0.395);
     --menu-item-default-active-bg: rgba(70, 15, 125, 0.5);
-     --background-secondary: rgba(0, 0, 0, 0.4);
-}
-
-[class^=stackedBars]>[class^=bar_] {
-    border:  rgb(192, 192, 192) solid;
-    border-width: 1px 1px 0px;
-    background-color: #222228;
+    --background-secondary: rgba(0, 0, 0, 0.4);
 }
 
 [class^=app_],
@@ -703,13 +633,13 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
 [class^=sidebar_]>[class^=container_],
 [class^=sidebar_],
 [class^=sidebarRegion_]>[class^=sidebarRegionScroller_] {
-    background-color: var(--app-background) !important;
-    background: var(--app-background) !important;
+    background-color: var(--app-background);
+    background: var(--app-background);
 }
 
 [class^=container_]>[class^=header_] {
-    box-shadow: none !important;
-    border: none !important;
+    box-shadow: none;
+    border: none;
     background: transparent;
 }
 
@@ -723,11 +653,25 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
         background-color: #222228;
         border-radius: 8px;
         border: 1px rgb(192, 192, 192) solid;
-        margin: 15px 40px 15px 40px;
+        margin: 15px 45px 15px 45px;
     }
-    
+
     &>[class^=listItemContents_] {
         margin: 15px;
+    }
+}
+
+[class^=scroller_]>[class^=itemCard] {
+    background-color: #222228;
+    border-radius: 8px;
+    margin: 10px 0px 10px 0px;
+    transition: all 0.5s ease;
+
+    &:hover {
+        background-color: #222228 !important;
+        border-radius: 8px;
+        border: 1px rgb(192, 192, 192) solid;
+        margin: 10px 15px 10px 15px;
     }
 }
 
@@ -736,13 +680,13 @@ nav[class^="wrapper_"] div[class^="listItem_"]+div[aria-label] {
     border-radius: 8px;
 }
 
-[id^=message-accessories] + [class^=buttonContainer] > [class^=buttons] {
-    top: -27px !important; 
+[id^=message-accessories]+[class^=buttonContainer]>[class^=buttons] {
+    top: -27px;
 }
 
-[class^="searchResultsWrap_"] [class^=container_]:has([class^=pageControlContainer_]){
-  position: sticky;
-  bottom: 0px;
-  z-index: 999;
-  background: #0f0f10;
+[class^="searchResultsWrap_"] [class^=container_]:has([class^=pageControlContainer_]) {
+    position: sticky;
+    bottom: 0px;
+    z-index: 999;
+    background: #0f0f10;
 }
