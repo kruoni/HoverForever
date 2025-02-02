@@ -31,8 +31,7 @@ It respects Discord's banners' size (600x240px). I tried to make it fit the wrap
 ```
 :root {
     --avatar-wrapper-background: /*YOUR OWN IMAGE*/;
-    --avatar-wrapper-background-size: 216px /*MAKE THE IMAGE FIT THE WHOLE WRAPPER HORIZONTALLY*/;
-}
+    --avatar-wrapper-background-size: 216px;
 ```
 ![image](https://github.com/user-attachments/assets/2cb90838-c234-4f18-801d-90bde830c7eb)
 
