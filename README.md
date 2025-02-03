@@ -2,48 +2,58 @@
 
 DMs           |  Servers
 :-------------------------:|:-------------------------:
-![Shows the DMs and Groups with the style applied](https://github.com/user-attachments/assets/cb11d17f-3d49-4e33-ac17-c90d54d708a4)  |  ![Shows a random channel in a server with the style applied](https://github.com/user-attachments/assets/b0d8fd7e-3431-4dee-86ba-61a848484049)
+![Shows the DMs and Groups with the style applied](https://github.com/user-attachments/assets/84cbb1c5-212a-4c0e-9e48-52ca3e00b59d) |  ![Shows a random channel in a server with the style applied](https://github.com/user-attachments/assets/d6c44499-1665-470a-8c6c-3a66e3b84a41)
 
-*Preview might be prone to change.
 
 > [!NOTE]
->I do plan to merge this to completely replace main-surcord so I don't have to rely on SlippingGittys's theme.
+> Previews are capped to around 16 fps, and the [Demonstration](https://github.com/MiniDiscordThemes/Demonstration) theme made it ***even*** more laggier.
 
-> [!IMPORTANT]
-> This is close to merging, I will probably change the previews when done so.
+> [!WARNING]
+> ## CODE CAN BE BROKEN: if needed, file an issue following the template.
+> I will try to optimize the theme when I have more time on my hand, however the code is currently a mess (I am **not** keen to do a full rewrite).
+
 # How To Install:
 
 1- With QuickCSS (or any CSS editors from your client):
 
-`@import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/edge-default-discord/discord-theme.css")`
+`@import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main-theme/discord-theme.css")`
 
-2- With the raw link (for use with Vencord's online theme):
+2- With the raw link (for use with Vencord's online theme, or any other online import using raw links):
 
-`https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/edge-default-discord/discord-theme.css`
+`https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main-theme/discord-theme.css`
 
-3- Save the raw file
+3- Save as a css file:
 
-Save this link as a file and put it where your client wants its theme files to be `https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/edge-default-discord/discord-theme.css`
+Save this link as a file and you'll get a .css file ready to be used: https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main-theme/discord-theme.css
 
 ## Customization
+
+### The :root variables are: 
+```
+:root {
+    --avatar-wrapper-background: /*YOUR OWN IMAGE*/;
+    --avatar-wrapper-background-size: 216px;
+    --app-background: transparent; /* change to #232328 to remove transparency*/
+}
+```
+Check below for more details. 
+
 ### You can change the Image that appears on the avatar Wrapper.
 It respects Discord's banners' size (600x240px). I tried to make it fit the wrapper, so custom sizes might be jamky.
 ```
 :root {
     --avatar-wrapper-background: /*YOUR OWN IMAGE*/;
     --avatar-wrapper-background-size: 216px;
+}
 ```
-![image](https://github.com/user-attachments/assets/2cb90838-c234-4f18-801d-90bde830c7eb)
+![image](https://github.com/user-attachments/assets/f6e56e8f-7686-4375-91f4-313c20ac17b7)
 
-### Transparency is enabled by default (on **Vencord**, don't forget to enable window transparency in its settings).
 
-![image](https://github.com/user-attachments/assets/68ba8a8b-aac5-48a2-b02a-0b69cc38506e)
+### Transparency is enabled by default (for *Vencord*, you have to enable "window transparency" in its settings, for other clients, I sadly do not know how to do so, so check for a setting mentioning transparency).
+
+![image](https://github.com/user-attachments/assets/bd6063c2-91cc-49d4-bd24-755ed3c8fe9f)
 
 To disable the effect, just change the value in the :root part:
 ```
     --app-background: transparent; /* change to #232328 to remove transparency*/
 ```
-
-> [!WARNING]
-> ## CODE CAN BE A LITTLE BIT BROKEN: file an issue if so (please follow the template). 
-> I will try to optimize the theme when I have more time on my hand, however, I don't even understand my own code, so this will be fun (and im **not** really keen to do a full rewrite).
