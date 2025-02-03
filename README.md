@@ -1,3 +1,5 @@
+### Old readme won't bother modifying it.
+
 # Discord Theme to have the laggiest experience ever! (uses [surCord](https://github.com/SlippingGittys-Discord-Themes/surCord) for the time being).
 ## Check the other branch for more frequent updates + a full theme without requiring surCord
 
@@ -12,13 +14,13 @@ DMs           |  Servers
 
 # How To Install:
 1- With QuickCSS (or any CSS editors from your client):
-`@import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main-surcord/discord-theme.css")`
+`@import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/legacy-surcord/discord-theme.css")`
 
 2- With the raw link (for use with Vencord's online theme):
-`https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main-surcord/discord-theme.css`
+`https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/legacy-surcord/discord-theme.css`
 
 3- Save the raw file
-Same link as before (`https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main-surcord/discord-theme.css`) but here you can save the page as a file, recommended if you want to make changes to the theme without polluting your quick css, but you'll have to check for updates.
+Same link as before (`https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/legacy-surcord/discord-theme.css`) but here you can save the page as a file, recommended if you want to make changes to the theme without polluting your quick css, but you'll have to check for updates.
 
 ## Customization
 ### You can change the Image that appears on the avatar Wrapper.
