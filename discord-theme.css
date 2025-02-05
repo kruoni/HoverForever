@@ -99,8 +99,8 @@
     }
 }
 
-.media-engine-video[class^=mirror_] {
-    transform: none
+.media-engine-video[class*=mirror_] {
+    transform: none;
 }
 
 [class^=wrapper],
@@ -393,7 +393,7 @@
         width: 50px;
         transition: margin-left 0.6s 0.2s, width 0.6s 0.2s ease;
 
-        [class^=containerDefault_]:is([draggable=true]) {
+        [class^=containerDefault__] {
             opacity: 0;
             margin-bottom: -40px;
             transition: opacity 1s 0.2s, margin-bottom 0.7s 0.4s ease;
@@ -404,7 +404,7 @@
          margin-left: 0;
             width: 240px;
 
-            [class^=containerDefault_]:is([draggable=true]) {
+            [class^=containerDefault__] {
                 opacity: 1;
                 margin-bottom: 0;
             }
@@ -429,6 +429,15 @@
             opacity: 1;
         }
     }
+}
+
+
+[class^=notAppAside]:hover:not([class^=sidebar_], [class^=wrapper]) [class^=title_] [class^=titleWrapper]  {
+        margin-top: 0;
+}
+
+[class^=clickTrap], [class^=backdrop__] {
+    pointer-events: none !important;
 }
 
 [class^=chat_] {
@@ -469,7 +478,6 @@
 
 [class^=tabBody],
 [class^=content] {
-
     [class^=nowPlayingColumn],
     [class^=outer_] {
         margin-right: -30%;
@@ -553,8 +561,6 @@
 }
 
 [class^=content] {
-
-
     &>[class^=chatContent] {
         max-width: 100%;
     }
