@@ -31,9 +31,10 @@ Save this link as a file and you'll get a .css file ready to be used: https://ra
 ### The :root variables are: 
 ```
 :root {
-    --avatar-wrapper-background: /*YOUR OWN IMAGE*/;
+    --avatar-wrapper-background:  /*YOUR OWN IMAGE*/;
     --avatar-wrapper-background-size: 216px;
-    --app-background: transparent; /* change to #232328 to remove transparency*/
+    --app-background: transparent;
+    /* change to #222228 for dark mode, or #dad5cf for light mode, to remove transparency*/
 }
 ```
 Check below for more details. 
@@ -55,5 +56,7 @@ It respects Discord's banners' size (600x240px). I tried to make it fit the wrap
 
 To disable the effect, just change the value in the :root part:
 ```
-    --app-background: transparent; /* change to #232328 to remove transparency*/
+:root {
+    /* change to #222228 for dark mode, or #dad5cf for light mode, to remove transparency*/
+}
 ```
