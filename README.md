@@ -6,7 +6,7 @@ DMs           |  Servers
 
 
 > [!NOTE]
-> Previews are capped to around 16 fps, and the [Demonstration](https://github.com/MiniDiscordThemes/Demonstration) theme made it ***even*** more laggier.
+> Previews are capped to around 16 fps, and the [Demonstration](https://github.com/MiniDiscordThemes/Demonstration) theme made them ***even*** more laggier.
 
 > [!WARNING]
 > ## CODE CAN BE BROKEN: if needed, file an issue following the template.
