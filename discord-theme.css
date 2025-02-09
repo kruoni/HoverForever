@@ -44,7 +44,7 @@
     --avatar-wrapper-background: url('https://img.freepik.com/photos-gratuite/fond-ecran-colore-flou-artistique_58702-8654.jpg');
     --avatar-wrapper-background-size: 216px;
     --app-background: transparent;
-    /* change to #222228 for dark mode, or #dad5cf for light mode, to remove transparency*/
+    /* change to --color-bg-dark2 for dark mode, or --color-bg-light2 for light mode, to remove transparency */
     --color-bg-light1: #eee8df;
     --color-bg-light2: #dad5cf;
     --color-border-light: #242322;
