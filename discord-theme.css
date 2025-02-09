@@ -41,7 +41,7 @@
 @import url('https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main-theme/theme.css');
 
 :root {
-    --avatar-wrapper-background: url(https://usrbg.is-hardly.online/usrbg/v2/1013402777201938432?3097);
+    --avatar-wrapper-background: url'(https://img.freepik.com/photos-gratuite/fond-ecran-colore-flou-artistique_58702-8654.jpg');
     --avatar-wrapper-background-size: 216px;
     --app-background: transparent;
     /* change to #222228 for dark mode, or #dad5cf for light mode, to remove transparency*/
