@@ -1,21 +1,24 @@
 .theme-dark {
-    --background-accent: rgb(221, 218, 224);
-    --background-modifier-selected: rgba(104, 35, 174, 0.395);
-    --background-modifier-hover: rgba(214, 201, 226, 0.3);
-    --background-modifier-active: rgba(70, 15, 125, 0.5);
+    --background-accent: #dddae0;
+    --background-modifier-selected: var(--color-accent-button);
+    --background-modifier-hover: #d6c9e24d;
+    --background-modifier-active: var(--color-accent-button-hover);
     --channeltextarea-background: var(--color-bg-dark2);
     --background-primary: var(--color-bg-dark1);
     --background-floating: var(--color-bg-dark2);
-    --background-secondary: rgba(0, 0, 0, 0.4);
+    --background-secondary: #00000066;
     --background-secondary-alt: var(--color-bg-dark2);
     --background-tertiary: var(--color-bg-dark2);
-    --channels-default: rgb(221, 218, 224);
-    --channel-icon: rgb(104, 35, 174);
-    --interactive-normal: rgb(221, 218, 224);
-    --menu-item-default-hover-bg: rgba(104, 35, 174, 0.395);
-    --menu-item-default-active-bg: rgba(70, 15, 125, 0.5);
-    --button-filled-brand-background: rgba(104, 35, 174, 0.395);
-    --button-filled-brand-background-hover: rgba(70, 15, 125, 0.5);
+    --channels-default: #dddae0;
+    --channel-icon: var(--color-channel-icon);
+    --interactive-normal: #dddae0;
+    --menu-item-default-hover-bg: var(--color-accent-button);
+    --menu-item-default-active-bg: var(--color-accent-button-hover);
+    --button-filled-brand-background: var(--color-accent-button);
+    --button-filled-brand-background-hover: var(--color-accent-button-hover);
+    --brand-500: var(--color-accent-button);
+    --brand-experiement-560: var(--color-accent-button);
+    --brand-experiement-500: var(--color-accent-button);
 
     [class^=panels] {
         border: var(--color-border-dark) solid;
@@ -44,18 +47,24 @@
         }
     }
 
+    [class^=messagesPopoutWrap] {
+        background-color: var(--color-bg-dark1) !important;
+        border: 1px var(--color-border-dark) solid;
+        border-radius: 8px;
+    }
+
     [class^=nowPlayingColumn]>[class^=container_] {
         background-color: var(--color-bg-dark2);
     }
 
     [class^=menu_] {
         border: 1px var(--color-border-dark) solid;
-        border-radius: 16px;
+        border-radius: 8px;
     }
 
     [class^=submenu_] {
         border: 1px var(--color-border-dark) solid;
-        border-radius: 16px;
+        border-radius: 8px;
         margin-left: 3px;
     }
 
@@ -85,11 +94,12 @@
     }
 
     [class^=popout] {
-        background-color: var(--color-bg-dark2);
+        background-color: var(--color-bg-dark1);
         border: 1px var(--color-border-dark) solid;
 
         &>[class^=flex_]:not([id^=":"]) {
             background-color: var(--color-bg-dark1);
+            border-radius: 0px 0px 8px 8px;
         }
     }
 
@@ -124,12 +134,12 @@
         border: 1px var(--color-border-dark) solid;
         border-radius: 8px 8px 8px 8px;
 
-        &:not(:has([class*=vcd-screen-picker-modal]))>[class^=content] {
+        [class^=content]:not([class*=vcd-screen-picker-modal], [type="button"]>*) {
             background: var(--color-bg-dark2);
             border-radius: 8px 8px 0px 0px;
         }
 
-        &:has([class*=vcd-screen-picker-modal])>[class^=content] {
+        [class*=content]:is([class*=vcd-screen-picker-modal]) {
             background: var(--color-bg-dark2);
             border-radius: 0px 0px 0px 0px;
         }
@@ -137,6 +147,10 @@
         [class*=vcd-screen-picker-header] {
             background: var(--color-bg-dark1) !important;
             border-radius: 8px 8px 0px 0px !important;
+        }
+
+        [class*=vcd-screen-picker-option]:not([data-checked="true"]), section>[class^=select__] {
+            background: var(--color-bg-dark1)
         }
 
         [class*=vcd-screen-picker-modal] {
@@ -156,29 +170,32 @@
 
     }
 
-    [class^=overlay_] {
+    /*[class^=overlay_]:not([class*=card], [class*=menuOverlay]) {
         background: var(--color-bg-dark2);
-    }
+    }*/
 }
 
 .theme-light {
-    --background-accent: rgb(221, 218, 224);
-    --background-modifier-selected: rgba(104, 35, 174, 0.395);
-    --background-modifier-hover: rgba(214, 201, 226, 0.3);
-    --background-modifier-active: rgba(70, 15, 125, 0.5);
+    --background-accent: #dddae0;
+    --background-modifier-selected: var(--color-accent-button);
+    --background-modifier-hover: #d6c9e24d;
+    --background-modifier-active: var(--color-accent-button-hover);
     --channeltextarea-background: var(--color-bg-light2);
     --background-primary: var(--color-bg-light1);
     --background-floating: var(--color-bg-light2);
-    --background-secondary: rgba(255, 255, 255, 0.4);
+    --background-secondary: #ffffff66;
     --background-secondary-alt: var(--color-bg-light2);
     --background-tertiary: var(--color-bg-light2);
-    --channels-default: #2f2f2e;
-    --channel-icon: rgb(104, 35, 174);
-    --interactive-normal: #2f2f2e;
-    --menu-item-default-hover-bg: rgba(104, 35, 174, 0.395);
-    --menu-item-default-active-bg: rgba(70, 15, 125, 0.5);
-    --button-filled-brand-background: rgba(104, 35, 174, 0.395);
-    --button-filled-brand-background-hover: rgba(70, 15, 125, 0.5);
+    --channels-default: #2e2e2d;
+    --channel-icon: var(--color-channel-icon);
+    --interactive-normal: #2e2e2d;
+    --menu-item-default-hover-bg: var(--color-accent-button);
+    --menu-item-default-active-bg: var(--color-accent-button-hover);
+    --button-filled-brand-background: var(--color-accent-button);
+    --button-filled-brand-background-hover: var(--color-accent-button-hover);
+    --brand-500: var(--color-accent-button);
+    --brand-experiement-560: var(--color-accent-button);
+    --brand-experiement-500: var(--color-accent-button);
 
     [class^=panels] {
         border: var(--color-border-light) solid;
@@ -207,25 +224,37 @@
         }
     }
 
+    [class^=messagesPopoutWrap] {
+        background-color: var(--color-bg-light1) !important;
+        border: 1px var(--color-border-light) solid;
+        border-radius: 8px;
+    }
+
     [class^=nowPlayingColumn]>[class^=container_] {
         background-color: var(--color-bg-light2);
     }
 
     [class^=menu_] {
         border: 1px var(--color-border-light) solid;
-        border-radius: 16px;
+        border-radius: 8px;
     }
 
     [class^=submenu_] {
         border: 1px var(--color-border-light) solid;
-        border-radius: 16px;
+        border-radius: 8px;
         margin-left: 3px;
     }
 
-    [class^=channelTextArea_]:not(:has([class^=stacked]))>[class^=scrollableContainer],
+    [class^=channelTextArea_]:not(:has([class^=stackedBars]))>[class^=scrollableContainer],
     [class^=form_]>[class^=wrapper] {
         border: 1px var(--color-border-light) solid;
         border-width: 1px 1px 1px;
+    }
+
+    [class*=bottomBar] {
+        background-color: var(--color-bg-light2) !important;
+        border: 1px var(--color-border-light) solid;
+        width: 360px;
     }
 
     [class^=channelTextArea_]:has([class^=stacked])>[class^=scrollableContainer] {
@@ -248,11 +277,13 @@
     }
 
     [class^=popout] {
-        background-color: var(--color-bg-light2);
+        background-color: var(--color-bg-light1);
         border: 1px var(--color-border-light) solid;
-
+        border-radius: 8px;
+        
         &>[class^=flex_]:not([id^=":"]) {
             background-color: var(--color-bg-light1);
+            border-radius: 0px 0px 8px 8px;
         }
     }
 
@@ -286,19 +317,23 @@
         border: 1px var(--color-border-light) solid;
         border-radius: 8px 8px 8px 8px;
 
-        &:not(:has([class*=vcd-screen-picker-modal]))>[class^=content] {
+        [class^=content]:not([class*=vcd-screen-picker-modal], [type="button"]>*) {
             background: var(--color-bg-light1);
             border-radius: 8px 8px 0px 0px;
         }
-       
-        &:has([class*=vcd-screen-picker-modal])>[class^=content] {
+
+        [class^=content]:is([class*=vcd-screen-picker-modal]) {
             background: var(--color-bg-light1);
             border-radius: 0px 0px 0px 0px;
         }
-        
+
         [class*=vcd-screen-picker-header] {
             background: var(--color-bg-light2) !important;
             border-radius: 8px 8px 0px 0px !important;
+        }
+
+        [class*=vcd-screen-picker-option]:not([data-checked="true"]), section>[class^=select__] {
+            background: var(--color-bg-light2)
         }
 
         [class*=horizontalReverse_] {
@@ -312,9 +347,9 @@
         }
     }
 
-    [class^=overlay_] {
+    /*[class^=overlay_]:not([class*=card], [class*=menuOverlay]) {
         background: var(--color-bg-light2);
-    }
+    }*/
 }
 
 [class*=unreadMentionsFixedFooter_] {
@@ -507,7 +542,7 @@
         margin-bottom: 4px;
         border-radius: 32px;
         background-color: transparent;
-        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.719);
+        box-shadow: 1px 1px 5px rgb(0, 0, 0);
         transition: margin-left 0.4s 0.2s, margin-top 0.4s 0.2s, margin-right 0.4s 0.2s ease;
     }
 
@@ -787,7 +822,7 @@
 [class^=content] {
 
     [class^=nowPlayingColumn],
-    [class^=outer_] {
+    &>[class^=outer_] {
         margin-right: -30%;
         max-width: 30%;
         transition: margin-right 0.7s 0.2s ease;
