@@ -36,7 +36,7 @@
      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▓ 
     ▓▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█
  */
-@import: url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main-theme/theme.css");
+@import url('https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main-theme/theme.css');
 
 :root {
     --avatar-wrapper-background: url(https://usrbg.is-hardly.online/usrbg/v2/1013402777201938432?3097);
