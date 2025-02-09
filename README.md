@@ -16,7 +16,7 @@ DMs           |  Servers
 
 1- With QuickCSS (or any CSS editors from your client):
 
-`@import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main-theme/discord-theme.css")`
+`@import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main-theme/discord-theme.css");`
 
 2- With the raw link (for use with Vencord's online theme, or any other online import using raw links):
 
