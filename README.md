@@ -31,10 +31,18 @@ Save this link as a file and you'll get a .css file ready to be used: https://ra
 ### The :root variables are: 
 ```
 :root {
-    --avatar-wrapper-background:  /*YOUR OWN IMAGE*/;
+    --avatar-wrapper-background: /* YOUR OWN IMAGE HERE */;
     --avatar-wrapper-background-size: 216px;
     --app-background: transparent;
     /* change to #222228 for dark mode, or #dad5cf for light mode, to remove transparency*/
+    --color-bg-light1: #eee8df;
+    --color-bg-light2: #dad5cf;
+    --color-border-light: #242322;
+    --color-panel-light: #dad5cfa5;
+    --color-bg-dark1: #1a1a1d;
+    --color-bg-dark2: #222228;
+    --color-border-dark: #c0c0c0;
+    --color-panel-dark: #222228a5;
 }
 ```
 Check below for more details. 
