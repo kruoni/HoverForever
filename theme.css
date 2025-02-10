@@ -1022,3 +1022,7 @@
     border-radius: 8px 8px 8px;
     margin: 5px 3px 5px 10px;
 }
+
+[class^=overlay_]>[class^=body]>[class^=content] {
+    background: transparent !important;
+}
