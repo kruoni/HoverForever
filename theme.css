@@ -31,18 +31,9 @@
         border-width: 1px 1px 1px;
     }
 
-    [class^=panels]>[class^=container_] {
-        background-color: var(--color-panel-dark);
-    }
-
-    [class^=panels] [class^=panel_] {
-        background-color: var(--color-panel-dark);
-    }
-
-    [class^=panels]:has([class^=panel_])>[class^=wrapper_]>[class^=container_] {
-        background-color: var(--color-panel-dark);
-    }
-
+    [class^=panels] [class^=panel_],
+    [class^=panels]>[class^=container_],
+    [class^=panels]:has([class^=panel_])>[class^=wrapper_]>[class^=container_],
     [class^=panels]:not(:has([class^=panel_]))>[class^=wrapper_]>[class^=container_] {
         background-color: var(--color-panel-dark);
     }
@@ -56,11 +47,7 @@
     [class^=messagesPopoutWrap] {
         background-color: var(--color-bg-dark1) !important;
         border: 1px var(--color-border-dark) solid;
-                border-radius: 8px;
-    }
-
-    [class^=nowPlayingColumn]>[class^=container_] {
-        background-color: var(--color-bg-dark2);
+        border-radius: 8px;
     }
 
     [class^=menu_] {
@@ -95,7 +82,8 @@
     [class^=background_]>[class^=fieldList_],
     [class^=accountProfile]>[class^=background_],
     [class^=chat_]>[class^=content]>[class^=container_],
-    [class^=container]>[class^=reply] {
+    [class^=container]>[class^=reply],
+    [class^=nowPlayingColumn]>[class^=container_] {
         background-color: var(--color-bg-dark2);
     }
 
@@ -155,7 +143,8 @@
             border-radius: 8px 8px 0px 0px !important;
         }
 
-        [class*=vcd-screen-picker-option]:not([data-checked="true"]), section>[class^=select__] {
+        [class*=vcd-screen-picker-option]:not([data-checked="true"]),
+        section>[class^=select__] {
             background: var(--color-bg-dark1)
         }
 
@@ -175,10 +164,6 @@
         }
 
     }
-
-    /*[class^=overlay_]:not([class*=card], [class*=menuOverlay]) {
-        background: var(--color-bg-dark2);
-    }*/
 }
 
 .theme-light {
@@ -214,18 +199,9 @@
         border-width: 1px 1px 1px;
     }
 
-    [class^=panels]>[class^=container_] {
-        background-color: var(--color-panel-light);
-    }
-
-    [class^=panels] [class^=panel_] {
-        background-color: var(--color-panel-light);
-    }
-
-    [class^=panels]:has([class^=panel_])>[class^=wrapper_]>[class^=container_] {
-        background-color: var(--color-panel-light);
-    }
-
+    [class^=panels]>[class^=container_],
+    [class^=panels] [class^=panel_],
+    [class^=panels]:has([class^=panel_])>[class^=wrapper_]>[class^=container_],
     [class^=panels]:not(:has([class^=panel_]))>[class^=wrapper_]>[class^=container_] {
         background-color: var(--color-panel-light);
     }
@@ -240,10 +216,6 @@
         background-color: var(--color-bg-light1) !important;
         border: 1px var(--color-border-light) solid;
         border-radius: 8px;
-    }
-
-    [class^=nowPlayingColumn]>[class^=container_] {
-        background-color: var(--color-bg-light2);
     }
 
     [class^=menu_] {
@@ -284,7 +256,8 @@
     [class^=background_]>[class^=fieldList_],
     [class^=accountProfile]>[class^=background_],
     [class^=chat_]>[class^=content]>[class^=container_],
-    [class^=container]>[class^=reply] {
+    [class^=container]>[class^=reply],
+    [class^=nowPlayingColumn]>[class^=container_] {
         background-color: var(--color-bg-light2);
     }
 
@@ -292,7 +265,7 @@
         background-color: var(--color-bg-light1);
         border: 1px var(--color-border-light) solid;
         border-radius: 8px;
-        
+
         &>[class^=flex_]:not([id^=":"]) {
             background-color: var(--color-bg-light1);
             border-radius: 0px 0px 8px 8px;
@@ -344,7 +317,8 @@
             border-radius: 8px 8px 0px 0px !important;
         }
 
-        [class*=vcd-screen-picker-option]:not([data-checked="true"]), section>[class^=select__] {
+        [class*=vcd-screen-picker-option]:not([data-checked="true"]),
+        section>[class^=select__] {
             background: var(--color-bg-light2)
         }
 
@@ -358,10 +332,6 @@
             border-radius: 8px 8px 0px 0px;
         }
     }
-
-    /*[class^=overlay_]:not([class*=card], [class*=menuOverlay]) {
-        background: var(--color-bg-light2);
-    }*/
 }
 
 [class*=unreadMentionsFixedFooter_] {
@@ -631,15 +601,23 @@
 
     #vc-spotify-info-wrapper {
         padding: 0;
-        transition: all 0.2s 0.2s ease;
+        transition: padding 0s 0.2s ease;
     }
 
-    &:hover #vc-spotify-info-wrapper {
+    &:hover [class^=panels]:not(:has([class^=wrapper]>[class^=container_])) #vc-spotify-info-wrapper {
         padding: 2px;
+    }
+
+    &:hover [class^=panels]:has([class^=wrapper]>[class^=container_]) #vc-spotify-info-wrapper {
+        padding: 0px 2px 0px 2px;
     }
 
     [class^=panels]:has([class^=wrapper]>[class^=container_]) #vc-spotify-player {
         border-radius: 0 0 0 0;
+    }
+
+    #vc-spotify-album-image {
+        border-radius: 8px
     }
 
     &:hover [class^=panels]:has(#vc-spotify-player)>[class^=container_] {
@@ -932,14 +910,8 @@
 }
 
 [class^='membersGroup']:has([role=button]),
-[class^='member'] [class^='container']:has([class*='badges']) {
-    display: none;
-}
-
-[class^=voiceChannelsButton_] {
-    display: none;
-}
-
+[class^='member'] [class^='container']:has([class*='badges']),
+[class^=voiceChannelsButton_],
 [class^=containerPadding_]>[class^=bar_] {
     display: none;
 }
@@ -948,13 +920,11 @@
     margin-left: 1px;
 }
 
-[class^=channelTextArea]>[class^=stackedBars_] {
-    background: transparent;
-}
-
+[class^=channelTextArea]>[class^=stackedBars_],
 [class^=memberSinceWrapper_],
-[class^=memberSinceWrapper]>*:not([class^=divider]) {
-    background: none;
+[class^=memberSinceWrapper]>*:not([class^=divider]),
+[class^=overlay_]>[class^=body]>[class^=content] {
+    background: transparent !important;
 }
 
 [class^=app_],
@@ -1023,6 +993,10 @@
     margin: 5px 3px 5px 10px;
 }
 
-[class^=overlay_]>[class^=body]>[class^=content] {
-    background: transparent !important;
+[type="button"] {
+    border-radius: 8px;
+}
+
+[class^=newMessagesBar] {
+    backdrop-filter: blur(1rem);
 }
