@@ -19,6 +19,27 @@
     --brand-500: var(--color-accent-button);
     --brand-experiement-560: var(--color-accent-button);
     --brand-experiement-500: var(--color-accent-button);
+    --primary-500: var(--color-accent-button);
+    --primary-860: invert(1);
+
+    [class^=focusLock]>[class^=container_] {
+        box-shadow: 1px 1px 5px #525252;
+        border-radius: 8px;
+
+        [class^=inviteSplash] {
+            border: var(--color-border-dark) solid;
+            border-radius: 0px 8px 8px 0px;
+            border-width: 1px 1px 1px 0px;
+        }
+
+        &>[class^=content_] {
+            background-color: var(--color-bg-dark2);
+            border: var(--color-border-dark) solid;
+            border-radius: 8px 8px 8px 8px;
+            border-width: 1px 1px 1px 1px;
+            transform: scale(1.02) translateX(-2px);
+        }
+    }
 
     [class^=panels] {
         border: var(--color-border-dark) solid;
@@ -128,7 +149,7 @@
         border: 1px var(--color-border-dark) solid;
         border-radius: 8px 8px 8px 8px;
 
-        [class^=content]:not([class*=vcd-screen-picker-modal], [type="button"]>*) {
+        &>[class^=content]:not([class*=vcd-screen-picker-modal], [type="button"]>*) {
             background: var(--color-bg-dark2);
             border-radius: 8px 8px 0px 0px;
         }
@@ -187,6 +208,27 @@
     --brand-500: var(--color-accent-button);
     --brand-experiement-560: var(--color-accent-button);
     --brand-experiement-500: var(--color-accent-button);
+    --primary-500: var(--color-accent-button);
+    --primary-860: invert(1);
+
+    [class^=focusLock]>[class^=container_] {
+        box-shadow: 1px 1px 5px #000000;
+        border-radius: 8px;
+
+        [class^=inviteSplash] {
+            border: var(--color-border-light) solid;
+            border-radius: 0px 8px 8px 0px;
+            border-width: 1px 1px 1px 0px;
+        }
+
+        &>[class^=content_] {
+            background-color: var(--color-bg-light1);
+            border: var(--color-border-light) solid;
+            border-radius: 8px 8px 8px 8px;
+            border-width: 1px 1px 1px 1px;
+            transform: scale(1.02) translateX(-2px);
+        }
+    }
 
     [class^=panels] {
         border: var(--color-border-light) solid;
@@ -302,7 +344,7 @@
         border: 1px var(--color-border-light) solid;
         border-radius: 8px 8px 8px 8px;
 
-        [class^=content]:not([class*=vcd-screen-picker-modal], [type="button"]>*) {
+        &>[class^=content]:not([class*=vcd-screen-picker-modal], [type="button"]>*) {
             background: var(--color-bg-light1);
             border-radius: 8px 8px 0px 0px;
         }
@@ -523,7 +565,7 @@
         margin-bottom: 4px;
         border-radius: 32px;
         background-color: transparent;
-        box-shadow: 1px 1px 5px rgb(0, 0, 0);
+        box-shadow: 1px 1px 5px #000000;
         transition: margin-left 0.4s 0.2s, margin-top 0.4s 0.2s, margin-right 0.4s 0.2s ease;
     }
 
@@ -972,10 +1014,21 @@
     }
 }
 
-[class^=scroller_]>[role^=group]>[class^=item_],
-[role^=group]>div>[class^=item_],
-[class^=channel__]>[class^=interactive] {
+[data-list-item-id*=channels___] {
+    max-width: 96%;
     border-radius: 8px;
+}
+
+[class^=linkTop], [class^=avatar]>[class^=wrapper] {
+    transform: translateX(2px);
+}
+
+[class^=userInfo]>[class^=wrapper] {
+    translate: 0px 4px;
+}
+
+[class^=channel__]>[class^=interactive] {
+    max-width: 99%;
 }
 
 [id^=message-accessories]+[class^=buttonContainer]>[class^=buttons] {
@@ -993,10 +1046,23 @@
     margin: 5px 3px 5px 10px;
 }
 
-[type="button"] {
-    border-radius: 8px;
+[type="button"]:not([class*=centerButton]),
+[role="menuitem"],
+[class^=side_]>[class^=item_],
+[class^=tabBar_]>[class^=item_],
+[class^=channel__]>[class^=interactive],
+[type="submit"] {
+    border-radius: 8px !important;
+}
+
+[class^=dot__] {
+    display: none;
 }
 
 [class^=newMessagesBar] {
     backdrop-filter: blur(1rem);
+}
+
+[class*=colorable]:not([class*=red_]) {
+    background: var(--color-accent-button) !important;
 }
