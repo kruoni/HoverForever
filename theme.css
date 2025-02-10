@@ -25,6 +25,12 @@
         border-width: 1px 1px 1px;
     }
 
+    #vc-spotify-player {
+        background-color: var(--color-panel-dark);
+        border: var(--color-border-dark) solid;
+        border-width: 1px 1px 1px;
+    }
+
     [class^=panels]>[class^=container_] {
         background-color: var(--color-panel-dark);
     }
@@ -50,7 +56,7 @@
     [class^=messagesPopoutWrap] {
         background-color: var(--color-bg-dark1) !important;
         border: 1px var(--color-border-dark) solid;
-        border-radius: 8px;
+                border-radius: 8px;
     }
 
     [class^=nowPlayingColumn]>[class^=container_] {
@@ -198,6 +204,12 @@
     --brand-experiement-500: var(--color-accent-button);
 
     [class^=panels] {
+        border: var(--color-border-light) solid;
+        border-width: 1px 1px 1px;
+    }
+
+    #vc-spotify-player {
+        background-color: var(--color-panel-light);
         border: var(--color-border-light) solid;
         border-width: 1px 1px 1px;
     }
@@ -508,7 +520,6 @@
         }
     }
 
-
     [class^=panels]>[class^=container]>[class^=flex] {
         visibility: hidden;
         opacity: 0;
@@ -610,6 +621,31 @@
         transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s, border 0s 0.2s ease;
     }
 
+    [class^=panels] #vc-spotify-player {
+        visibility: hidden;
+        opacity: 0;
+        border-radius: 32px 32px 0 0;
+        margin-top: -135px;
+        transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s, border 0s 0.2s ease;
+    }
+
+    #vc-spotify-info-wrapper {
+        padding: 0;
+        transition: all 0.2s 0.2s ease;
+    }
+
+    &:hover #vc-spotify-info-wrapper {
+        padding: 2px;
+    }
+
+    [class^=panels]:has([class^=wrapper]>[class^=container_]) #vc-spotify-player {
+        border-radius: 0 0 0 0;
+    }
+
+    &:hover [class^=panels]:has(#vc-spotify-player)>[class^=container_] {
+        border-radius: 0 0 32px 32px;
+    }
+
     &:hover [class^=panels]:not(:has([class^=panel_]))>[class^=container_] {
         border-radius: 0 0 32px 32px;
         border-width: 0px 1px 0px;
@@ -625,8 +661,9 @@
         border-width: 1px 1px 1px;
     }
 
-    &:hover [class^=panels]>[class^=wrapper_]>[class^=container_],
-    &:hover [class^=panels]>[class^=panel_] {
+    &:hover [class^=panels] [class^=wrapper_] [class^=container_],
+    &:hover [class^=panels] [class^=panel_],
+    &:hover [class^=panels] #vc-spotify-player {
         visibility: visible;
         margin-top: 0;
         opacity: 1;
