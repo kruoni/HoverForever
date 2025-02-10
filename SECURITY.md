@@ -9,5 +9,5 @@
 
 ## Reporting a Vulnerability
 
-Even though this is a discord theme, code can be tricky (especially if I use a custom link that ends up being BAD).
-If you do need though, to report a security vulnerability (which I highly doubt), open an issue or contact me at contact@kruoni.xyz.
+Even though this is a discord theme, code can be tricky (especially if a bad link is used).
+If you do need though, to report a security vulnerability, open an issue following the template, or contact me directly at contact@kruoni.xyz.
