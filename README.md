@@ -34,7 +34,7 @@ Save this link as a file and you'll get a .css file ready to be used: https://ra
     --avatar-wrapper-background: /*YOUR OWN IMAGE*/;
     --avatar-wrapper-background-size: 216px;
     --app-background: transparent;
-    /* change to --color-bg-dark2 for dark mode, or --color-bg-light2 for light mode, to remove transparency*/
+    /* change to var(--color-bg-dark2) for dark mode, or var(--color-bg-light2) for light mode, to remove transparency*/
     --color-bg-light1: #eee8df;
     --color-bg-light2: #dad5cf;
     --color-border-light: #242322;
