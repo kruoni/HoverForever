@@ -447,21 +447,18 @@
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcuMzkyOTMgMy4wMDg5M0wzLjAwODg3IDcuMzkyOTlMMi44MTc5NSAyLjgxODAxTDcuMzkyOTMgMy4wMDg5M1oiIGZpbGw9IiMwMjZBMTUiLz4KPHBhdGggZD0iTTQuNjA2OTUgOC45OTEwMUw4Ljk5MTAxIDQuNjA2OTVMOS4xODE5MyA5LjE4MTkzTDQuNjA2OTUgOC45OTEwMVogIiBmaWxsPSIjMDI2QTE1Ii8+Cjwvc3ZnPg==);
 }
 
-[aria-label="Servers sidebar"] {
+[class*=guilds_] {
     margin-top: 29px;
 }
 
 .expression-picker-chat-input-button:not(:last-child):not([class^=buttons]:has([class^=separator])>.expression-picker-chat-input-button:nth-last-child(2)),
-[aria-label="Send a gift"],
+[class^=container]>[class^=button],
 [href="/shop"],
 [href="/store"],
-[aria-label="Help"],
-[aria-label="Inbox"],
-[aria-label="Apps"],
-[aria-label="Start Video Call"],
-[aria-label="Start An Activity"],
-[aria-label="Play Activities here"],
-[class^=linkTop]>[class^=children] {
+[class^=channelAppLauncher]>div>[class^=button_],
+[class^=toolbar_]>*:is(:nth-child(2), :nth-last-child(3), :nth-last-child(2)),
+[class^=linkTop]>[class^=children],
+[data-list-item-id^=guildsnav___app] {
     display: none;
 }
 
@@ -624,12 +621,12 @@
         transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s, border 0s 0.2s ease;
     }
 
-    &>[class^=panels]:not(:has([class^=panel_]))>[class^=wrapper_]>[class^=container_] {
+    &>[class^=panels]:not(:has([class^=panel_]))>div>[class^=container_] {
         border-radius: 32px 32px 0 0;
         margin-top: -104px;
     }
 
-    &>[class^=panels]:has([class^=panel_])>[class^=wrapper_]>[class^=container_] {
+    &>[class^=panels]:has([class^=panel_])>div>[class^=container_] {
         border-radius: 0 0 0 0;
     }
 
@@ -641,7 +638,7 @@
         transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s, border 0s 0.2s ease;
     }
 
-    [class^=panels] #vc-spotify-player {
+    #vc-spotify-player {
         visibility: hidden;
         opacity: 0;
         border-radius: 32px 32px 0 0;
@@ -649,21 +646,61 @@
         transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s, border 0s 0.2s ease;
     }
 
+    #vc-spotify-player:has(#vc-spotify-album-expanded-wrapper) {
+        visibility: hidden;
+        opacity: 0;
+        border-radius: 32px 32px 0 0;
+        margin-top: -100px;
+        transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s, border 0s 0.2s ease;
+
+        #vc-spotify-album-image {
+            border-radius: 32px;
+            margin-bottom: -7px;
+        }
+    }
+
+    &:hover #vc-spotify-player:has(#vc-spotify-album-expanded-wrapper) {
+        visibility: visible;
+        opacity: 1;
+        border-radius: 32px 32px 0 0;
+        margin-top: 0px;
+    }
+
+    [class^=panels]:has(div>[class^=container_]) #vc-spotify-player:has(#vc-spotify-album-expanded-wrapper) {
+        border-radius: 0 0 0 0;
+        margin-top: -94px;
+
+        #vc-spotify-album-image {
+            border-radius: 8px;
+            margin-bottom: 0;
+        }
+    }
+
+    &:hover [class^=panels]:has(div>[class^=container_]) #vc-spotify-player:has(#vc-spotify-album-expanded-wrapper) {
+        margin-top: 0;
+    }
+
     #vc-spotify-info-wrapper {
         padding: 0;
         transition: padding 0s 0.2s ease;
     }
 
-    &:hover [class^=panels]:not(:has([class^=wrapper]>[class^=container_])) #vc-spotify-info-wrapper {
+    &:hover [class^=panels]:not(:has(div>[class^=container_])) #vc-spotify-info-wrapper {
         padding: 2px;
     }
 
-    &:hover [class^=panels]:has([class^=wrapper]>[class^=container_]) #vc-spotify-info-wrapper {
+    &:hover [class^=panels]:has(div>[class^=container_]) #vc-spotify-info-wrapper {
         padding: 0px 2px 0px 2px;
     }
 
-    [class^=panels]:has([class^=wrapper]>[class^=container_]) #vc-spotify-player {
+    [class^=panels]:has(div>[class^=container_]) #vc-spotify-player {
         border-radius: 0 0 0 0;
+        margin-top: -121px;
+    }
+
+    &:hover [class^=panels]:has(div>[class^=container_]) #vc-spotify-player {
+        border-radius: 0 0 0 0;
+        margin-top: 0;
     }
 
     #vc-spotify-album-image {
@@ -684,7 +721,7 @@
         border-width: 0px 1px 1px;
     }
 
-    &:hover [class^=panels]:not(:has([class^=wrapper]>[class^=container_]>[class^=flex]))>[class^=container_] {
+    &:hover [class^=panels]:not(:has(div>div>[class^=flex]))>[class^=container_] {
         border-radius: 32px;
         border-width: 1px 1px 1px;
     }
@@ -770,7 +807,7 @@
             transition: margin-top 1s 0.2s ease;
         }
 
-        &:not(:has([class^=animated]))>[class^=container_]:not(:has([class^=scroller_]>[class^=content_]>li>[class^=container_])) {
+        &:not(:has([class^=animated]))>[class^=container_]:not(:has(div>div>li>[class^=container_])) {
             visibility: hidden;
             opacity: 0;
             margin-top: -25px;
@@ -779,7 +816,6 @@
     }
 
     &:hover>[class^=container_] {
-
         [class^=bannerImg_],
         [class^=animated],
         [class^=container_]:has([class^=animated]) {
@@ -789,14 +825,14 @@
             max-width: 240px;
         }
 
-        &:hover:not(:has([class^=animated]))>[class^=container_]:not(:has([class^=scroller_]>[class^=content_]>li>[class^=container_])) {
+        &:hover:not(:has([class^=animated]))>[class^=container_]:not(:has(div>div>li>[class^=container_])) {
             visibility: visible;
             margin-top: 0px;
             opacity: 1;
         }
     }
 
-    [aria-label="Channels"] {
+    & [id="channels"]>[class^=content] {
         margin-left: 7px;
         width: 50px;
         transition: margin-left 0.6s 0.2s, width 0.6s 0.2s ease;
@@ -808,7 +844,7 @@
         }
     }
 
-    &:hover [aria-label="Channels"] {
+    &:hover [id="channels"]>[class^=content] {
         margin-left: 0;
         width: 240px;
 
@@ -818,7 +854,7 @@
         }
     }
 
-    [aria-label="Private channels"] {
+    [class^=privateChannels__] {
         margin-top: -100px;
         transition: margin-top 0.8s 0.2s ease;
 
@@ -829,7 +865,7 @@
         }
     }
 
-    &:hover [aria-label="Private channels"] {
+    &:hover [class^=privateChannels__]  {
         margin-top: -50px;
 
         [class^=privateChannelsHeader] {
@@ -966,7 +1002,7 @@
     display: none;
 }
 
-[aria-label="Message"]>[class^=icon_] {
+[class^=actionButton]:first-child>[class^=icon_] {
     margin-left: 1px;
 }
 
@@ -1073,4 +1109,25 @@
 
 [class*=colorable]:not([class*=red_]) {
     background: var(--color-accent-button) !important;
+}
+
+/* Remove Nitro tenure tooltip bloat, by *pointy* on the Vencord Server */
+[class^="tooltipContainer_"]:has([class^="tooltipWordmarkContainer_"]) {
+    padding: initial;
+    & img, h1, h2, [class^="tooltipWordmarkContainer_"] { display: none; }
+    
+    & [class*="tooltipDescription_"] {
+        color: inherit!important;
+        font: inherit;
+        margin: inherit;
+        &:before { content: "Nitro "; }
+    }
+    & [src="/assets/242f4d0069d97414.svg"] ~ div:after { content: " (Bronze)" }
+    & [src="/assets/a28ccbd2a55e8413.svg"] ~ div:after { content: " (Silver)" }
+    & [src="/assets/45bb84c5fd852085.svg"] ~ div:after { content: " (Gold)" }
+    & [src="/assets/d343a0b3439e81d1.svg"] ~ div:after { content: " (Platinum)" }
+    & [src="/assets/bb018f1613e8d528.svg"] ~ div:after { content: " (Diamond)" }
+    & [src="/assets/11a893d07ab86fe4.svg"] ~ div:after { content: " (Emerald)" }
+    & [src="/assets/2801bd9ef48c1d87.svg"] ~ div:after { content: " (Ruby)" }
+    & [src="/assets/c20bd44dcc3b5ecb.svg"] ~ div:after { content: " (Opal)" }
 }
