@@ -49,7 +49,6 @@ Save this link as a file and you'll get a .css file ready to be used: https://ra
     --background-modifier-hover-light: #d6c9e24d;
     --color-shadow-light: #9797a6;
 
-
     /* DARK MODE */
     --color-bg-dark1: #1a1a1d;
     --color-bg-dark2: #222228;
@@ -59,7 +58,7 @@ Save this link as a file and you'll get a .css file ready to be used: https://ra
     --background-opacity-dark: #00000033;
     --background-accent-dark: #dddae0;
     --background-modifier-hover-dark: #d6c9e24d;
-    --color-shadow-dark: #171718;
+    --color-shadow-dark: #101011;
 
     /* VARIOUS COLORS */
     --color-accent-button: #6823ae65;
