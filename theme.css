@@ -26,6 +26,10 @@
     --primary-500: var(--color-accent-button);
     --primary-860: invert(1);
 
+    [class^=content]>[class^=container_]>[class*=container_] {
+        box-shadow: inset 0 0 7px var(--color-shadow-dark);
+    }
+
     [class^=focusLock]>[class^=container_] {
         box-shadow: 1px 1px 5px #525252;
         border-radius: 8px;
@@ -41,6 +45,7 @@
             border: var(--color-border-dark) solid;
             border-radius: 8px 8px 8px 8px;
             border-width: 1px 1px 1px 1px;
+            box-shadow: inset 0 0 7px var(--color-shadow-dark);
             transform: scale(1.02) translateX(-2px);
         }
     }
@@ -60,7 +65,7 @@
         border-width: 1px 1px 1px;
     }
 
-    [class^=panels] [class^=panel_],
+    [class^=panels]>[class^=panel_],
     [class^=panels]>[class^=container_],
     [class^=panels]:has([class^=panel_])>[class^=wrapper_]>[class^=container_],
     [class^=panels]:not(:has([class^=panel_]))>[class^=wrapper_]>[class^=container_] {
@@ -70,6 +75,7 @@
     [class^=chat_] {
         [class^=title] {
             background-color: var(--color-bg-dark2);
+            box-shadow: inset 0 0 7px var(--color-shadow-dark);
         }
     }
 
@@ -135,12 +141,12 @@
 
     [class^=peopleListItem_] {
         background-color: var(--color-bg-dark2);
+        box-shadow: inset 0 0 7px var(--color-shadow-dark);
 
         &:hover {
             background-color: var(--color-bg-dark2);
             border: 1px var(--color-border-dark) solid;
         }
-
     }
 
     [class^=scroller_]>[class^=itemCard] {
@@ -168,11 +174,13 @@
         &>[class^=content]:not([class*=vcd-screen-picker-modal], [type="button"]>*) {
             background: var(--color-bg-dark2);
             border-radius: 8px 8px 0px 0px;
+            box-shadow: inset 0 0 7px var(--color-shadow-dark);
         }
 
         [class*=content]:is([class*=vcd-screen-picker-modal]) {
             background: var(--color-bg-dark2);
             border-radius: 0px 0px 0px 0px;
+            box-shadow: inset 0 0 7px var(--color-shadow-dark);
         }
 
         [class*=vcd-screen-picker-header] {
@@ -195,11 +203,20 @@
             border-radius: 0px 0px 8px 8px;
         }
 
-        [class*=horizontal_] {
-            background: var(--color-bg-dark2);
+        /*[class*=horizontal_]:not([class*=footer], [class*=header]) {
+            background: var(--color-bg-dark1);
             border-radius: 8px 8px 0px 0px;
+        }*/
+
+        [class*=horizontal_]:is([class*=footer]) {
+            background: var(--color-bg-dark1);
+            border-radius: 0px 0px 8px 8px;
         }
 
+        [class*=horizontal_]:is([class*=header]) {
+            background: var(--color-bg-dark1);
+            border-radius: 8px 8px 0px 0px;
+        }
     }
 }
 
@@ -211,7 +228,7 @@
     --channeltextarea-background: var(--color-bg-light2);
     --background-primary: var(--color-bg-light1);
     --background-floating: var(--color-bg-light2);
-    --background-secondary:  var(--background-opacity-light);
+    --background-secondary: var(--background-opacity-light);
     --background-secondary-alt: var(--color-bg-light2);
     --background-tertiary: var(--color-bg-light2);
     --channels-default: var(--text-color-light);
@@ -226,6 +243,10 @@
     --brand-experiement-500: var(--color-accent-button);
     --primary-500: var(--color-accent-button);
     --primary-860: invert(1);
+
+    [class^=content]>[class^=container_]>[class*=container_] {
+        box-shadow: inset 0 0 7px var(--color-shadow-light);
+    }
 
     [class^=focusLock]>[class^=container_] {
         box-shadow: 1px 1px 5px #000000;
@@ -242,6 +263,7 @@
             border: var(--color-border-light) solid;
             border-radius: 8px 8px 8px 8px;
             border-width: 1px 1px 1px 1px;
+            box-shadow: inset 0 0 7px var(--color-shadow-light);
             transform: scale(1.02) translateX(-2px);
         }
     }
@@ -271,6 +293,7 @@
     [class^=chat_] {
         [class^=title] {
             background-color: var(--color-bg-light2);
+            box-shadow: inset 0 0 7px var(--color-shadow-light);
         }
     }
 
@@ -342,6 +365,7 @@
 
     [class^=peopleListItem_] {
         background-color: var(--color-bg-light2);
+        box-shadow: inset 0 0 7px var(--color-shadow-light);
 
         &:hover {
             background-color: var(--color-bg-light2);
@@ -372,13 +396,15 @@
         border-radius: 8px 8px 8px 8px;
 
         &>[class^=content]:not([class*=vcd-screen-picker-modal], [type="button"]>*) {
-            background: var(--color-bg-light2);
+            background: var(--color-bg-light1);
             border-radius: 8px 8px 0px 0px;
+            box-shadow: inset 0 0 7px var(--color-shadow-light);
         }
 
         [class^=content]:is([class*=vcd-screen-picker-modal]) {
             background: var(--color-bg-light1);
             border-radius: 0px 0px 0px 0px;
+            box-shadow: inset 0 0 7px var(--color-shadow-light);
         }
 
         [class*=vcd-screen-picker-header] {
@@ -396,7 +422,17 @@
             border-radius: 0px 0px 8px 8px;
         }
 
-        [class*=horizontal_] {
+        /*[class*=horizontal_]:not([class*=footer], [class*=header]) {
+            background: var(--color-bg-light1);
+            border-radius: 8px 8px 0px 0px;
+        }*/
+
+        [class*=horizontal_]:is([class*=footer]) {
+            background: var(--color-bg-light1);
+            border-radius: 0px 0px 8px 8px;
+        }
+
+        [class*=horizontal_]:is([class*=header]) {
             background: var(--color-bg-light1);
             border-radius: 8px 8px 0px 0px;
         }
@@ -525,10 +561,10 @@
     }
 
     [class^=avatarWrapper] {
-        height: 0px;
+        margin-top: -72px;
         background: var(--avatar-wrapper-background);
         background-size: 0;
-        transition: height 0.4s 0.2s, transform 0.6s, opacity 1s, background-size 0s 0.2s linear;
+        transition: transform 0.6s, opacity 1s, margin-top 0.3s 0.2s, background-size 0s 0.2s ease;
         border-radius: 32px;
         margin-right: unset;
         margin-left: unset;
@@ -544,11 +580,11 @@
     }
 
     &:hover [class^=avatarWrapper] {
+        margin-top: 0;
         background-size: var(--avatar-wrapper-background-size);
-        height: 75px;
 
         &:hover {
-            transform: scale(1.05);
+            transform: scale(1.02);
 
             &>[class^=wrapper_] {
                 opacity: 0.1;
@@ -570,43 +606,103 @@
     }
 
     [class^=avatarWrapper]>[class^=wrapper] {
-        margin-left: -7px;
-        margin-top: -34px;
+        margin-left: -3px;
+        margin-top: 37px;
         scale: 0.9;
         transition: all 0.2s 0.2s linear;
     }
 
     &:hover [class^=avatarWrapper]>[class^=wrapper] {
         margin-left: 5px;
-        margin-top: 33px;
-        scale: 1;
     }
 
     [class^=panels] {
-        margin-top: -100px;
-        margin-left: 12px;
-        margin-right: 16px;
-        margin-bottom: 4px;
+        margin: 0 12px 4px 16px;
         border-radius: 32px;
         background-color: transparent;
         box-shadow: 1px 1px 5px #000000;
-        transition: margin-left 0.4s 0.2s, margin-top 0.4s 0.2s, margin-right 0.4s 0.2s ease;
+        transition: margin 0.3s 0.2s, border-radius 0.1s 0.2s ease;
     }
 
-    &:hover [class^=panels] {
-        margin-left: 2px;
-        margin-top: 0px;
-        margin-right: 5px;
+    &:hover>[class^=panels] {
+        margin: 0 2px 4px 5px;
     }
 
     [class^=panels]>[class^=container_] {
-        border-radius: 32px;
         height: unset;
+        border-radius: 32px;
         align-items: unset;
-        padding: 4px 8px;
+        padding: 4px 4px 4px 4px;
         flex-direction: column-reverse;
         gap: 2px;
-        transition: border-radius 0s 0.2s ease;
+        transition: border-radius 0.2s 0.2s, padding 0.2s 0.2s, border-radius 0.1s 0.2s ease;
+    }
+
+    [class^=panels]>div>[class^=container_] {
+        visibility: hidden;
+        opacity: 0;
+        padding: 0;
+        margin-top: -75px;
+        transition: visibility 0.2s 0.2s, opacity 0.3s 0.2s, margin-top 0.3s 0.2s, padding 0.3s 0.2s, border 0s 0.2s, border-radius 0.1s 0.2s ease;
+    }
+
+    [class^=panels]>[class^=panel_] {
+        visibility: hidden;
+        opacity: 0;
+        padding: 0;
+        margin-top: -34px;
+        transition: visibility 0.2s 0.2s, opacity 0.3s 0.2s, margin-top 0.3s 0.2s, padding 0.3s 0.2s, border 0s 0.2s, border-radius 0.1s 0.2s ease;  
+    }
+
+    #vc-spotify-player {
+        visibility: hidden;
+        opacity: 0;
+        padding: 0;
+        margin-top: -122px;
+        transition: visibility 0.2s 0.2s, opacity 0.3s 0.2s, margin-top 0.3s 0.2s, padding 0.3s 0.2s, border 0s 0.2s, border-radius 0.1s 0.2s ease;
+    }
+
+    #vc-spotify-album-expanded-wrapper {
+        margin-top: 10.5px;
+        transition: margin-top 0s 0.2s;
+    }
+
+    &:hover [class^=panels]>div>[class^=container_],
+    &:hover [class^=panels]>[class^=panel_],
+    &:hover #vc-spotify-player {
+        visibility: visible;
+        opacity: 1;
+        padding: 8px;
+        margin-top: 0;
+        border: 0 #00000000 solid;
+    }
+
+    &:hover [class^=panels]:has(div>[class^=container_], #vc-spotify-player)>[class^=container_] {
+        border-radius: 0 0 32px 32px;
+    }
+
+    &:hover [class^=panels]:not(:has([class^=panel_]))>div>[class^=container_] {
+        border-radius: 32px 32px 0 0;
+    }
+
+    &:hover [class^=panels]:has([class^=panel_])>div>[class^=container_] {
+        border-radius: 0 0 0 0;
+    }
+
+    &:hover [class^=panels]:not(:has(div>[class^=container]))>#vc-spotify-player {
+        border-radius: 32px 32px 0 0;
+    }
+
+    &:hover [class^=panels]:has(div>[class^=container])>#vc-spotify-player {
+        border-radius: 0 0 0 0;
+    }
+
+    &:hover [class^=panels]>[class^=panel_] {
+        border-radius: 32px 32px 0 0;
+    }
+
+    #vc-spotify-album-image {
+        border-radius: 8px;
     }
 
     [class^=nameTag_] {
@@ -614,6 +710,7 @@
         opacity: 0;
         margin-top: 33px;
         margin-left: -4px;
+        margin-right: 15px;
         transition: visibility 0.1s 0.2s, opacity 0.2s 0.2s, margin-left 0.1s 0.2s ease;
 
         &>div>* {
@@ -625,133 +722,7 @@
     &:hover [class^=nameTag_] {
         visibility: visible;
         opacity: 1;
-    }
-
-    [class^=avatarWrapper]:hover [class^=nameTag_] {
-        opacity: 0;
-        transition: opacity 1s;
-    }
-
-    [class^=wrapper_]>[class^=container_] {
-        visibility: hidden;
-        opacity: 0;
-        border-radius: 32px 32px 0 0;
-        margin-top: -100px;
-        transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s, border 0s 0.2s ease;
-    }
-
-    &>[class^=panels]:not(:has([class^=panel_]))>div>[class^=container_] {
-        border-radius: 32px 32px 0 0;
-        margin-top: -104px;
-    }
-
-    &>[class^=panels]:has([class^=panel_])>div>[class^=container_] {
-        border-radius: 0 0 0 0;
-    }
-
-    [class^=panels] [class^=panel_] {
-        visibility: hidden;
-        opacity: 0;
-        border-radius: 32px 32px 0 0;
-        margin-top: -53px;
-        transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s, border 0s 0.2s ease;
-    }
-
-    #vc-spotify-player {
-        visibility: hidden;
-        opacity: 0;
-        border-radius: 32px 32px 0 0;
-        margin-top: -135px;
-        transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s, border 0s 0.2s ease;
-    }
-
-    #vc-spotify-player:has(#vc-spotify-album-expanded-wrapper) {
-        visibility: hidden;
-        opacity: 0;
-        border-radius: 32px 32px 0 0;
-        margin-top: -100px;
-        transition: margin-top 0.2s 0.2s, visibility 0.2s 0.2s, opacity 0.3s 0.2s, border 0s 0.2s ease;
-
-        #vc-spotify-album-image {
-            border-radius: 32px;
-            margin-bottom: -7px;
-        }
-    }
-
-    &:hover #vc-spotify-player:has(#vc-spotify-album-expanded-wrapper) {
-        visibility: visible;
-        opacity: 1;
-        border-radius: 32px 32px 0 0;
-        margin-top: 0px;
-    }
-
-    [class^=panels]:has(div>[class^=container_]) #vc-spotify-player:has(#vc-spotify-album-expanded-wrapper) {
-        border-radius: 0 0 0 0;
-        margin-top: -94px;
-
-        #vc-spotify-album-image {
-            border-radius: 8px;
-            margin-bottom: 0;
-        }
-    }
-
-    &:hover [class^=panels]:has(div>[class^=container_]) #vc-spotify-player:has(#vc-spotify-album-expanded-wrapper) {
-        margin-top: 0;
-    }
-
-    #vc-spotify-info-wrapper {
-        padding: 0;
-        transition: padding 0s 0.2s ease;
-    }
-
-    &:hover [class^=panels]:not(:has(div>[class^=container_])) #vc-spotify-info-wrapper {
-        padding: 2px;
-    }
-
-    &:hover [class^=panels]:has(div>[class^=container_]) #vc-spotify-info-wrapper {
-        padding: 0px 2px 0px 2px;
-    }
-
-    [class^=panels]:has(div>[class^=container_]) #vc-spotify-player {
-        border-radius: 0 0 0 0;
-        margin-top: -121px;
-    }
-
-    &:hover [class^=panels]:has(div>[class^=container_]) #vc-spotify-player {
-        border-radius: 0 0 0 0;
-        margin-top: 0;
-    }
-
-    #vc-spotify-album-image {
-        border-radius: 8px
-    }
-
-    &:hover [class^=panels]:has(#vc-spotify-player)>[class^=container_] {
-        border-radius: 0 0 32px 32px;
-    }
-
-    &:hover [class^=panels]:not(:has([class^=panel_]))>[class^=container_] {
-        border-radius: 0 0 32px 32px;
-        border-width: 0px 1px 0px;
-    }
-
-    &:hover [class^=panels]:has([class^=panel_])>[class^=container_] {
-        border-radius: 0 0 32px 32px;
-        border-width: 0px 1px 1px;
-    }
-
-    &:hover [class^=panels]:not(:has(div>div>[class^=flex]))>[class^=container_] {
-        border-radius: 32px;
-        border-width: 1px 1px 1px;
-    }
-
-    &:hover [class^=panels] [class^=wrapper_] [class^=container_],
-    &:hover [class^=panels] [class^=panel_],
-    &:hover [class^=panels] #vc-spotify-player {
-        visibility: visible;
-        margin-top: 0;
-        opacity: 1;
-        border: #00000000 solid 0;
+        margin-left: 0;
     }
 
     [class^=containerDefault_]>[class^=list_] {
@@ -835,6 +806,7 @@
     }
 
     &:hover>[class^=container_] {
+
         [class^=bannerImg_],
         [class^=animated],
         [class^=container_]:has([class^=animated]) {
@@ -884,7 +856,7 @@
         }
     }
 
-    &:hover [class^=privateChannels__]  {
+    &:hover [class^=privateChannels__] {
         margin-top: -50px;
 
         [class^=privateChannelsHeader] {
@@ -1082,7 +1054,8 @@
     border-radius: 8px;
 }
 
-[class^=linkTop], [class^=layout]>[class^=avatar]>[class^=wrapper] {
+[class^=linkTop],
+[class^=layout]>[class^=avatar]>[class^=wrapper] {
     transform: translateX(2px);
 }
 
