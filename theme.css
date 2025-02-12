@@ -449,15 +449,14 @@
 
 [class^=typeWindows_] {
     width: 60px !important;
-    z-index: 102;
+    height: 25px;
     position: absolute;
     flex-direction: row;
     align-items: center;
-    top: 1px;
     margin: 0;
     padding-top: 12px;
     padding-right: 9px;
-    padding-left: 3px;
+    padding-left: 2.5px;
     -webkit-app-region: drag;
     background: transparent;
 }
@@ -469,6 +468,7 @@
 [class^=winButton] {
     width: 12px;
     height: 12px;
+    top: -6px;
     margin-left: 8px;
     border-radius: 15px;
     background-color: var(--background-primary);
@@ -503,7 +503,7 @@
 }
 
 [class*=guilds_] {
-    margin-top: 29px;
+    margin-top: 34px;
 }
 
 .expression-picker-chat-input-button:not(:last-child):not([class^=buttons]:has([class^=separator])>.expression-picker-chat-input-button:nth-last-child(2)),
@@ -599,19 +599,19 @@
         margin-left: -1px;
         background: var(--avatar-wrapper-background);
         background-size: var(--avatar-wrapper-background-size);
-        width: 216px;
+        width: 0;
         margin-top: 170px;
         height: 76px;
         position: absolute;
-        transition: visibility 0.3s 0.2s, opacity 0.4s 0.2s, margin-top 0.5s 0.2s ease;
+        transition: visibility 0.3s 0.2s linear, opacity 0.4s 0.2s linear, margin-top 0.4s 0.2s, width 0.6s 0.2s ease;
     }
 
     &:hover [class^=avatarWrapper]::before {
         visibility: visible;
         opacity: 1;
+        width: 216px;
         margin-top: 0;
     }
-
 
     [class^=panels]>[class^=container]>[class^=flex] {
         visibility: hidden;
@@ -672,7 +672,7 @@
         opacity: 0;
         padding: 0;
         margin-top: -34px;
-        transition: visibility 0.2s 0.2s, opacity 0.3s 0.2s, margin-top 0.3s 0.2s, padding 0.3s 0.2s, border 0s 0.2s, border-radius 0.1s 0.2s ease;  
+        transition: visibility 0.2s 0.2s, opacity 0.3s 0.2s, margin-top 0.3s 0.2s, padding 0.3s 0.2s, border 0s 0.2s, border-radius 0.1s 0.2s ease;
     }
 
     #vc-spotify-player {
@@ -726,8 +726,9 @@
         border-radius: 8px;
     }
 
-    [class^=nameTag_] {
+    [class^=avatarWrapper]>[class^=nameTag_] {
         visibility: hidden;
+        z-index: 1;
         opacity: 0;
         margin-top: 33px;
         margin-left: -4px;
@@ -740,7 +741,7 @@
         }
     }
 
-    &:hover [class^=nameTag_] {
+    &:hover [class^=avatarWrapper]>[class^=nameTag_] {
         visibility: visible;
         opacity: 1;
         margin-left: 0;
@@ -780,7 +781,7 @@
     }
 
     [class^=container] {
-        [class^=linkBottom] [class^=text-xs] {
+        [class^=linkBottom]>[class^=text-xs] {
             visibility: hidden;
             opacity: 0;
             margin-top: -16px;
@@ -794,7 +795,7 @@
             transition: visibility 0.3s 0.2s, opacity 0.4s 0.2s, margin-top 0.5s 0.2s ease;
         }
 
-        &:hover [class^=linkBottom] [class^=text-xs] {
+        &:hover [class^=linkBottom]>[class^=text-xs] {
             visibility: visible;
             margin-top: 0;
             opacity: 1;
@@ -933,7 +934,6 @@
 
 [class^=tabBody],
 [class^=content] {
-
     [class^=nowPlayingColumn],
     &>[class^=outer_] {
         margin-right: -30%;
