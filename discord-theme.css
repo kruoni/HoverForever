@@ -57,6 +57,7 @@
     --background-opacity-light: #ffffff33;
     --background-accent-light: #dddae0;
     --background-modifier-hover-light: #d6c9e24d;
+    --color-shadow-light: #9797a6;
 
     /* DARK MODE */
     --color-bg-dark1: #1a1a1d;
@@ -67,6 +68,7 @@
     --background-opacity-dark: #00000033;
     --background-accent-dark: #dddae0;
     --background-modifier-hover-dark: #d6c9e24d;
+    --color-shadow-dark: #101011;
 
     /* VARIOUS COLORS */
     --color-accent-button: #6823ae65;
