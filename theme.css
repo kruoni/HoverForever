@@ -599,17 +599,19 @@
         margin-left: -1px;
         background: var(--avatar-wrapper-background);
         background-size: var(--avatar-wrapper-background-size);
-        width: 0;
+        width: 216px;
+        margin-top: 170px;
         height: 76px;
         position: absolute;
-        transition: visibility 0.4s 0.2s, opacity 0.5s 0.2s, width 0.3s 0.2s ease;
+        transition: visibility 0.3s 0.2s, opacity 0.4s 0.2s, margin-top 0.5s 0.2s ease;
     }
 
     &:hover [class^=avatarWrapper]::before {
         visibility: visible;
         opacity: 1;
-        width: 216px;
+        margin-top: 0;
     }
+
 
     [class^=panels]>[class^=container]>[class^=flex] {
         visibility: hidden;
