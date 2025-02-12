@@ -562,12 +562,13 @@
 
     [class^=avatarWrapper] {
         margin-top: -72px;
-        background-size: 0;
-        transition: transform 0.6s, opacity 1s, margin-top 0.3s 0.2s, background-size 0s 0.2s ease;
+        background: none;
         border-radius: 32px;
         margin-right: unset;
         margin-left: unset;
         padding-left: 4px;
+        background-size: 0;
+        transition: transform 0.6s, opacity 1s, margin-top 0.3s 0.2s ease;
 
         & {
             transform: scale(1);
