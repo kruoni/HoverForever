@@ -31,18 +31,37 @@ Save this link as a file and you'll get a .css file ready to be used: https://ra
 ### The :root variables are: 
 ```
 :root {
-    --avatar-wrapper-background: /*YOUR OWN IMAGE*/;
+    --avatar-wrapper-background: /* YOUR OWN IMAGE HERE */;
     --avatar-wrapper-background-size: 216px;
+
+    /* SERVER AND CHANNEL SIDEBAR COLOR */
     --app-background: transparent;
-    /* change to var(--color-bg-dark2) for dark mode, or var(--color-bg-light2) for light mode, to remove transparency*/
+    /* change to var(--color-bg-dark2) for dark mode, or var(--color-bg-light2) for light mode, to remove transparency */
+
+    /* LIGHT MODE */
     --color-bg-light1: #eee8df;
     --color-bg-light2: #dad5cf;
     --color-border-light: #242322;
     --color-panel-light: #dad5cfb0;
+    --text-color-light: #2e2e2d;
+    --background-opacity-light: #ffffff33;
+    --background-accent-light: #dddae0;
+    --background-modifier-hover-light: #d6c9e24d;
+    --color-shadow-light: #9797a6;
+
+
+    /* DARK MODE */
     --color-bg-dark1: #1a1a1d;
     --color-bg-dark2: #222228;
     --color-border-dark: #c0c0c0;
     --color-panel-dark: #222228b0;
+    --text-color-dark: #dddae0;
+    --background-opacity-dark: #00000033;
+    --background-accent-dark: #dddae0;
+    --background-modifier-hover-dark: #d6c9e24d;
+    --color-shadow-dark: #171718;
+
+    /* VARIOUS COLORS */
     --color-accent-button: #6823ae65;
     --color-accent-button-hover: #460f7d80;
     --color-channel-icon: #6823ae;
@@ -68,6 +87,8 @@ It respects Discord's banners' size (600x240px). I tried to make it fit the wrap
 To disable the effect, just change the value in the :root part:
 ```
 :root {
-    /* change to #222228 for dark mode, or #dad5cf for light mode, to remove transparency*/
+    /* SERVER AND CHANNEL SIDEBAR COLOR */
+    --app-background: transparent;
+    /* change to var(--color-bg-dark2) for dark mode, or var(--color-bg-light2) for light mode, to remove transparency */
 }
 ```
