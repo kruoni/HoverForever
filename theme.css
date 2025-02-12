@@ -1,17 +1,21 @@
+* {
+    font-family: inter;
+}
+
 .theme-dark {
-    --background-accent: #dddae0;
+    --background-accent: var(--background-accent-dark);
     --background-modifier-selected: var(--color-accent-button);
-    --background-modifier-hover: #d6c9e24d;
+    --background-modifier-hover: var(--background-modifier-hover-dark);
     --background-modifier-active: var(--color-accent-button-hover);
     --channeltextarea-background: var(--color-bg-dark2);
     --background-primary: var(--color-bg-dark1);
     --background-floating: var(--color-bg-dark2);
-    --background-secondary: #00000066;
+    --background-secondary: var(--background-opacity-dark);
     --background-secondary-alt: var(--color-bg-dark2);
     --background-tertiary: var(--color-bg-dark2);
-    --channels-default: #dddae0;
+    --channels-default: var(--text-color-dark);
     --channel-icon: var(--color-channel-icon);
-    --interactive-normal: #dddae0;
+    --interactive-normal: var(--text-color-dark);
     --menu-item-default-hover-bg: var(--color-accent-button);
     --menu-item-default-active-bg: var(--color-accent-button-hover);
     --button-filled-brand-background: var(--color-accent-button);
@@ -39,6 +43,10 @@
             border-width: 1px 1px 1px 1px;
             transform: scale(1.02) translateX(-2px);
         }
+    }
+
+    [class^=root_]>div>[class*=card_] {
+        background-color: var(--color-bg-dark2);
     }
 
     [class^=panels] {
@@ -71,7 +79,7 @@
         border-radius: 8px;
     }
 
-    [class^=menu_] {
+    [role="menu"] {
         border: 1px var(--color-border-dark) solid;
         border-radius: 8px;
     }
@@ -146,6 +154,7 @@
 
     [class^=buttons]>[class^=buttonsInner] {
         border: 1px var(--color-border-dark) solid;
+        background-color: var(--color-bg-dark2);
     }
 
     [class^="searchResultsWrap_"] [class^=container_]:has([class^=pageControlContainer_]) {
@@ -195,19 +204,19 @@
 }
 
 .theme-light {
-    --background-accent: #dddae0;
+    --background-accent: var(--background-accent-light);
     --background-modifier-selected: var(--color-accent-button);
-    --background-modifier-hover: #d6c9e24d;
+    --background-modifier-hover: var(--background-modifier-hover-light);
     --background-modifier-active: var(--color-accent-button-hover);
     --channeltextarea-background: var(--color-bg-light2);
     --background-primary: var(--color-bg-light1);
     --background-floating: var(--color-bg-light2);
-    --background-secondary: #ffffff66;
+    --background-secondary:  var(--background-opacity-light);
     --background-secondary-alt: var(--color-bg-light2);
     --background-tertiary: var(--color-bg-light2);
-    --channels-default: #2e2e2d;
+    --channels-default: var(--text-color-light);
     --channel-icon: var(--color-channel-icon);
-    --interactive-normal: #2e2e2d;
+    --interactive-normal: var(--text-color-light);
     --menu-item-default-hover-bg: var(--color-accent-button);
     --menu-item-default-active-bg: var(--color-accent-button-hover);
     --button-filled-brand-background: var(--color-accent-button);
@@ -235,6 +244,10 @@
             border-width: 1px 1px 1px 1px;
             transform: scale(1.02) translateX(-2px);
         }
+    }
+
+    [class^=root_]>div>[class*=card_] {
+        background-color: var(--color-bg-light2);
     }
 
     [class^=panels] {
@@ -267,9 +280,14 @@
         border-radius: 8px;
     }
 
-    [class^=menu_] {
+    [role="menu"] {
         border: 1px var(--color-border-light) solid;
+        background-color: var(--color-bg-light2);
         border-radius: 8px;
+
+        [role=menuitem]:not([class*=colorDanger]) [class^=label_] {
+            color: var(--text-color-light);
+        }
     }
 
     [class^=submenu_] {
@@ -317,7 +335,7 @@
         border-radius: 8px;
 
         &>[class^=flex_]:not([id^=":"]) {
-            background-color: var(--color-bg-light1);
+            background-color: var(--color-bg-light2);
             border-radius: 0px 0px 8px 8px;
         }
     }
@@ -342,6 +360,7 @@
 
     [class^=buttons]>[class^=buttonsInner] {
         border: 1px var(--color-border-light) solid;
+        background-color: var(--color-bg-light1);
     }
 
     [class^="searchResultsWrap_"] [class^=container_]:has([class^=pageControlContainer_]) {
@@ -353,7 +372,7 @@
         border-radius: 8px 8px 8px 8px;
 
         &>[class^=content]:not([class*=vcd-screen-picker-modal], [type="button"]>*) {
-            background: var(--color-bg-light1);
+            background: var(--color-bg-light2);
             border-radius: 8px 8px 0px 0px;
         }
 
@@ -1109,25 +1128,4 @@
 
 [class*=colorable]:not([class*=red_]) {
     background: var(--color-accent-button) !important;
-}
-
-/* Remove Nitro tenure tooltip bloat, by *pointy* on the Vencord Server */
-[class^="tooltipContainer_"]:has([class^="tooltipWordmarkContainer_"]) {
-    padding: initial;
-    & img, h1, h2, [class^="tooltipWordmarkContainer_"] { display: none; }
-    
-    & [class*="tooltipDescription_"] {
-        color: inherit!important;
-        font: inherit;
-        margin: inherit;
-        &:before { content: "Nitro "; }
-    }
-    & [src="/assets/242f4d0069d97414.svg"] ~ div:after { content: " (Bronze)" }
-    & [src="/assets/a28ccbd2a55e8413.svg"] ~ div:after { content: " (Silver)" }
-    & [src="/assets/45bb84c5fd852085.svg"] ~ div:after { content: " (Gold)" }
-    & [src="/assets/d343a0b3439e81d1.svg"] ~ div:after { content: " (Platinum)" }
-    & [src="/assets/bb018f1613e8d528.svg"] ~ div:after { content: " (Diamond)" }
-    & [src="/assets/11a893d07ab86fe4.svg"] ~ div:after { content: " (Emerald)" }
-    & [src="/assets/2801bd9ef48c1d87.svg"] ~ div:after { content: " (Ruby)" }
-    & [src="/assets/c20bd44dcc3b5ecb.svg"] ~ div:after { content: " (Opal)" }
 }
