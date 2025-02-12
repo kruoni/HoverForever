@@ -27,11 +27,11 @@
     --primary-860: invert(1);
 
     [class^=content]>[class^=container_]>[class*=container_] {
-        box-shadow: inset 0 0 7px var(--color-shadow-dark);
+        box-shadow: inset 0 -1px 4px var(--color-shadow-dark);
     }
 
     [class^=focusLock]>[class^=container_] {
-        box-shadow: 1px 1px 5px #525252;
+        box-shadow: 3px 3px 20px var(--color-shadow-dark);
         border-radius: 8px;
 
         [class^=inviteSplash] {
@@ -45,7 +45,7 @@
             border: var(--color-border-dark) solid;
             border-radius: 8px 8px 8px 8px;
             border-width: 1px 1px 1px 1px;
-            box-shadow: inset 0 0 7px var(--color-shadow-dark);
+            box-shadow: inset 0 -5px 3px var(--color-shadow-dark);
             transform: scale(1.02) translateX(-2px);
         }
     }
@@ -57,6 +57,7 @@
     [class^=panels] {
         border: var(--color-border-dark) solid;
         border-width: 1px 1px 1px;
+        box-shadow: 1px 2px 5px var(--color-shadow-dark);
     }
 
     #vc-spotify-player {
@@ -73,9 +74,9 @@
     }
 
     [class^=chat_] {
-        [class^=title] {
+        [class^=title]:not([class^=titleWrapper]) {
             background-color: var(--color-bg-dark2);
-            box-shadow: inset 0 0 7px var(--color-shadow-dark);
+            box-shadow: inset 0 -1px 4px var(--color-shadow-dark);
         }
     }
 
@@ -87,7 +88,13 @@
 
     [role="menu"] {
         border: 1px var(--color-border-dark) solid;
+        background-color: var(--color-bg-dark2);
         border-radius: 8px;
+        box-shadow: inset 0 -3px 2px var(--color-shadow-dark), 0 3px 10px var(--color-shadow-dark);
+
+        [role=menuitem]:not([class*=colorDanger]) [class^=label_] {
+            color: var(--text-color-dark);
+        }
     }
 
     [class^=submenu_] {
@@ -100,6 +107,7 @@
     [class^=form_]>[class^=wrapper] {
         border: var(--color-border-dark) solid;
         border-width: 1px 1px 1px;
+        box-shadow: inset 0 -2px 3px var(--color-shadow-dark);
     }
 
     [class^=jumpToPresentBar] {
@@ -112,6 +120,7 @@
     [class^=channelTextArea_]:has([class^=stacked])>[class^=scrollableContainer] {
         border: var(--color-border-dark) solid;
         border-width: 0px 1px 1px;
+        box-shadow: inset 0 -2px 3px var(--color-shadow-dark);
     }
 
     [class^=stackedBars]>div>div>div>[class^=replyBar_] {
@@ -141,12 +150,16 @@
 
     [class^=peopleListItem_] {
         background-color: var(--color-bg-dark2);
-        box-shadow: inset 0 0 7px var(--color-shadow-dark);
+        box-shadow: inset 0 -2px 3px var(--color-shadow-dark);
 
         &:hover {
             background-color: var(--color-bg-dark2);
             border: 1px var(--color-border-dark) solid;
         }
+    }
+
+    [class^=searchBar] {
+        box-shadow: inset 0 -2px 3px var(--color-shadow-dark);
     }
 
     [class^=scroller_]>[class^=itemCard] {
@@ -174,18 +187,11 @@
         &>[class^=content]:not([class*=vcd-screen-picker-modal], [type="button"]>*) {
             background: var(--color-bg-dark2);
             border-radius: 8px 8px 0px 0px;
-            box-shadow: inset 0 0 7px var(--color-shadow-dark);
         }
 
         [class*=content]:is([class*=vcd-screen-picker-modal]) {
             background: var(--color-bg-dark2);
             border-radius: 0px 0px 0px 0px;
-            box-shadow: inset 0 0 7px var(--color-shadow-dark);
-        }
-
-        [class*=vcd-screen-picker-header] {
-            background: var(--color-bg-dark1) !important;
-            border-radius: 8px 8px 0px 0px !important;
         }
 
         [class*=vcd-screen-picker-option]:not([data-checked="true"]),
@@ -201,6 +207,7 @@
         [class*=horizontalReverse_] {
             background: var(--color-bg-dark1);
             border-radius: 0px 0px 8px 8px;
+            box-shadow: inset 0 -3px 4px var(--color-shadow-dark);
         }
 
         /*[class*=horizontal_]:not([class*=footer], [class*=header]) {
@@ -211,11 +218,26 @@
         [class*=horizontal_]:is([class*=footer]) {
             background: var(--color-bg-dark1);
             border-radius: 0px 0px 8px 8px;
+            box-shadow: inset 0 -3px 4px var(--color-shadow-dark);
         }
 
         [class*=horizontal_]:is([class*=header]) {
-            background: var(--color-bg-dark1);
+            background: var(--color-bg-dark2);
             border-radius: 8px 8px 0px 0px;
+        }
+
+        [class*=vertical_] {
+            background: var(--color-bg-dark2);
+            border-radius: 8px 8px 0px 0px;
+        }
+
+        [class^=slide]>[class^=container]>[class*=thin_] {
+            background: var(--color-bg-dark2);
+            border-radius: 8px 8px 0px 0px;
+        }
+
+        [class^=linkButton] {
+            background-color: var(--color-bg-dark1);
         }
     }
 }
@@ -245,11 +267,11 @@
     --primary-860: invert(1);
 
     [class^=content]>[class^=container_]>[class*=container_] {
-        box-shadow: inset 0 0 7px var(--color-shadow-light);
+        box-shadow: inset 0 -1px 4px var(--color-shadow-light);
     }
 
     [class^=focusLock]>[class^=container_] {
-        box-shadow: 1px 1px 5px #000000;
+        box-shadow: 3px 3px 20px var(--color-shadow-light);
         border-radius: 8px;
 
         [class^=inviteSplash] {
@@ -263,7 +285,7 @@
             border: var(--color-border-light) solid;
             border-radius: 8px 8px 8px 8px;
             border-width: 1px 1px 1px 1px;
-            box-shadow: inset 0 0 7px var(--color-shadow-light);
+            box-shadow: inset 0 -5px 3px var(--color-shadow-light);
             transform: scale(1.02) translateX(-2px);
         }
     }
@@ -275,6 +297,7 @@
     [class^=panels] {
         border: var(--color-border-light) solid;
         border-width: 1px 1px 1px;
+        box-shadow: 1px 2px 5px var(--color-shadow-light);
     }
 
     #vc-spotify-player {
@@ -291,9 +314,9 @@
     }
 
     [class^=chat_] {
-        [class^=title] {
+        [class^=title]:not([class^=titleWrapper]) {
             background-color: var(--color-bg-light2);
-            box-shadow: inset 0 0 7px var(--color-shadow-light);
+            box-shadow: inset 0 -1px 4px var(--color-shadow-light);
         }
     }
 
@@ -307,6 +330,7 @@
         border: 1px var(--color-border-light) solid;
         background-color: var(--color-bg-light2);
         border-radius: 8px;
+        box-shadow: inset 0 -3px 2px var(--color-shadow-light), 0 3px 10px var(--color-shadow-light);
 
         [role=menuitem]:not([class*=colorDanger]) [class^=label_] {
             color: var(--text-color-light);
@@ -323,6 +347,7 @@
     [class^=form_]>[class^=wrapper] {
         border: 1px var(--color-border-light) solid;
         border-width: 1px 1px 1px;
+        box-shadow: inset 0 -2px 3px var(--color-shadow-light);
     }
 
     [class^=jumpToPresentBar] {
@@ -335,6 +360,7 @@
     [class^=channelTextArea_]:has([class^=stacked])>[class^=scrollableContainer] {
         border: 1px var(--color-border-light) solid;
         border-width: 0px 1px 1px;
+        box-shadow: inset 0 -2px 3px var(--color-shadow-light);
     }
 
     [class^=stackedBars]>div>div>div>[class^=replyBar_] {
@@ -365,12 +391,16 @@
 
     [class^=peopleListItem_] {
         background-color: var(--color-bg-light2);
-        box-shadow: inset 0 0 7px var(--color-shadow-light);
+        box-shadow: inset 0 -2px 3px var(--color-shadow-light);
 
         &:hover {
             background-color: var(--color-bg-light2);
             border: 1px var(--color-border-light) solid;
         }
+    }
+
+    [class^=searchBar] {
+        box-shadow: inset 0 -2px 3px var(--color-shadow-light);
     }
 
     [class^=scroller_]>[class^=itemCard] {
@@ -398,18 +428,11 @@
         &>[class^=content]:not([class*=vcd-screen-picker-modal], [type="button"]>*) {
             background: var(--color-bg-light1);
             border-radius: 8px 8px 0px 0px;
-            box-shadow: inset 0 0 7px var(--color-shadow-light);
         }
 
-        [class^=content]:is([class*=vcd-screen-picker-modal]) {
+        [class*=content]:is([class*=vcd-screen-picker-modal]) {
             background: var(--color-bg-light1);
             border-radius: 0px 0px 0px 0px;
-            box-shadow: inset 0 0 7px var(--color-shadow-light);
-        }
-
-        [class*=vcd-screen-picker-header] {
-            background: var(--color-bg-light2) !important;
-            border-radius: 8px 8px 0px 0px !important;
         }
 
         [class*=vcd-screen-picker-option]:not([data-checked="true"]),
@@ -417,24 +440,45 @@
             background: var(--color-bg-light2)
         }
 
+        [class*=vcd-screen-picker-modal] {
+            background: var(--color-bg-light2);
+            border-radius: 8px 8px 0px 0px;
+        }
+
         [class*=horizontalReverse_] {
             background: var(--color-bg-light2);
             border-radius: 0px 0px 8px 8px;
+            box-shadow: inset 0 -2px 3px var(--color-shadow-light);
         }
 
         /*[class*=horizontal_]:not([class*=footer], [class*=header]) {
-            background: var(--color-bg-light1);
+            background: var(--color-bg-dark1);
             border-radius: 8px 8px 0px 0px;
         }*/
 
         [class*=horizontal_]:is([class*=footer]) {
-            background: var(--color-bg-light1);
+            background: var(--color-bg-light2);
             border-radius: 0px 0px 8px 8px;
+            box-shadow: inset 0 -2px 3px var(--color-shadow-light);
         }
 
         [class*=horizontal_]:is([class*=header]) {
+            background: var(--color-bg-light2);
+            border-radius: 8px 8px 0px 0px;
+        }
+
+        [class*=vertical_] {
             background: var(--color-bg-light1);
             border-radius: 8px 8px 0px 0px;
+        }
+
+        [class^=slide]>[class^=container]>[class*=thin_] {
+            background: var(--color-bg-light1);
+            border-radius: 8px 8px 0px 0px;
+        }
+
+        [class^=linkButton] {
+            background-color: var(--color-bg-light2);
         }
     }
 }
@@ -641,7 +685,6 @@
         margin: 0 12px 4px 16px;
         border-radius: 32px;
         background-color: transparent;
-        box-shadow: 1px 1px 5px #000000;
         transition: margin 0.3s 0.2s, border-radius 0.1s 0.2s ease;
     }
 
@@ -934,6 +977,7 @@
 
 [class^=tabBody],
 [class^=content] {
+
     [class^=nowPlayingColumn],
     &>[class^=outer_] {
         margin-right: -30%;
