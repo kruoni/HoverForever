@@ -548,7 +548,7 @@
 
     &:not([class^=sidebarRegionScroller]>[class^=sidebar_], [class^=sidebarRegion]) {
         max-width: 72px;
-        transition: max-width 0.6s 0.2s ease;
+        transition: max-width 0.8s 0.2s ease;
 
         &:hover {
             max-width: 240px;
@@ -561,9 +561,9 @@
         border-radius: 32px;
         margin-right: unset;
         margin-left: unset;
-        padding-left: 4px;
+        padding-left: 3px;
         background-size: 0;
-        transition: transform 0.6s, opacity 1s, margin-top 0.3s 0.2s ease;
+        transition: transform 0.6s, opacity 1s, margin-top 0.6s 0.2s ease;
 
         & {
             transform: scale(1);
@@ -594,17 +594,18 @@
         margin-left: -1px;
         background: var(--avatar-wrapper-background);
         background-size: var(--avatar-wrapper-background-size);
-        width: 0;
+        width: 216px;
         margin-top: 170px;
         height: 76px;
+        transform: scale(0.1);
         position: absolute;
-        transition: visibility 0.3s 0.2s linear, opacity 0.4s 0.2s linear, margin-top 0.4s 0.2s, width 0.6s 0.2s ease;
+        transition: visibility 0.3s 0.2s linear, opacity 0.4s 0.2s linear, margin-top 0.6s 0.2s, transform 0.8s 0.2s ease;
     }
 
     &:hover [class^=avatarWrapper]::before {
         visibility: visible;
         opacity: 1;
-        width: 216px;
+        transform: scale(1);
         margin-top: 0;
     }
 
@@ -613,7 +614,7 @@
         opacity: 0;
         justify-content: center;
         gap: 30px;
-        transition: visibility 0.3s 0.2s, opacity 0.2s 0.2s, gap 0.2s 0.2s linear;
+        transition: visibility 0.3s 0.2s, opacity 0.2s 0.2s, gap 0.2s 0.2s ease;
     }
 
     &:hover [class^=panels]>[class^=container]>[class^=flex] {
@@ -622,25 +623,29 @@
     }
 
     [class^=avatarWrapper]>[class^=wrapper] {
-        margin-left: -3px;
         margin-top: 37px;
+        margin-left: -1px;
         scale: 0.9;
-        transition: all 0.2s 0.2s linear;
+        transition: all 0.2s 0.2s ease;
     }
 
     &:hover [class^=avatarWrapper]>[class^=wrapper] {
-        margin-left: 5px;
+        margin-top: 37px;
+        margin-left: 8px;
     }
 
     [class^=panels] {
-        margin: 0 12px 4px 16px;
+        margin-bottom: 6px;
+        margin-left: 14px;
+        max-width: 42px;
         border-radius: 32px;
         background-color: transparent;
-        transition: margin 0.3s 0.2s, border-radius 0.1s 0.2s ease;
+        transition: margin 0.3s 0.2s, border-radius 0.1s 0.2s, max-width 0.4s 0.2s ease;
     }
 
     &:hover>[class^=panels] {
-        margin: 0 2px 4px 5px;
+        margin-left: 6px;
+        max-width: 228px;
     }
 
     [class^=panels]>[class^=container_] {
@@ -679,7 +684,7 @@
 
     #vc-spotify-album-expanded-wrapper {
         margin-top: 10.5px;
-        transition: margin-top 0s 0.2s;
+        transition: margin-top 0s 0.2s ease;
     }
 
     &:hover [class^=panels]>div>[class^=container_],
@@ -725,9 +730,8 @@
         z-index: 1;
         opacity: 0;
         margin-top: 33px;
-        margin-left: -4px;
         margin-right: 15px;
-        transition: visibility 0.1s 0.2s, opacity 0.2s 0.2s, margin-left 0.1s 0.2s ease;
+        transition: visibility 0.1s 0.2s, opacity 0.2s 0.2s ease;
 
         &>div>* {
             color: rgb(255, 255, 255);
@@ -738,7 +742,6 @@
     &:hover [class^=avatarWrapper]>[class^=nameTag_] {
         visibility: visible;
         opacity: 1;
-        margin-left: 0;
     }
 
     [class^=containerDefault_]>[class^=list_] {
@@ -779,7 +782,7 @@
             visibility: hidden;
             opacity: 0;
             margin-top: -16px;
-            transition: all 0.4s 0.2s ease;
+            transition: all 0.6s 0.2s ease;
         }
 
         li>[class^=container_] {
@@ -847,7 +850,7 @@
         [class^=containerDefault__] {
             opacity: 0;
             margin-bottom: -40px;
-            transition: opacity 1s 0.2s, margin-bottom 0.7s 0.4s ease;
+            transition: opacity 1s 0.2s, margin-bottom 0.7s 0.2s ease;
         }
     }
 
@@ -868,7 +871,7 @@
         [class^=privateChannelsHeader] {
             opacity: 0;
             margin-bottom: -40px;
-            transition: opacity 1s 0.2s, margin-bottom 0.7s 0.4s ease;
+            transition: opacity 1s 0.2s, margin-bottom 0.7s 0.2s ease;
         }
     }
 
@@ -911,7 +914,7 @@
         [class^=membersGroup_] {
             opacity: 0;
             margin-bottom: -35px;
-            transition: opacity 1s 0.2s, margin-bottom 0.7s 0.4s ease;
+            transition: opacity 1s 0.2s, margin-bottom 0.7s 0.2s ease;
         }
 
         &:hover {
@@ -1163,3 +1166,4 @@
         --opacity: 1;
     }
 }
+
