@@ -556,7 +556,7 @@
     }
 
     [class^=avatarWrapper] {
-        margin-top: -72px;
+        margin-top: -40px;
         background: none;
         border-radius: 32px;
         margin-right: unset;
@@ -609,33 +609,33 @@
         margin-top: 0;
     }
 
-    [class^=panels]>[class^=container]>[class^=flex] {
+    [class^=content]>[class^=flex] {
         visibility: hidden;
         opacity: 0;
         justify-content: center;
         gap: 30px;
+        transform: translate(-83px, -55px);
         transition: visibility 0.3s 0.2s, opacity 0.2s 0.2s, gap 0.2s 0.2s ease;
     }
 
-    &:hover [class^=panels]>[class^=container]>[class^=flex] {
+    &:hover [class^=content]>[class^=flex] {
         visibility: visible;
         opacity: 1;
     }
 
-    [class^=avatarWrapper]>[class^=wrapper] {
-        margin-top: 37px;
-        margin-left: -1px;
+    [class^=avatarWrapper]>[class*=avatar] {
+        margin-top: 39px;
+        margin-left: -2px;
         scale: 0.9;
-        transition: all 0.2s 0.2s ease;
+        transition: all 0.4s 0.2s ease;
     }
 
-    &:hover [class^=avatarWrapper]>[class^=wrapper] {
-        margin-top: 37px;
+    &:hover [class^=avatarWrapper]>[class*=avatar] {
         margin-left: 8px;
     }
 
     [class^=panels] {
-        margin-bottom: 6px;
+        margin-bottom: 4px;
         margin-left: 14px;
         max-width: 42px;
         border-radius: 32px;
@@ -651,11 +651,21 @@
     [class^=panels]>[class^=container_] {
         height: unset;
         border-radius: 32px;
-        align-items: unset;
         padding: 4px 4px 4px 4px;
-        flex-direction: column-reverse;
-        gap: 2px;
         transition: border-radius 0.2s 0.2s, padding 0.2s 0.2s, border-radius 0.1s 0.2s ease;
+    }
+
+    [class^=panels]>[class^=container_]>[class^=content] {
+        background: none;
+        height: unset;
+        font-size: unset;
+        padding: unset;
+        margin-top: 0px;
+        transition: all 0.2s 0.2s ease;
+    }
+
+    &:hover [class^=panels]>[class^=container_]>[class^=content] {
+        margin-top: 32px;
     }
 
     [class^=panels]>div>[class^=container_] {
@@ -729,7 +739,7 @@
         visibility: hidden;
         z-index: 1;
         opacity: 0;
-        margin-top: 33px;
+        margin-bottom: -39px;
         margin-right: 15px;
         transition: visibility 0.1s 0.2s, opacity 0.2s 0.2s ease;
 
@@ -1166,4 +1176,3 @@
         --opacity: 1;
     }
 }
-
