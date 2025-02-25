@@ -556,7 +556,7 @@
     }
 
     [class^=avatarWrapper] {
-        margin-top: -40px;
+        margin-top: -72px;
         background: none;
         border-radius: 32px;
         margin-right: unset;
@@ -609,33 +609,33 @@
         margin-top: 0;
     }
 
-    [class^=content]>[class^=flex] {
+    [class^=panels]>[class^=container]>[class^=flex] {
         visibility: hidden;
         opacity: 0;
         justify-content: center;
         gap: 30px;
-        transform: translate(-83px, -55px);
         transition: visibility 0.3s 0.2s, opacity 0.2s 0.2s, gap 0.2s 0.2s ease;
     }
 
-    &:hover [class^=content]>[class^=flex] {
+    &:hover [class^=panels]>[class^=container]>[class^=flex] {
         visibility: visible;
         opacity: 1;
     }
 
-    [class^=avatarWrapper]>[class*=avatar] {
-        margin-top: 39px;
-        margin-left: -2px;
+    [class^=avatarWrapper]>[class^=wrapper] {
+        margin-top: 37px;
+        margin-left: -1px;
         scale: 0.9;
-        transition: all 0.4s 0.2s ease;
+        transition: all 0.2s 0.2s ease;
     }
 
-    &:hover [class^=avatarWrapper]>[class*=avatar] {
+    &:hover [class^=avatarWrapper]>[class^=wrapper] {
+        margin-top: 37px;
         margin-left: 8px;
     }
 
     [class^=panels] {
-        margin-bottom: 4px;
+        margin-bottom: 6px;
         margin-left: 14px;
         max-width: 42px;
         border-radius: 32px;
@@ -651,24 +651,14 @@
     [class^=panels]>[class^=container_] {
         height: unset;
         border-radius: 32px;
+        align-items: unset;
         padding: 4px 4px 4px 4px;
+        flex-direction: column-reverse;
+        gap: 2px;
         transition: border-radius 0.2s 0.2s, padding 0.2s 0.2s, border-radius 0.1s 0.2s ease;
     }
 
-    [class^=panels]>[class^=container_]>[class^=content] {
-        background: none;
-        height: unset;
-        font-size: unset;
-        padding: unset;
-        margin-top: 0px;
-        transition: all 0.2s 0.2s ease;
-    }
-
-    &:hover [class^=panels]>[class^=container_]>[class^=content] {
-        margin-top: 32px;
-    }
-
-    [class^=panels]>div>[class^=container_] {
+    [class^=panels]>[class^=wrapper]>[class^=container_] {
         visibility: hidden;
         opacity: 0;
         padding: 0;
@@ -697,8 +687,8 @@
         transition: margin-top 0s 0.2s ease;
     }
 
-    &:hover [class^=panels]>div>[class^=container_],
-    &:hover [class^=panels]>[class^=panel_],
+    &:hover [class^=panels]>[class^=wrapper]>[class^=container_],
+    &:hover [class^=panels]>[class^=panel__],
     &:hover #vc-spotify-player {
         visibility: visible;
         opacity: 1;
@@ -707,23 +697,23 @@
         border: 0 #00000000 solid;
     }
 
-    &:hover [class^=panels]:has(div>[class^=container_], #vc-spotify-player)>[class^=container_] {
+    &:hover [class^=panels]:has([class^=wrapper]>[class^=container_], #vc-spotify-player)>[class^=container_] {
         border-radius: 0 0 32px 32px;
     }
 
-    &:hover [class^=panels]:not(:has([class^=panel_]))>div>[class^=container_] {
+    &:hover [class^=panels]:not(:has([class^=panel_]))>[class^=wrapper]>[class^=container_] {
         border-radius: 32px 32px 0 0;
     }
 
-    &:hover [class^=panels]:has([class^=panel_])>div>[class^=container_] {
+    &:hover [class^=panels]:has([class^=panel_])>[class^=wrapper]>[class^=container_] {
         border-radius: 0 0 0 0;
     }
 
-    &:hover [class^=panels]:not(:has(div>[class^=container]))>#vc-spotify-player {
+    &:hover [class^=panels]:not(:has([class^=wrapper]>[class^=container_]))>#vc-spotify-player {
         border-radius: 32px 32px 0 0;
     }
 
-    &:hover [class^=panels]:has(div>[class^=container])>#vc-spotify-player {
+    &:hover [class^=panels]:has(div>[class^=wrapper]>[class^=container_])>#vc-spotify-player {
         border-radius: 0 0 0 0;
     }
 
@@ -739,7 +729,7 @@
         visibility: hidden;
         z-index: 1;
         opacity: 0;
-        margin-bottom: -39px;
+        margin-top: 33px;
         margin-right: 15px;
         transition: visibility 0.1s 0.2s, opacity 0.2s 0.2s ease;
 
