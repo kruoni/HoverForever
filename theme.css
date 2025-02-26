@@ -502,13 +502,14 @@
 }
 
 .expression-picker-chat-input-button:not(:last-child):not([class^=buttons]:has([class^=separator])>.expression-picker-chat-input-button:nth-last-child(2)),
-[class^=container]>[class^=button],
+[class^=container]>[class^=button]:not(:has([class^=micButton])),
 [href="/shop"],
 [href="/store"],
 [class^=channelAppLauncher]>div>[class^=button_],
 [class^=toolbar_]>*:is(:nth-child(2), :nth-last-child(3), :nth-last-child(2)),
 [class^=linkTop]>[class^=children],
-[data-list-item-id^=guildsnav___app] {
+[data-list-item-id^=guildsnav___app],
+[class^=button__]:is([aria-haspopup="dialog"]) {
     display: none;
 }
 
@@ -609,22 +610,24 @@
         margin-top: 0;
     }
 
-    [class^=panels]>[class^=container]>[class^=flex] {
+    [class^=panels]>[class^=container__]>[class^=buttons__] {
         visibility: hidden;
         opacity: 0;
         justify-content: center;
         gap: 30px;
-        transition: visibility 0.3s 0.2s, opacity 0.2s 0.2s, gap 0.2s 0.2s ease;
+        margin-top: -2px;
+        margin-bottom: 1px;
+        transition: visibility 0.3s 0.2s, opacity 0.2s 0.2s ease;
     }
 
-    &:hover [class^=panels]>[class^=container]>[class^=flex] {
+    &:hover [class^=panels]>[class^=container__]>[class^=buttons__] {
         visibility: visible;
         opacity: 1;
     }
 
     [class^=avatarWrapper]>[class^=wrapper] {
         margin-top: 37px;
-        margin-left: -1px;
+        margin-left: -2px;
         scale: 0.9;
         transition: all 0.2s 0.2s ease;
     }
