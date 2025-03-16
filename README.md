@@ -1,3 +1,6 @@
+>[!IMPORTANT]
+>I will rewrite the theme when my break will start, so no new changes will be made until then (except critical bug fixes).
+
 # Discord Theme to have the laggiest experience ever!
 
 DMs           |  Servers
@@ -6,11 +9,7 @@ DMs           |  Servers
 
 
 > [!NOTE]
-> Previews are capped to around 16 fps, and the [Demonstration](https://github.com/MiniDiscordThemes/Demonstration) theme made them ***even*** more laggier.
-
-> [!WARNING]
-> ## CODE CAN BE BROKEN: if needed, file an issue following the template.
-> I will try to optimize the theme when I have more time on my hand, however the code is currently a mess (I am **not** keen to do a full rewrite).
+> Previews are capped to around 16 fps, and the [Demonstration](https://github.com/MiniDiscordThemes/Demonstration) theme made them ***even*** more laggier,
 
 # How To Install:
 
@@ -91,3 +90,6 @@ To disable the effect, just change the value in the :root part:
     /* change to var(--color-bg-dark2) for dark mode, or var(--color-bg-light2) for light mode, to remove transparency */
 }
 ```
+> [!WARNING]
+> ## CODE CAN BE BROKEN: if needed, file an issue following the template.
+> I will try to optimize the theme when I have more time on my hand, however the code is currently a mess (I am **not** keen to do a full rewrite).
