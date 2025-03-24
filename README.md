@@ -1,5 +1,5 @@
 >[!IMPORTANT]
->I will rewrite the theme when my break will start, so no new changes will be made until then (except critical bug fixes).
+> The theme is currently being rewritten (I had more time than I thought), so expect a big boost in performance, but some small aesthetics changes (for example, the profile picture wont be shown while the theme is unhovered, as it was causing 99% of the theme's lag, thanks discord avatar wrapper).
 
 # Discord Theme to have the laggiest experience ever!
 
@@ -68,7 +68,7 @@ Save this link as a file and you'll get a .css file ready to be used: https://ra
 Check below for more details. 
 
 ### You can change the Image that appears on the avatar Wrapper.
-It respects Discord's banners' size (600x240px). I tried to make it fit the wrapper, so custom sizes might be jamky.
+It respects Discord's banners' size (600x240px). I tried to make it fit the wrapper, so custom sizes might be janky.
 ```
 :root {
     --avatar-wrapper-background: /*YOUR OWN IMAGE*/;
