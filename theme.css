@@ -434,11 +434,7 @@
         border: 1px var(--color-border-light) solid;
         border-width: 1px 1px 0px;
     }
-
-    .stackedBars__74017 {
-        border: none !important;
-    }    
-
+    
     .themed__9293f,
     .background__1fed1,
     .fieldList__1fed1,
@@ -1231,4 +1227,8 @@ interactive_bf202d {
 
 .clipContainer__841c8 {
     padding-top: 0;
+}
+
+.stackedBars__74017 {
+    border: none !important;
 }
