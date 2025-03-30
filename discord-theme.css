@@ -42,7 +42,7 @@
 
 :root {
     --avatar-wrapper-background: url('https://img.freepik.com/photos-gratuite/fond-ecran-colore-flou-artistique_58702-8654.jpg');
-    --avatar-wrapper-background-size: 216px;
+    --avatar-wrapper-background-size: 270px;
 
     /* SERVER AND CHANNEL SIDEBAR COLOR */
     --app-background: transparent;
