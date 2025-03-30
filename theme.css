@@ -622,7 +622,7 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     &:hover .avatar__37e49 {
-        transform: translate(18px, 22px);
+        transform: translate(18px, 30px);
     }
 
     .avatar__37e49::before {
