@@ -69,10 +69,11 @@ It respects Discord's banners' size (600x240px). I tried to make it fit the wrap
 ```
 :root {
     --avatar-wrapper-background: /*YOUR IMAGE HERE*/;
-    --avatar-wrapper-background-size: 216px;
+    --avatar-wrapper-background-size: 270px;
 }
 ```
-![image](https://github.com/user-attachments/assets/f6e56e8f-7686-4375-91f4-313c20ac17b7)
+![image](https://github.com/user-attachments/assets/743efcf8-c66b-4727-9c49-a5bdfa3c3bad)
+
 
 
 ### Transparency is enabled by default (for *Vencord*, you have to enable "window transparency" in its settings, for other clients, I sadly do not know how to do so, so check for a setting mentioning transparency).
