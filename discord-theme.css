@@ -47,14 +47,14 @@
     /* SERVER AND CHANNEL SIDEBAR COLOR */
     --app-background: transparent;
     /* change to var(--color-bg-dark2) for dark mode, or var(--color-bg-light2) for light mode, to remove transparency */
-    
+
     /* LIGHT MODE */
     --color-bg-light1: #eee8df;
     --color-bg-light2: #dad5cf;
     --color-border-light: #242322;
     --color-panel-light: #dad5cfb0;
-    --text-color-light: #2e2e2d;
-    --background-opacity-light: #ffffff33;
+    --text-color-light: #282724;
+    --text-color-light-active: #363430;
     --background-accent-light: #dddae0;
     --background-modifier-hover-light: #d6c9e24d;
     --color-shadow-light: #9797a6;
@@ -64,11 +64,11 @@
     --color-bg-dark2: #222228;
     --color-border-dark: #c0c0c0;
     --color-panel-dark: #222228b0;
-    --text-color-dark: #dddae0;
-    --background-opacity-dark: #00000033;
+    --text-color-dark: #eae4db;
+    --text-color-dark-active: #d8cbbc;
     --background-accent-dark: #dddae0;
     --background-modifier-hover-dark: #d6c9e24d;
-    --color-shadow-dark: #101011;
+    --color-shadow-dark: #18151b;
 
     /* VARIOUS COLORS */
     --color-accent-button: #6823ae65;
