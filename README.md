@@ -1,6 +1,3 @@
->[!IMPORTANT]
-> The theme is currently being rewritten (I had more time than I thought), so expect a big boost in performance, but some small aesthetics changes (for example, the profile picture wont be shown while the theme is unhovered, as it was causing 99% of the theme's lag, thanks discord avatar wrapper).
-
 # Discord Theme to have the laggiest experience ever!
 
 DMs           |  Servers
@@ -9,28 +6,28 @@ DMs           |  Servers
 
 
 > [!NOTE]
-> Previews are capped to around 16 fps, and the [Demonstration](https://github.com/MiniDiscordThemes/Demonstration) theme made them ***even*** more laggier,
+> Previews are outdated!
 
 # How To Install:
 
 1- With QuickCSS (or any CSS editors from your client):
 
-`@import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main-theme/discord-theme.css");`
+`@import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/visual-refresh/discord-theme.css");`
 
 2- With the raw link (for use with Vencord's online theme, or any other online import using raw links):
 
-`https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main-theme/discord-theme.css`
+`https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/visual-refresh/discord-theme.css`
 
 3- Save as a css file:
 
-Save this link as a file and you'll get a .css file ready to be used: https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main-theme/discord-theme.css
+Save this link as a file and you'll get a .css file ready to be used: https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/visual-refresh/discord-theme.css
 
 ## Customization
 
 ### The :root variables are: 
 ```
 :root {
-    --avatar-wrapper-background: /* YOUR OWN IMAGE HERE */;
+    --avatar-wrapper-background: /*YOUR IMAGE HERE*/;
     --avatar-wrapper-background-size: 216px;
 
     /* SERVER AND CHANNEL SIDEBAR COLOR */
@@ -42,8 +39,8 @@ Save this link as a file and you'll get a .css file ready to be used: https://ra
     --color-bg-light2: #dad5cf;
     --color-border-light: #242322;
     --color-panel-light: #dad5cfb0;
-    --text-color-light: #2e2e2d;
-    --background-opacity-light: #ffffff33;
+    --text-color-light: #282724;
+    --text-color-light-active: #363430;
     --background-accent-light: #dddae0;
     --background-modifier-hover-light: #d6c9e24d;
     --color-shadow-light: #9797a6;
@@ -53,11 +50,11 @@ Save this link as a file and you'll get a .css file ready to be used: https://ra
     --color-bg-dark2: #222228;
     --color-border-dark: #c0c0c0;
     --color-panel-dark: #222228b0;
-    --text-color-dark: #dddae0;
-    --background-opacity-dark: #00000033;
+    --text-color-dark: #eae4db;
+    --text-color-dark-active: #d8cbbc;
     --background-accent-dark: #dddae0;
     --background-modifier-hover-dark: #d6c9e24d;
-    --color-shadow-dark: #101011;
+    --color-shadow-dark: #18151b;
 
     /* VARIOUS COLORS */
     --color-accent-button: #6823ae65;
@@ -71,7 +68,7 @@ Check below for more details.
 It respects Discord's banners' size (600x240px). I tried to make it fit the wrapper, so custom sizes might be janky.
 ```
 :root {
-    --avatar-wrapper-background: /*YOUR OWN IMAGE*/;
+    --avatar-wrapper-background: /*YOUR IMAGE HERE*/;
     --avatar-wrapper-background-size: 216px;
 }
 ```
