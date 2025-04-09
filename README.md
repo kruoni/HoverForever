@@ -1,12 +1,6 @@
 # Discord Theme to have the laggiest experience ever!
 
-DMs           |  Servers
-:-------------------------:|:-------------------------:
-![Shows the DMs and Groups with the style applied](https://github.com/user-attachments/assets/84cbb1c5-212a-4c0e-9e48-52ca3e00b59d) |  ![Shows a random channel in a server with the style applied](https://github.com/user-attachments/assets/d6c44499-1665-470a-8c6c-3a66e3b84a41)
-
-
-> [!NOTE]
-> Previews are outdated!
+https://github.com/user-attachments/assets/c738e275-b1be-4523-bb49-e777e4336407
 
 # How To Install:
 
