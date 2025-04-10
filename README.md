@@ -15,15 +15,15 @@ DMs           |  Servers
 
 1- With QuickCSS (or any CSS editors from your client):
 
-`@import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main-theme/discord-theme.css");`
+`@import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/legacy-theme/discord-theme.css");`
 
 2- With the raw link (for use with Vencord's online theme, or any other online import using raw links):
 
-`https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main-theme/discord-theme.css`
+`https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/legacy-theme/discord-theme.css`
 
 3- Save as a css file:
 
-Save this link as a file and you'll get a .css file ready to be used: https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/main-theme/discord-theme.css
+Save this link as a file and you'll get a .css file ready to be used: https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/legacy-theme/discord-theme.css
 
 ## Customization
 
