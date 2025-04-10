@@ -22,8 +22,8 @@
     --primary-860: invert(1);
     --background-base-lower: var(--color-bg-dark1) !important;
     --background-secondary: var(--color-bg-dark2);
-    --modal-footer-background: var(--color-bg-dark2);
-    --modal-background: var(--color-bg-dark1);
+    --modal-background: var(--color-bg-dark1) !important;
+    --modal-footer-background: var(--color-bg-dark1) !important;
     --header-secondary: var(--channels-default);
     --custom-channel-members-bg: var(--color-bg-dark1);
 
@@ -295,8 +295,8 @@
     --primary-860: invert(1);
     --background-base-lower: var(--color-bg-light1) !important;
     --background-secondary: var(--color-bg-light2);
-    --modal-footer-background: var(--color-bg-light2);
-    --modal-background: var(--color-bg-light1);
+    --modal-background: var(--color-bg-light1) !important;
+    --modal-footer-background: var(--color-bg-light1) !important;
     --header-secondary: var(--channels-default);
     --custom-channel-members-bg: var(--color-bg-light1);
 
