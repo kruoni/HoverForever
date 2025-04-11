@@ -655,7 +655,7 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     .avatar__37e49 {
-        transform: translate(65px, -700px);
+        transform: translate(67px, -700px);
         transition: transform 0.8s 0.2s ease;
     }
 
@@ -668,7 +668,7 @@ div:hover>.avatarDecoration__44b0c {
         height: 64px;
         width: 64px;
         opacity: 1;
-        transform: translate(-14px, -13px);
+        transform: translate(-13px, -13px);
         position: absolute;
         border-radius: 32px;
         transition: opacity 0.9s 0.2s ease;
