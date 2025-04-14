@@ -1,6 +1,7 @@
-# Discord Theme to have the laggiest experience ever!
+# Discord Theme where hovering is key! 
 
-https://github.com/user-attachments/assets/c738e275-b1be-4523-bb49-e777e4336407
+https://github.com/user-attachments/assets/5868e1fa-a43a-4ea0-82ba-3d0b77bbc478
+
 
 # How To Install:
 
