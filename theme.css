@@ -1309,7 +1309,7 @@ interactive_bf202d {
     width: 72px !important;
     height: 72px !important;
     padding-left: 0;
-    margin-left: -5px;
+    margin-left: -4px;
     gap: 0;
 }
 
@@ -1323,6 +1323,8 @@ interactive_bf202d {
 
 .winButtons_c38106 {
     margin-top: 36px;
+    gap: 7px;
+    flex-direction: row;
 }
 
 .winButton_c38106 svg {
@@ -1337,8 +1339,8 @@ interactive_bf202d {
 
 .winButton_c38106 {
     border-radius: 8px;
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     background-color: var(--background-primary);
 }
 
