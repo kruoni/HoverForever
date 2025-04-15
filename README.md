@@ -6,17 +6,19 @@ https://github.com/user-attachments/assets/5868e1fa-a43a-4ea0-82ba-3d0b77bbc478
 # How To Install:
 
 1- With QuickCSS (or any CSS editors from your client):
-
-`@import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/visual-refresh/discord-theme.css");`
-
+```
+@import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/visual-refresh/discord-theme.css");
+```
 2- With the raw link (for use with Vencord's online theme, or any other online import using raw links):
-
-`https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/visual-refresh/discord-theme.css`
-
+```
+https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/visual-refresh/discord-theme.css
+```
 3- Save as a css file:
 
-Save this link as a file and you'll get a .css file ready to be used: https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/visual-refresh/discord-theme.css
-
+Save this link as a file and you'll get a .css file ready to be used: 
+```
+https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/visual-refresh/discord-theme.css
+```
 ## Customization
 
 ### The :root variables are: 
