@@ -636,7 +636,7 @@ div:hover>.avatarDecoration__44b0c {
         }
     }
 
-    .visual-refresh .avatarWrapper__37e49:hover {
+    .avatarWrapper__37e49:hover {
         background-color: none;
     }
 
@@ -1077,14 +1077,8 @@ div:hover>.avatarDecoration__44b0c {
 }
 
 .headerIcon__00943 {
-    padding-right: 19px;
+    transform: translateX(-15px);
     scale: 1.4;
-    transition: padding-right 1.5s ease;
-}
-
-.section__00943 {
-    opacity: 0;
-    margin-top: -70px;
     transition: all 1.5s ease;
 }
 
@@ -1093,6 +1087,7 @@ div:hover>.avatarDecoration__44b0c {
     min-width: 150px;
     margin-right: -150px;
 }
+
 .content_f75fb0>.outer_c0bea0 {
     max-width: 200px;
     min-width: 200px;
@@ -1134,20 +1129,54 @@ div:hover>.avatarDecoration__44b0c {
     }
 }
 
+.section__00943 {
+    width: 32px;
+    margin-left: 12px;
+    transition: all 1.5s ease;
+}
+
+.activitySection__00943>*:not(.activitySectionAssets__00943),
+.details__39ec2 {
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+
+.actions__39ec2 {
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+
+.imagePosition_ef9ae7 {
+    scale: 1.7;
+    transform: translate(24px, 12px);
+    transition: all 1.5s ease;
+}
+
+.content_f75fb0>.outer_c0bea0:hover .imagePosition_ef9ae7 {
+    scale: 1;
+    transform: translate(0, 0);
+}
+
+.nowPlayingColumn__133bf:hover .section__00943 {
+    width: 209px;
+    margin-left: 0;
+}
+
+.content_f75fb0>.outer_c0bea0:hover .actions__39ec2,
+.content_f75fb0>.outer_c0bea0:hover .details__39ec2,
+.nowPlayingColumn__133bf:hover .activitySection__00943>*:not(.activitySectionAssets__00943) {
+    opacity: 1;
+}
+
 .content_f75fb0>.outer_c0bea0:hover,
 .nowPlayingColumn__133bf:hover {
     max-width: 300px;
 }
 
-.nowPlayingColumn__133bf:hover .section__00943 {
-    opacity: 1;
-    margin-top: 15px;
-}
-
 .nowPlayingColumn__133bf:hover .headerIcon__00943,
 .nowPlayingColumn__133bf:hover .headerFull__00943>*:not(.wrapper__44b0c, img) {
     opacity: 1;
-    padding-right: 5px;
+    transform: translateX(0px);
 }
 
 .container_c48ade:hover .content_f75fb0>.outer_c0bea0,
@@ -1237,7 +1266,7 @@ body,
     display: none;
 }
 
-.visual-refresh .wrapper_ef3116 {
+.wrapper_ef3116 {
     margin-bottom: unset;
 }
 
