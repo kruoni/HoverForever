@@ -1,6 +1,12 @@
 # Discord Theme where hovering is key! 
 
-https://github.com/user-attachments/assets/5868e1fa-a43a-4ea0-82ba-3d0b77bbc478
+Activity Column           |  User Profile | Sidebar | General Preview
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![2025-04-1518-00-29-ezgif com-cut](https://github.com/user-attachments/assets/aeef4f27-6efc-4116-9328-11f431888d18) | ![userprofile preview](https://github.com/user-attachments/assets/dd28c48c-aaa9-4cd1-a93b-80fe2276fef6) | ![2025-04-1518-26-46-ezgif com-cut](https://github.com/user-attachments/assets/644b6745-9d45-4e8e-9846-ab5da3baac0f) | ![2025-04-1518-38-15-ezgif com-optimize](https://github.com/user-attachments/assets/c7b45cce-310b-4a86-91d9-a26f55ef64d2)
+
+Friend List Horizontal          | Friend List Vertical
+:-------------------------:|:-------------------------:
+![image](https://github.com/user-attachments/assets/3d760c24-b895-4bcb-88ee-e93b554b16db) | ![image](https://github.com/user-attachments/assets/228a6402-5687-4aa4-9ba1-4cf65ec623a5)
 
 
 # How To Install:
