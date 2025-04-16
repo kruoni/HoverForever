@@ -4,8 +4,9 @@
 
 | Version | Supported          |
 | ------- | ------------------ |
-| main-theme  | :white_check_mark: |
+| visual-refresh  | :white_check_mark: |
 | legacy-surcord  | :x:                |
+| legacy-theme  | :x:|
 
 ## Reporting a Vulnerability
 
