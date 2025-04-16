@@ -1523,3 +1523,82 @@ interactive_bf202d {
         }
     }
 }
+
+/* legcord compatibility (use with default (custom) titlebar) */
+.window-title {
+    display: none;
+}
+
+.titlebar {
+    width: 70px;
+}
+
+#window-controls-container {
+    float: left !important;
+    scale: 0.6;
+    display: flex;
+    margin-left: -13px;
+    width: 100px !important;
+}
+
+.app-focused #window-controls-container [id*=-icon]{
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+}
+
+#window-controls-container {
+    border-radius: 8px;
+    width: 12px;
+    height: 12px;
+}
+
+#quit-icon,
+#minimize-icon,
+#maximize-icon  {
+    mask: none !important;
+    background-color: var(--background-primary) !important;
+}
+
+.app-focused #quit-icon  {
+    background-color: #ff5c57 !important;
+    mask: none !important;
+}
+
+#quit {
+    order: 1 !important;
+}
+
+#minimize {
+    order: 2 !important;
+}
+
+#maximize {
+    order: 3 !important;
+}
+
+.app-focused #quit-icon:hover {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUuMjkyODkgNkwyLjgxODAxIDMuNTI1MTNMMy41MjUxMiAyLjgxODAyTDUuOTk5OTkgNS4yOTI4OUw4LjQ3NDg3IDIuODE4MDJMOS4xODE5NyAzLjUyNTEzTDYuNzA3MSA2TDkuMTgxOTcgOC40NzQ4N0w4LjQ3NDg3IDkuMTgxOThMNS45OTk5OSA2LjcwNzExTDMuNTI1MTIgOS4xODE5OEwyLjgxODAxIDguNDc0ODdMNS4yOTI4OSA2WiIgZmlsbD0iI0EyMDAwOCIvPgo8L3N2Zz4=);
+}
+
+.app-focused #minimize-icon {
+    background-color: #fdbd3d !important;
+    mask: none !important;
+}
+
+.app-focused #minimize-icon:hover {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDUuMzk5OTlIMlY2LjU5OTk5SDEwVjUuMzk5OTlaIiBmaWxsPSIjQjM3MTFBIi8+Cjwvc3ZnPg==);
+}
+
+.app-focused #maximize-icon {
+    mask: none !important;
+    background-color: #26c84b !important;
+}
+
+.app-focused #maximize-icon:hover {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcuMzkyOTMgMy4wMDg5M0wzLjAwODg3IDcuMzkyOTlMMi44MTc5NSAyLjgxODAxTDcuMzkyOTMgMy4wMDg5M1oiIGZpbGw9IiMwMjZBMTUiLz4KPHBhdGggZD0iTTQuNjA2OTUgOC45OTEwMUw4Ljk5MTAxIDQuNjA2OTVMOS4xODE5MyA5LjE4MTkzTDQuNjA2OTUgOC45OTEwMVogIiBmaWxsPSIjMDI2QTE1Ii8+Cjwvc3ZnPg==);
+}
+
+body:has(div>.titlebar) .appMount__51fd7 {
+    height: 1032px !important;
+}
