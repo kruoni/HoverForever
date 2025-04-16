@@ -1600,5 +1600,5 @@ interactive_bf202d {
 }
 
 body:has(div>.titlebar) .appMount__51fd7 {
-    height: 1032px !important;
+    height: 100% !important;
 }
