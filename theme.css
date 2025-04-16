@@ -725,14 +725,22 @@ div:hover>.avatarDecoration__44b0c {
     .panel__5dec7,
     #vc-spotify-player {
         opacity: 0;
+        padding: 8px;
         transition: opacity 0.8s 0.2s ease;
+    }
+
+    #vc-spotify-player {
+        padding: 12px;
+    }
+
+    #vc-spotify-album-expanded-wrapper {
+        padding: 8px;
     }
 
     &:hover .container_e131a9,
     &:hover .panel__5dec7,
     &:hover #vc-spotify-player {
         opacity: 1;
-        padding: 8px;
     }
 
     .panels_c48ade:has(.container_e131a9, #vc-spotify-player)>.container__37e49 {
@@ -1144,6 +1152,15 @@ div:hover>.avatarDecoration__44b0c {
         scale: 1;
         transform: translate(0, 0);
     }
+
+    .card__747b1 {
+        padding-bottom: 55px;
+        transition: all 1.5s ease;
+    }
+
+    &:hover .card__747b1 {
+        padding-bottom: 12px;
+    }
 }
 
 .nowPlayingColumn__133bf {
@@ -1160,6 +1177,12 @@ div:hover>.avatarDecoration__44b0c {
     &:hover .section__00943 {
         width: 209px;
         margin-left: 0;
+    }
+
+    .activitySection__00943>*:not(.activitySectionAssets__00943),
+    .details__39ec2 {
+        opacity: 0;
+        transition: all 1.5s ease;
     }
 }
 
@@ -1400,7 +1423,7 @@ interactive_bf202d {
     min-width: 70%;
 }
 
-.bar_c38106 {
+body:not(:has(div>.titlebar)) .bar_c38106 {
     width: 72px !important;
     height: 72px !important;
     padding-left: 0;
@@ -1474,12 +1497,12 @@ interactive_bf202d {
     margin-top: -16px;
 }
 
-.base_c48ade,
-.contentTransitionWrap__23e6b {
+body:not(:has(div>.titlebar)) .base_c48ade,
+body:not(:has(div>.titlebar)) .contentTransitionWrap__23e6b {
     margin-top: -37px;
 }
 
-.guilds_c48ade {
+body:not(:has(div>.titlebar)) .guilds_c48ade {
     margin-top: 37px;
 }
 
@@ -1525,6 +1548,7 @@ interactive_bf202d {
 }
 
 /* legcord compatibility (use with default (custom) titlebar) */
+
 .window-title {
     display: none;
 }
