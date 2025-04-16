@@ -1497,12 +1497,12 @@ body:not(:has(div>.titlebar)) .bar_c38106 {
     margin-top: -16px;
 }
 
-body:not(:has(div>.titlebar)) .base_c48ade,
-body:not(:has(div>.titlebar)) .contentTransitionWrap__23e6b {
+.base_c48ade,
+.contentTransitionWrap__23e6b {
     margin-top: -37px;
 }
 
-body:not(:has(div>.titlebar)) .guilds_c48ade {
+.guilds_c48ade {
     margin-top: 37px;
 }
 
