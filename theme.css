@@ -1300,7 +1300,7 @@ body,
     transition: all 0.8s ease !important;
 
     &:hover {
-        margin: 15px 17px 15px 38px;
+        margin: 15px 17px 15px 38px !important;
     }
 
     .listItemContents_fc004c {
