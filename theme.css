@@ -1209,10 +1209,6 @@ div:hover>.avatarDecoration__44b0c {
     margin-right: 0;
 }
 
-.repliedTextPreview_c19a55 {
-    padding-right: 25px;
-}
-
 [class^="userPopoutInner_"] [class^="descriptionClamp_"] {
     -webkit-line-clamp: unset;
     max-height: unset;
