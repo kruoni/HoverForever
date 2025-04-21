@@ -567,7 +567,6 @@
 [href="/shop"],
 [href="/store"],
 .channelAppLauncher_e6e74f,
-.toolbar__9293f>*:is(:nth-child(2), :nth-last-child(3), :nth-last-child(2)),
 .listItem__650eb:has([data-list-item-id=guildsnav___app-download-button]),
 .buttons__74017>*:not(.expression-picker-chat-input-button),
 .children__2ea32,
@@ -871,7 +870,7 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     .bannerImg_f37cb1 {
-        max-width: 102px;
+        width: 102px;
         height: calc(var(--custom-guild-banner-height) - 96px);
         transition: all 0.8s 0.2s ease;
     }
@@ -907,7 +906,7 @@ div:hover>.avatarDecoration__44b0c {
         }
 
         .bannerImg_f37cb1 {
-            max-width: 301px;
+            width: 301px;
             height: 169px;
         }
 
@@ -1042,8 +1041,8 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     .container_c8ffbb {
-        max-width: 68px;
-        transition: max-width 0.8s 0.2s;
+        width: 68px;
+        transition: width 0.8s 0.2s;
 
         .membersGroup_c8ffbb {
             opacity: 0;
@@ -1057,7 +1056,7 @@ div:hover>.avatarDecoration__44b0c {
         }
 
         &:hover {
-            max-width: 240px;
+            width: 240px;
 
             .membersGroup_c8ffbb {
                 opacity: 1;
@@ -1084,9 +1083,11 @@ div:hover>.avatarDecoration__44b0c {
     opacity: 0;
     transition: opacity 1.5s ease;
 }
+
 .headerIcon__00943 {
     transform: translateX(-15px);
     scale: 1.4;
+    opacity: 1;
     transition: all 1.5s ease;
 }
 
@@ -1418,8 +1419,7 @@ interactive_bf202d {
 }
 
 .reactions__23977 {
-    max-width: 70%;
-    min-width: 70%;
+    width: 70%;
 }
 
 body:not(:has(div>.titlebar)) .bar_c38106 {
@@ -1624,4 +1624,37 @@ body:not(:has(div>.titlebar)) .bar_c38106 {
 
 body:has(div>.titlebar) .appMount__51fd7 {
     height: 100% !important;
+}
+
+:root {
+  --codeblock-height: 200px;
+}
+.codeContainer__75297 > code {
+  max-height: var(--codeblock-height);
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+  }
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+    &::-webkit-scrollbar-track, &::-webkit-scrollbar-thumb {
+    visibility: hidden; 
+  }
+  &::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    background-color: var(--scrollbar-thin-thumb);
+    border: 2px solid transparent;
+    border-radius: 4px;
+    min-height: 40px;
+  }
+  &:hover::-webkit-scrollbar-track, &:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-thin-track);
+    border: 2px solid var(--scrollbar-thin-track);
+    border-color: var(--scrollbar-thin-track);
+  }
 }
