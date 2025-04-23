@@ -1079,7 +1079,7 @@ div:hover>.avatarDecoration__44b0c {
     transition: margin-right 1s, max-width 1.5s ease;
 }
 
-.headerFull__00943>*:not(.wrapper__44b0c, .clickable__00943) {
+.headerFull__00943>*:not(.wrapper__44b0c, .clickable__00943, .headerIcon__00943) {
     opacity: 0;
     transition: opacity 1.5s ease;
 }
