@@ -1079,7 +1079,7 @@ div:hover>.avatarDecoration__44b0c {
     transition: margin-right 1s, max-width 1.5s ease;
 }
 
-.headerFull__00943>*:not(.wrapper__44b0c, .clickable__00943, .headerIcon__00943) {
+.headerFull__00943>*:not(.wrapper__44b0c, .clickable__00943) {
     opacity: 0;
     transition: opacity 1.5s ease;
 }
@@ -1109,13 +1109,13 @@ div:hover>.avatarDecoration__44b0c {
         }
     }
 
-    .overlay__325ce {
+    .overlay_d04d18 {
         opacity: 0;
         transition: all 1.5s ease;
     }
 
     &:hover {
-        .overlay__325ce {
+        .overlay_d04d18 {
             opacity: 1;
         }
     }
@@ -1153,12 +1153,12 @@ div:hover>.avatarDecoration__44b0c {
         transform: translate(0, 0);
     }
 
-    .card__747b1 {
+    .card__486c9 {
         padding-bottom: 55px;
         transition: all 1.5s ease;
     }
 
-    &:hover .card__747b1 {
+    &:hover .card__486c9 {
         padding-bottom: 12px;
     }
 }
