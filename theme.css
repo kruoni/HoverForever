@@ -1153,12 +1153,12 @@ div:hover>.avatarDecoration__44b0c {
         transform: translate(0, 0);
     }
 
-    .card_b32ca4 {
-        padding-bottom: 55px;
+    .card_b32ca4:not(:has(.actions__39ec2>*)) {
+        padding-bottom: 35%;
         transition: all 1.5s ease;
     }
 
-    &:hover .card_b32ca4 {
+    &:hover .card_b32ca4:not(:has(.actions__39ec2>*)) {
         padding-bottom: 12px;
     }
 }
@@ -1174,9 +1174,18 @@ div:hover>.avatarDecoration__44b0c {
         transition: all 1.5s ease;
     }
 
+    .activitySection__00943 {
+        align-items: unset;
+    }
+
+    .smallImage__00943 {
+        transform: translateY(-10px);
+    }
+
     &:hover .section__00943 {
         width: 88.5%;
         margin-left: 0;
+        padding-bottom: 12px;
     }
 
     .activitySection__00943>*:not(.activitySectionAssets__00943),
