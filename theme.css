@@ -1553,7 +1553,7 @@ body:has(#legcordNavControls) .bar_c38106 {
 #window-controls-container {
     float: left;
     margin-top: 5px;
-    margin-left: -11px;
+    margin-left: -24px;
     scale: 0.6;
     gap: 10px;
     width: 74px;
@@ -1567,15 +1567,22 @@ body:has(#legcordNavControls) .bar_c38106 {
     background-size: 100%;
 }
 
+#quit:hover {
+    background-color: unset !important;
+}
+
 #quit {
+    width: unset !important;
     order: 1;
 }
 
 #minimize {
+    width: unset !important;
     order: 2;
 }
 
 #maximize {
+    width: unset !important;
     order: 3;
 }
 
