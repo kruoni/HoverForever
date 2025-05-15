@@ -310,7 +310,7 @@
     --custom-channel-members-bg: var(--color-bg-light1);
     --card-primary-bg: var(--color-bg-light1) !important;
 
-    .defaultColor__4bd52 {
+    .defaultColor_b717a1 {
         color: var(--text-color-light);
     }
 
@@ -1109,13 +1109,13 @@ div:hover>.avatarDecoration__44b0c {
         }
     }
 
-    .overlay_d04d18 {
+    .overlay__3b260 {
         opacity: 0;
         transition: all 1.5s ease;
     }
 
     &:hover {
-        .overlay_d04d18 {
+        .overlay__3b260 {
             opacity: 1;
         }
     }
@@ -1153,12 +1153,12 @@ div:hover>.avatarDecoration__44b0c {
         transform: translate(0, 0);
     }
 
-    .card__486c9 {
+    .card_b32ca4 {
         padding-bottom: 55px;
         transition: all 1.5s ease;
     }
 
-    &:hover .card__486c9 {
+    &:hover .card_b32ca4 {
         padding-bottom: 12px;
     }
 }
