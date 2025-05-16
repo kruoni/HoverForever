@@ -1153,11 +1153,6 @@ div:hover>.avatarDecoration__44b0c {
         transform: translate(0, 0);
     }
 
-    .card_b32ca4 {
-        padding-bottom: 55px;
-        transition: all 1.5s ease;
-    }
-
     &:hover .card_b32ca4 {
         padding-bottom: 12px;
     }
@@ -1174,6 +1169,15 @@ div:hover>.avatarDecoration__44b0c {
         transition: all 1.5s ease;
     }
 
+    .activitySection__00943>*:not(.activitySectionAssets__00943) {
+        margin-bottom: -12px;
+        transition: all 1.5s ease;
+    }
+
+    &:hover .activitySection__00943>*:not(.activitySectionAssets__00943) {
+        margin-bottom: 0;
+    }
+
     &:hover .section__00943 {
         width: 88.5%;
         margin-left: 0;
@@ -1183,6 +1187,10 @@ div:hover>.avatarDecoration__44b0c {
     .details__39ec2 {
         opacity: 0;
         transition: all 1.5s ease;
+    }
+
+    .activitySection__00943 {
+        align-items: center;
     }
 }
 
