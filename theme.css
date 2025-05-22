@@ -1152,6 +1152,11 @@ div:hover>.avatarDecoration__44b0c {
         scale: 1;
         transform: translate(0, 0);
     }
+    
+    .card_b32ca4 {
+        padding-bottom: 48px;
+        transition: all 1.5s ease;
+    }
 
     &:hover .card_b32ca4 {
         padding-bottom: 12px;
