@@ -1161,6 +1161,10 @@ div:hover>.avatarDecoration__44b0c {
     &:hover .card_b32ca4 {
         padding-bottom: 12px;
     }
+
+    .card_b32ca4:has(.actions__39ec2>*) {
+        padding-bottom: 16px;
+    }
 }
 
 .nowPlayingColumn__133bf {
