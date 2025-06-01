@@ -1,5 +1,5 @@
 >[!IMPORTANT]
-> The theme is currently being rewritten (I had more time than I thought), so expect a big boost in performance, but some small aesthetics changes (for example, the profile picture wont be shown while the theme is unhovered, as it was causing 99% of the theme's lag, thanks discord avatar wrapper).
+> Legacy code left here for archiving purpose, since Discord Removed the old UI. DO NOT USE
 
 # Discord Theme to have the laggiest experience ever!
 
