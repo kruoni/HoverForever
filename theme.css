@@ -647,7 +647,7 @@ div:hover>.avatarDecoration__44b0c {
         width: 269px;
         height: 95px;
         margin-top: 0;
-        margin-left: -1px;
+        margin-left: -4.5px;
         opacity: 0;
         position: absolute;
         transition: opacity 0.8s 0.2s, scale 1s ease;
@@ -679,6 +679,17 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     .avatar__37e49::before {
+        content: "";
+        height: 64px;
+        width: 64px;
+        opacity: 1;
+        transform: translate(-12px, -11px);
+        position: absolute;
+        border-radius: 32px;
+        transition: opacity 0.9s 0.2s ease;
+    }
+
+    .avatar__37e49:has(.avatarDecoration__44b0c)::before {
         content: "";
         height: 64px;
         width: 64px;
@@ -1152,7 +1163,7 @@ div:hover>.avatarDecoration__44b0c {
         scale: 1;
         transform: translate(0, 0);
     }
-    
+
     .card_b32ca4 {
         padding-bottom: 48px;
         transition: all 1.5s ease;
@@ -1180,11 +1191,13 @@ div:hover>.avatarDecoration__44b0c {
 
     .activitySection__00943>*:not(.activitySectionAssets__00943) {
         margin-bottom: -12px;
+        margin-top: -12px;
         transition: all 1.5s ease;
     }
 
     &:hover .activitySection__00943>*:not(.activitySectionAssets__00943) {
-        margin-bottom: 0;
+        margin-bottom: -2px;
+        margin-top: -2px;
     }
 
     &:hover .section__00943 {
