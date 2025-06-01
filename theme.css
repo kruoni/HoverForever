@@ -603,7 +603,7 @@ div:hover>.avatarDecoration__44b0c {
 }
 
 .sidebarResizeHandle_c48ade {
-    display: none;
+    display: none !important;
 }
 
 .sidebar_c48ade {
@@ -636,7 +636,7 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     .avatarWrapper__37e49:hover {
-        background-color: none;
+        background: none;
     }
 
     .avatarWrapper__37e49::before {
@@ -648,6 +648,20 @@ div:hover>.avatarDecoration__44b0c {
         height: 95px;
         margin-top: 0;
         margin-left: -4.5px;
+        opacity: 0;
+        position: absolute;
+        transition: opacity 0.8s 0.2s, scale 1s ease;
+    }
+
+    .avatarWrapper__37e49:has(.avatarDecoration__44b0c)::before {
+        content: "";
+        border-radius: 32px;
+        background: var(--avatar-wrapper-background);
+        background-size: var(--avatar-wrapper-background-size);
+        width: 269px;
+        height: 95px;
+        margin-top: 0;
+        margin-left: 0;
         opacity: 0;
         position: absolute;
         transition: opacity 0.8s 0.2s, scale 1s ease;
@@ -670,7 +684,12 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     .avatar__37e49 {
-        transform: translate(67px, -700px);
+        transform: translate(63px, -700px);
+        transition: transform 0.8s 0.2s ease;
+    }
+
+    .avatar__37e49:has(.avatarDecoration__44b0c) {
+        transform: translate(65px, -700px);
         transition: transform 0.8s 0.2s ease;
     }
 
@@ -1367,10 +1386,6 @@ body,
     transform: translateX(3px);
 }
 
-.interactive_bf202d {
-    max-width: 99%;
-}
-
 .container_b7e1cb+.buttonContainer_c19a55>.buttons__5126c {
     top: -27px;
 }
@@ -1692,3 +1707,4 @@ body:has(#legcordNavControls) .bar_c38106 {
         border-color: var(--scrollbar-thin-track);
     }
 }
+
