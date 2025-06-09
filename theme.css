@@ -1115,10 +1115,11 @@ div:hover>.avatarDecoration__44b0c {
 }
 
 .headerIcon__00943 {
-    transform: translateX(-15px);
+    bottom: 5.5px;
+    right: 3px;
+    position: absolute;
     scale: 1.4;
     opacity: 1;
-    transition: all 1.5s ease;
 }
 
 .content_f75fb0>.outer_c0bea0 {
@@ -1228,9 +1229,33 @@ div:hover>.avatarDecoration__44b0c {
     .activitySection__00943>*:not(.activitySectionAssets__00943),
     .details__39ec2,
     .voiceSectionDetails__00943,
-    .partyMemberKnown_e45a82 {
+    .partyMemberKnown_e45a82,
+    .headerSimple__00943>:not(.wrapper__44b0c) {
         opacity: 0;
         transition: all 1.5s ease;
+    }
+
+    .headerSimple__00943::after {
+        content: "";
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 4px;
+        bottom: 0.5px;
+        display: block;
+        filter: invert(0.8);
+        background-size: 22px;
+        outline: 1px solid black;
+        background-color: white;
+        background-repeat: no-repeat;
+        background-position: 4px 3px;
+        border-radius: 8px;
+        background-image: url("https://github.com/kruoni/HoverForever/blob/visual-refresh/Speaker_Icon.png?raw=true");
+        transition: transform 1.7s ease;
+    }
+
+    .headerSimple__00943 .defaultColor_b717a1 { 
+        width: 145px;
     }
 
     .activitySection__00943 {
@@ -1242,6 +1267,7 @@ div:hover>.avatarDecoration__44b0c {
 .content_f75fb0>.outer_c0bea0:hover .details__39ec2,
 .nowPlayingColumn__133bf:hover .voiceSectionDetails__00943,
 .nowPlayingColumn__133bf:hover .partyMemberKnown_e45a82,
+.nowPlayingColumn__133bf:hover .headerSimple__00943>:not(.wrapper__44b0c),
 .nowPlayingColumn__133bf:hover .activitySection__00943>*:not(.activitySectionAssets__00943) {
     opacity: 1;
 }
@@ -1251,8 +1277,7 @@ div:hover>.avatarDecoration__44b0c {
     max-width: 300px;
 }
 
-.nowPlayingColumn__133bf:hover .headerIcon__00943,
-.nowPlayingColumn__133bf:hover .headerFull__00943>*:not(.wrapper__44b0c, img) {
+.nowPlayingColumn__133bf:hover .headerFull__00943>*:not(.wrapper__44b0c, .clickable__00943, .headerIcon__00943) {
     opacity: 1;
     transform: translateX(0px);
 }
