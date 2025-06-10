@@ -1230,7 +1230,8 @@ div:hover>.avatarDecoration__44b0c {
     .details__39ec2,
     .voiceSectionDetails__00943,
     .partyMemberKnown_e45a82,
-    .headerSimple__00943>:not(.wrapper__44b0c) {
+    .headerSimple__00943>:not(.wrapper__44b0c),
+    .applicationStreamingSection__00943>*:not(.wrapper__44b0c) {
         opacity: 0;
         transition: all 1.5s ease;
     }
@@ -1267,6 +1268,7 @@ div:hover>.avatarDecoration__44b0c {
 .content_f75fb0>.outer_c0bea0:hover .details__39ec2,
 .nowPlayingColumn__133bf:hover .voiceSectionDetails__00943,
 .nowPlayingColumn__133bf:hover .partyMemberKnown_e45a82,
+.nowPlayingColumn__133bf:hover .applicationStreamingSection__00943>*:not(.wrapper__44b0c),
 .nowPlayingColumn__133bf:hover .headerSimple__00943>:not(.wrapper__44b0c),
 .nowPlayingColumn__133bf:hover .activitySection__00943>*:not(.activitySectionAssets__00943) {
     opacity: 1;
