@@ -1,0 +1,78 @@
+/* legcord compatibility (use with default (custom) titlebar) */
+
+body:has(#legcordNavControls) .bar_c38106 {
+    margin-top: 10px;
+    width: 62px;
+    height: 24px;
+}
+
+#window-controls-container {
+    float: left;
+    margin-top: 5px;
+    margin-left: -24px;
+    scale: 0.6;
+    gap: 10px;
+    width: 74px;
+}
+
+#window-controls-container [id*=icon] {
+    mask: none !important;
+    border-radius: 24px;
+    height: 24px;
+    width: 24px;
+    background-size: 100%;
+}
+
+#quit:hover {
+    background-color: unset !important;
+}
+
+#quit {
+    width: unset !important;
+    order: 1;
+}
+
+#minimize {
+    width: unset !important;
+    order: 2;
+}
+
+#maximize {
+    width: unset !important;
+    order: 3;
+}
+
+#window-controls-container>* {
+    border-radius: 24px;
+}
+
+#window-controls-container [id*=icon]::marker {
+    display: none;
+    content: "";
+}
+
+.app-focused #quit-icon {
+    background-color: #ff5c57 !important;
+}
+
+.app-focused #quit-icon:hover {
+    background-image: url(https://raw.githubusercontent.com/kem-a/macos-titlebar/refs/heads/main/gtk-4.0/titlebuttons/titlebutton-close-hover.svg);
+}
+
+.app-focused #minimize-icon {
+    background-color: #fdbd3d !important;
+}
+
+.app-focused #minimize-icon:hover {
+    background-image: url(https://raw.githubusercontent.com/kem-a/macos-titlebar/refs/heads/main/gtk-4.0/titlebuttons/titlebutton-minimize-hover.svg);
+}
+
+.app-focused #maximize-icon {
+    background-color: #26c84b !important;
+}
+
+.app-focused #maximize-icon:hover {
+    background-image: url(https://raw.githubusercontent.com/kem-a/macos-titlebar/refs/heads/main/gtk-4.0/titlebuttons/titlebutton-maximize-hover.svg);
+}
+
+/* end of legcord integration*/
