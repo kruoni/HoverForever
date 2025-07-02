@@ -12,7 +12,7 @@ Friend List Horizontal          | Friend List Vertical
 # How To Install:
 
 1- With QuickCSS (or any CSS editors from your client):
-```
+```css
 @import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/visual-refresh/discord-theme.css");
 ```
 2- With the raw link (for use with Vencord's online theme, or any other online import using raw links):
@@ -25,10 +25,11 @@ Save this link as a file and you'll get a .css file ready to be used:
 ```
 https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/visual-refresh/discord-theme.css
 ```
-## Customization
+
+# Customization
 
 ### The :root variables are: 
-```
+```css
 :root {
     --avatar-wrapper-background: /*YOUR IMAGE HERE*/;
     --avatar-wrapper-background-size: 216px;
@@ -69,7 +70,7 @@ Check below for more details.
 
 ### You can change the Image that appears on the avatar Wrapper.
 It respects Discord's banners' size (600x240px). I tried to make it fit the wrapper, so custom sizes might be janky.
-```
+```css
 :root {
     --avatar-wrapper-background: /*YOUR IMAGE HERE*/;
     --avatar-wrapper-background-size: 270px;
@@ -78,18 +79,25 @@ It respects Discord's banners' size (600x240px). I tried to make it fit the wrap
 ![image](https://github.com/user-attachments/assets/c2e63bd6-17dd-47f0-9413-a56b5c017bab) ![image](https://github.com/user-attachments/assets/76df8d6c-305c-4c01-aa4f-b80fa36cf02e)
 
 
-### Transparency is enabled by default (for *Vencord*, you have to enable "window transparency" in its settings, for other clients, I sadly do not know how to do so, so check for a setting mentioning transparency).
+### Transparency is enabled by default (Here's what the setting looks like using *Vencord*).
 
 ![image](https://github.com/user-attachments/assets/bd6063c2-91cc-49d4-bd24-755ed3c8fe9f)
 
 To disable the effect, just change the value in the :root part:
-```
+```css
 :root {
     /* SERVER AND CHANNEL SIDEBAR COLOR */
     --app-background: transparent;
     /* change to var(--color-bg-dark2) for dark mode, or var(--color-bg-light2) for light mode, to remove transparency */
 }
 ```
+
+### Legcord users: use this snippet to have the correct titlebar
+```css
+@import url(https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/visual-refresh/snippets/legcord-titlebar);
+```
+Drag by holding the window above the buttons.
+
 > [!WARNING]
 > ## CODE CAN BE BROKEN: if needed, file an issue following the template.
 > I will try to optimize the theme when I have more time on my hand, however the code is currently a mess (I am **not** keen to do a full rewrite).
