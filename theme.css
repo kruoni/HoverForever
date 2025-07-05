@@ -1021,7 +1021,7 @@ div:hover>.avatarDecoration__44b0c {
         }
 
         &:hover {
-            width: 240px;
+            width: 270px;
 
             .membersGroup_c8ffbb {
                 opacity: 1;
@@ -1045,7 +1045,7 @@ div:hover>.avatarDecoration__44b0c {
     transition: opacity 1.5s ease;
 }
 
-.headerIcon__00943 {
+.headerFull__00943 .headerIcon__00943 {
     bottom: 5.5px;
     right: 3px;
     position: absolute;
@@ -1158,6 +1158,7 @@ div:hover>.avatarDecoration__44b0c {
 
     .activitySection__00943>*:not(.activitySectionAssets__00943),
     .details__39ec2,
+    .section__00943:has(.twitchSectionSimple__00943) .twitchSectionSimple__00943>div:not(.twitchSectionIcon__00943),
     .voiceSectionDetails__00943,
     .partyMemberKnown_e45a82,
     .headerSimple__00943>:not(.wrapper__44b0c),
@@ -1196,14 +1197,23 @@ div:hover>.avatarDecoration__44b0c {
     }
 }
 
-.content_f75fb0>.outer_c0bea0:hover .actions__39ec2,
-.content_f75fb0>.outer_c0bea0:hover .details__39ec2,
-.nowPlayingColumn__133bf:hover .voiceSectionDetails__00943,
-.nowPlayingColumn__133bf:hover .partyMemberKnown_e45a82,
-.nowPlayingColumn__133bf:hover .applicationStreamingSection__00943>*:not(.wrapper__44b0c),
-.nowPlayingColumn__133bf:hover .headerSimple__00943>:not(.wrapper__44b0c),
-.nowPlayingColumn__133bf:hover .activitySection__00943>*:not(.activitySectionAssets__00943) {
-    opacity: 1;
+.content_f75fb0>.outer_c0bea0:hover { 
+    .actions__39ec2,
+    .details__39ec2 {
+        opacity: 1;
+    }
+}
+
+
+.nowPlayingColumn__133bf:hover {
+    .section__00943:has(.twitchSectionSimple__00943) .twitchSectionSimple__00943>div:not(.twitchSectionIcon__00943),
+    .voiceSectionDetails__00943,
+    .partyMemberKnown_e45a82,
+    .applicationStreamingSection__00943>*:not(.wrapper__44b0c),
+    .headerSimple__00943>:not(.wrapper__44b0c),
+    .activitySection__00943>*:not(.activitySectionAssets__00943) {
+        opacity: 1;
+    }
 }
 
 .content_f75fb0>.outer_c0bea0:hover,
