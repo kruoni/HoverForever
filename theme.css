@@ -574,7 +574,6 @@
     bottom: 0px;
 }
 
-[class^=container]>[class^=button]:not(:has([class^=micButton])),
 [href="/shop"],
 [href="/store"],
 .channelAppLauncher_e6e74f,
@@ -1433,7 +1432,7 @@ body:has(.winButtons_c38106) .bar_c38106 {
     margin: 36px 0 0 -15px;
 }
 
-body .bar_c38106 {
+.bar_c38106 {
     width: 62px;
     height: 24px;
     padding-left: 0;
@@ -1588,4 +1587,3 @@ body:has(.winButtons_c38106, #legcordNavControls) .guilds_c48ade {
         border-color: var(--scrollbar-thin-track);
     }
 }
-
