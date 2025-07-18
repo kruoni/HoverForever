@@ -28,7 +28,7 @@
     --header-secondary: var(--channels-default);
     --custom-channel-members-bg: var(--color-bg-dark1);
     --card-primary-bg: var(--color-bg-dark1) !important;
-    --custom-channel-members-bg: var(--color-bg-dark2); 
+    --custom-channel-members-bg: var(--color-bg-dark2);
 
     .popout__3f413 {
         background-color: var(--color-bg-dark2);
@@ -309,7 +309,8 @@
     --header-secondary: var(--channels-default);
     --custom-channel-members-bg: var(--color-bg-light1);
     --card-primary-bg: var(--color-bg-light1) !important;
-    --custom-channel-members-bg: var(--color-bg-light2); 
+    --custom-channel-members-bg: var(--color-bg-light2);
+
     .defaultColor_b717a1 {
         color: var(--text-color-light);
     }
@@ -494,7 +495,7 @@
     .background__1fed1,
     .fieldList__1fed1,
     .replyBar__841c8,
-    .jumpToPresentBar__0f481  {
+    .jumpToPresentBar__0f481 {
         background: var(--color-bg-light2) !important;
     }
 
@@ -1100,7 +1101,8 @@ div:hover>.avatarDecoration__44b0c {
         transform: translate(0px, 0px);
     }
 
-    .card_b32ca4 {
+    .card_b32ca4,
+    .card__39ec2 {
         padding-bottom: 48px;
         transition: all 1.5s ease;
     }
@@ -1109,11 +1111,13 @@ div:hover>.avatarDecoration__44b0c {
         padding-bottom: 12px;
     }
 
-    .card_b32ca4:has(.actions__39ec2 > *) {
+    .card_b32ca4:has(.actions__39ec2 > *),
+    .card__39ec2:has(.actions__39ec2 > *) {
         padding-bottom: 16px;
     }
 
     &:hover {
+
         .actions__39ec2,
         .details__39ec2 {
             opacity: 1;
@@ -1191,6 +1195,7 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     &:hover {
+
         .section__00943:has(.twitchSectionSimple__00943) .twitchSectionSimple__00943>div:not(.twitchSectionIcon__00943),
         .voiceSectionDetails__00943,
         .partyMemberKnown_e45a82,
