@@ -20,6 +20,7 @@
     --brand-experiement-500: var(--color-accent-button);
     --primary-500: var(--color-accent-button);
     --primary-860: invert(1);
+    --background-base-lowest: var(--color-bg-dark2) !important;
     --background-base-lower: var(--color-bg-dark1) !important;
     --background-base-low: var(--color-bg-dark2) !important;
     --background-secondary: var(--color-bg-dark2);
@@ -301,6 +302,7 @@
     --brand-experiement-500: var(--color-accent-button);
     --primary-500: var(--color-accent-button);
     --primary-860: invert(1);
+    --background-base-lowest: var(--color-bg-light2) !important;
     --background-base-lower: var(--color-bg-light1) !important;
     --background-base-low: var(--color-bg-light2) !important;
     --background-secondary: var(--color-bg-light2);
@@ -847,10 +849,19 @@ div:hover>.avatarDecoration__44b0c {
         transition: all 0.8s 0.2s ease;
     }
 
+    .textContainer__0d0f9 {
+        opacity: 0;
+        transition: all 0.8s 0.2s ease;
+    }
+
     .animatedContainer_f37cb1 {
         background: none;
         box-shadow: none;
         height: 169px;
+    }
+
+    .container__2637a:not(:has(.bannerImg_f37cb1)) .content__99f8c>*:first-child {
+        display: none;
     }
 
     .container__2637a:has(.bannerVisible_f37cb1) .scroller__629e4 {
@@ -867,6 +878,10 @@ div:hover>.avatarDecoration__44b0c {
     &:hover {
         .subtitle__2ea32 {
             margin-top: 0;
+            opacity: 1;
+        }
+
+        .textContainer__0d0f9 {
             opacity: 1;
         }
 
