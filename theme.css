@@ -311,7 +311,7 @@
     --card-primary-bg: var(--color-bg-light1) !important;
     --custom-channel-members-bg: var(--color-bg-light2);
 
-    .defaultColor_b717a1 {
+    .defaultColor__4bd52 {
         color: var(--text-color-light);
     }
 
@@ -1032,7 +1032,7 @@ div:hover>.avatarDecoration__44b0c {
     }
 }
 
-.content_f75fb0>.outer_c0bea0,
+.content_f75fb0>aside>.outer_c0bea0,
 .nowPlayingColumn__133bf {
     transition: margin-right 1s, max-width 1.5s ease;
 }
@@ -1050,7 +1050,7 @@ div:hover>.avatarDecoration__44b0c {
     opacity: 1;
 }
 
-.content_f75fb0>.outer_c0bea0 {
+.content_f75fb0>aside>.outer_c0bea0 {
     max-width: 200px;
     min-width: 200px;
 
@@ -1196,7 +1196,7 @@ div:hover>.avatarDecoration__44b0c {
         }
     }
 
-    .headerSimple__00943 .defaultColor_b717a1 {
+    .headerSimple__00943 .defaultColor__4bd52 {
         width: 145px;
     }
 
@@ -1217,7 +1217,7 @@ div:hover>.avatarDecoration__44b0c {
     }
 }
 
-.content_f75fb0>.outer_c0bea0:hover,
+.content_f75fb0>aside>.outer_c0bea0:hover,
 .nowPlayingColumn__133bf:hover {
     max-width: 300px;
 }
