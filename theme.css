@@ -311,7 +311,7 @@
     --card-primary-bg: var(--color-bg-light1) !important;
     --custom-channel-members-bg: var(--color-bg-light2);
 
-    .defaultColor__4bd52 {
+    .defaultColor_b717a1 {
         color: var(--text-color-light);
     }
 
@@ -1197,7 +1197,7 @@ div:hover>.avatarDecoration__44b0c {
         }
     }
 
-    .headerSimple__00943 .defaultColor__4bd52 {
+    .headerSimple__00943 .defaultColor_b717a1 {
         width: 145px;
     }
 
