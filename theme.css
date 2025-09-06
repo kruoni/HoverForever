@@ -1450,10 +1450,6 @@ body:has(.winButtons_c38106) .bar_c38106 {
     margin-top: 10px;
 }
 
-.title__85643 {
-    display: none !important;
-}
-
 .show_c38106 {
     margin: -33px 0px 0px 2px;
 }
@@ -1602,8 +1598,6 @@ body:has(.winButtons_c38106, #legcordNavControls) .guilds_c48ade {
     }
 }
 
-
-
 .root__9c3be:has(.theme-dark) {
     border-radius: 16px;
     margin: 0 0 0 0;
@@ -1615,4 +1609,8 @@ body:has(.winButtons_c38106, #legcordNavControls) .guilds_c48ade {
     border-radius: 16px;
     margin: 0 -2px 0 0;
     border: 1px solid var(--color-border-light);
+}
+
+.title_c38106 {
+    display: none !important;
 }
