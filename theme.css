@@ -618,9 +618,8 @@ div:hover>.avatarDecoration__44b0c {
 
     .avatarWrapper__37e49 {
         background: none;
-        height: 96px;
         border-radius: 32px;
-        padding-left: 1px;
+        margin-bottom: 20px;
         flex: unset;
         gap: unset;
         background-size: 0;
@@ -643,7 +642,7 @@ div:hover>.avatarDecoration__44b0c {
         background-size: var(--avatar-wrapper-background-size);
         width: 269px;
         height: 95px;
-        margin-top: 0;
+        margin-top: 12px;
         margin-left: -1.5px;
         opacity: 0;
         position: absolute;
@@ -658,7 +657,7 @@ div:hover>.avatarDecoration__44b0c {
         justify-content: center;
         gap: 30px;
         visibility: hidden;
-        transform: translateY(-2px);
+        transform: translateY(-9px);
         transition: visibility 0s 0.2s ease;
     }
 
@@ -669,18 +668,26 @@ div:hover>.avatarDecoration__44b0c {
     .avatar__37e49 {
         transform: translate(65px, -691px);
         transition: transform 0.8s 0.2s ease;
+        width: 48.99px !important;
+        height: 48.99px !important;
+
+
+        &>* {
+            width: 48.99px !important;
+            height: 48.99px !important;
+        }
     }
 
     &:hover .avatar__37e49 {
-        transform: translate(13px, 24px);
+        transform: translate(20px, 36px);
     }
 
     .avatar__37e49::before {
         content: "";
-        height: 64px;
-        width: 64px;
+        height: 63.99px;
+        width: 63.99px;
         opacity: 1;
-        transform: translate(-13px, -12px);
+        transform: translate(-14px, -12px);
         position: absolute;
         border-radius: 32px;
         transition: opacity 0.9s 0.2s ease;
@@ -704,6 +711,7 @@ div:hover>.avatarDecoration__44b0c {
 
     .container__37e49 {
         border-radius: 32px;
+        padding-top: 126px;
         align-items: unset;
         flex-direction: column-reverse;
         gap: 4px;
@@ -765,7 +773,7 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     .nameTag__37e49 {
-        transform: translate(20px, 25px);
+        transform: translate(18px, 32px);
 
         &>div>*,
         .hoverRoll__0263c forceHover__0263c {
