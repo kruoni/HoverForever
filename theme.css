@@ -666,7 +666,7 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     .avatar__37e49 {
-        transform: translate(65px, -691px);
+        transform: translate(62px, -691px);
         transition: transform 0.8s 0.2s ease;
         width: 48.99px !important;
         height: 48.99px !important;
@@ -904,16 +904,21 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     .scroller__629e4 {
-        margin-bottom: -100px;
+        margin-bottom: -35px;
+        transition: all 0.8s 0.2s ease;
     }
 
     .privateChannels__35e86 {
-        margin-bottom: -149px;
+        margin-bottom: -105px;
+        transition: all 0.8s 0.2s ease;
     }
 
-    &:hover .scroller__629e4,
     &:hover .privateChannels__35e86 {
-        margin-bottom: 9px;
+        margin-bottom: 25px;
+    }
+
+    &:hover .scroller__629e4 {
+        margin-bottom: 15px;
     }
 
     .scroller__629e4>.content__99f8c {
@@ -1011,8 +1016,13 @@ div:hover>.avatarDecoration__44b0c {
 }
 
 .chat_f75fb0 {
+
+    .container_c8ffbb:has(.allActivities-icons) {
+        width: 64px;
+    }
+
     .container_c8ffbb {
-        width: 68px;
+        width: 54px;
         transition: width 0.8s 0.2s;
 
         .membersGroup_c8ffbb {
@@ -1076,17 +1086,6 @@ div:hover>.avatarDecoration__44b0c {
         }
     }
 
-    .overlay__3b260 {
-        opacity: 0;
-        transition: all 1.5s ease;
-    }
-
-    &:hover {
-        .overlay__3b260 {
-            opacity: 1;
-        }
-    }
-
     .container_ab8609 {
         opacity: 0;
         transition: all 1.5s ease;
@@ -1120,9 +1119,8 @@ div:hover>.avatarDecoration__44b0c {
         transform: translate(0px, 0px);
     }
 
-    .card_b32ca4,
-    .card__39ec2 {
-        padding-bottom: 48px;
+    .card__84832 {
+        padding-bottom: 54px;
         transition: all 1.5s ease;
     }
 
@@ -1130,13 +1128,11 @@ div:hover>.avatarDecoration__44b0c {
         padding-bottom: 12px;
     }
 
-    .card_b32ca4:has(.actions__39ec2 > *),
-    .card__39ec2:has(.actions__39ec2 > *) {
+    &:hover .card__84832:has(.body__39ec2) {
         padding-bottom: 16px;
     }
 
     &:hover {
-
         .actions__39ec2,
         .details__39ec2 {
             opacity: 1;
@@ -1621,4 +1617,8 @@ body:has(.winButtons_c38106, #legcordNavControls) .guilds_c48ade {
 
 .title_c38106 {
     display: none !important;
+}
+
+.backForwardButtons__63abb {
+    display: none;
 }
