@@ -72,7 +72,7 @@ Check below for more details.
 It respects Discord's banners' size (600x240px). I tried to make it fit the wrapper, so custom sizes might be janky.
 ```css
 :root {
-    --avatar-wrapper-background: /*YOUR IMAGE HERE*/;
+    --avatar-wrapper-background: url(/*YOUR IMAGE HERE*/);
     --avatar-wrapper-background-size: 270px;
 }
 ```
