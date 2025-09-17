@@ -31,7 +31,7 @@ https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/visual-refresh/
 ### The :root variables are: 
 ```css
 :root {
-    --avatar-wrapper-background: /*YOUR IMAGE HERE*/;
+    --avatar-wrapper-background: url(/*YOUR IMAGE HERE*/);
     --avatar-wrapper-background-size: 216px;
 
     /* SERVER AND CHANNEL SIDEBAR COLOR */
