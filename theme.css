@@ -666,7 +666,7 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     .avatar__37e49 {
-        transform: translate(62px, -691px);
+        transform: translate(64px, -691px);
         transition: transform 0.8s 0.2s ease;
         width: 48.99px !important;
         height: 48.99px !important;
@@ -922,9 +922,13 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     .scroller__629e4>.content__99f8c {
-        transform: translateX(24px);
+        transform: translateX(26px);
         width: 50px;
         transition: all 0.8s 0.2s ease;
+    }
+
+    [class^=iconVisibility]>[class^=unread] {
+        transform: translateX(-26px);
     }
 
     .layout__20a53 {
