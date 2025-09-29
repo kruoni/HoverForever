@@ -915,8 +915,36 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     .privateChannels__35e86 {
+        .scroller__99e7c {
+            scrollbar-width: none !important;
+        }
+
         margin-bottom: -105px;
         transition: all 0.8s 0.2s ease;
+    }
+
+    .interactive__972a0:active,
+    .interactiveSelected__972a0 {
+        background: none;
+    }
+
+    .content_d125d2 {
+        .interactive__972a0:active::before,
+        .interactiveSelected__972a0::before {
+            content: "";
+            transition: all 0.8s 0.2s ease;
+            width: 97.5%;
+            height: 100%;
+            background: var(--background-modifier-selected);
+            position: absolute;
+            border-radius: 8px;
+            opacity: 0;
+        }
+
+        &:hover .interactive__972a0:active::before,
+        &:hover .interactiveSelected__972a0::before {
+            opacity: 1;
+        }
     }
 
     .children__2ea32>*:not(.channelInfo_c69b6d, .mentionsBadge__933a1) {
