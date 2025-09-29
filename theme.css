@@ -1718,3 +1718,9 @@ body:has(.winButtons_c38106, #legcordNavControls) .guilds_c48ade {
 .backForwardButtons__63abb {
     display: none;
 }
+
+.animatorTop_faf9c0:has([aria-label])>div>.outer_c0bea0 {
+  position: fixed;
+  bottom: 115px;
+  left: 115px;
+}
