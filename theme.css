@@ -22,6 +22,8 @@
     --primary-860: invert(1);
     --background-base-lowest: var(--color-bg-dark2) !important;
     --background-base-lower: var(--color-bg-dark1) !important;
+    --background-surface-high: var(--color-bg-dark1) !important;
+    --user-profile-overlay-background: var(--color-bg-dark2) !important;;
     --background-base-low: var(--color-bg-dark2) !important;
     --background-secondary: var(--color-bg-dark2);
     --modal-background: var(--color-bg-dark1) !important;
@@ -301,6 +303,8 @@
     --primary-500: var(--color-accent-button);
     --primary-860: invert(1);
     --background-base-lowest: var(--color-bg-light2) !important;
+    --background-surface-high: var(--color-bg-light1) !important;
+    --user-profile-overlay-background: var(--color-bg-light2) !important;;
     --background-base-lower: var(--color-bg-light1) !important;
     --background-base-low: var(--color-bg-light2) !important;
     --background-secondary: var(--color-bg-light2);
@@ -656,7 +660,7 @@ div:hover>.avatarDecoration__44b0c {
         justify-content: center;
         gap: 30px;
         visibility: hidden;
-        transform: translateY(-9px);
+        transform: translateY(-10.5px);
         transition: visibility 0s 0.2s ease;
     }
 
@@ -710,7 +714,7 @@ div:hover>.avatarDecoration__44b0c {
 
     .container__37e49 {
         border-radius: 32px;
-        padding-top: 126px;
+        padding-top: 128px;
         align-items: unset;
         flex-direction: column-reverse;
         gap: 4px;
@@ -1480,7 +1484,7 @@ body,
 
 .item_c1e9c4,
 .item__133bf,
-interactive_bf202d {
+.interactive_bf202d {
     border-radius: 8px !important;
 }
 
@@ -1724,3 +1728,4 @@ body:has(.winButtons_c38106, #legcordNavControls) .guilds_c48ade {
   bottom: 115px;
   left: 115px;
 }
+
