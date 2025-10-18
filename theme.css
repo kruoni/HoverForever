@@ -23,7 +23,7 @@
     --background-base-lowest: var(--color-bg-dark2) !important;
     --background-base-lower: var(--color-bg-dark1) !important;
     --background-surface-high: var(--color-bg-dark1) !important;
-    --user-profile-overlay-background: var(--color-bg-dark2) !important;;
+    --user-profile-overlay-background: var(--color-bg-dark2) !important;
     --background-base-low: var(--color-bg-dark2) !important;
     --background-secondary: var(--color-bg-dark2);
     --modal-background: var(--color-bg-dark1) !important;
@@ -304,7 +304,7 @@
     --primary-860: invert(1);
     --background-base-lowest: var(--color-bg-light2) !important;
     --background-surface-high: var(--color-bg-light1) !important;
-    --user-profile-overlay-background: var(--color-bg-light2) !important;;
+    --user-profile-overlay-background: var(--color-bg-light2) !important;
     --background-base-lower: var(--color-bg-light1) !important;
     --background-base-low: var(--color-bg-light2) !important;
     --background-secondary: var(--color-bg-light2);
@@ -561,8 +561,6 @@
     bottom: 0px;
 }
 
-[href="/shop"],
-[href="/store"],
 .channelAppLauncher_e6e74f,
 .listItem__650eb:has([data-list-item-id="guildsnav___app-download-button"]),
 .buttons__74017>*:not(.expression-picker-chat-input-button),
@@ -884,7 +882,6 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     &:hover {
-
         .container__0d0f9 {
             right: 0;
         }
@@ -913,18 +910,18 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     .scroller__629e4 {
-        margin-bottom: -35px;
+        margin-bottom: -400px;
         transition: all 0.8s 0.2s ease;
         scrollbar-width: none !important;
     }
 
     .privateChannels__35e86 {
+        margin-bottom: -400px;
+        transition: all 0.8s 0.2s ease;
+
         .scroller__99e7c {
             scrollbar-width: none !important;
         }
-
-        margin-bottom: -105px;
-        transition: all 0.8s 0.2s ease;
     }
 
     .interactive__972a0:active,
@@ -933,6 +930,7 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     .content_d125d2 {
+
         .interactive__972a0:active::before,
         .interactiveSelected__972a0::before {
             content: "";
@@ -1063,7 +1061,7 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     .privateChannels__35e86 {
-        transform: translateY(-70px);
+        transform: translateY(-175px);
         transition: all 0.8s 0.2s ease;
     }
 
@@ -1724,8 +1722,7 @@ body:has(.winButtons_c38106, #legcordNavControls) .guilds_c48ade {
 }
 
 .animatorTop_faf9c0:has([aria-label])>div>.outer_c0bea0 {
-  position: fixed;
-  bottom: 115px;
-  left: 115px;
+    position: fixed;
+    bottom: 115px;
+    left: 115px;
 }
-
