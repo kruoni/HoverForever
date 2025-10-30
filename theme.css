@@ -141,7 +141,7 @@
         margin-left: unset;
     }
 
-    .panels_c48ade {
+    .panels__5e434 {
         border: var(--color-border-dark) solid;
         border-width: 1px 1px 1px;
         box-shadow: 1px 2px 5px var(--color-shadow-dark);
@@ -152,9 +152,9 @@
     }
 
     .panel__5dec7,
-    .panels_c48ade>[class^="container_"],
-    .panels_c48ade:has(.panel__5dec7)>[class^="wrapper_"]>[class^="container_"],
-    .panels_c48ade:not(:has(.panel__5dec7))>[class^="wrapper_"]>[class^="container_"] {
+    .panels__5e434>[class^="container_"],
+    .panels__5e434:has(.panel__5dec7)>[class^="wrapper_"]>[class^="container_"],
+    .panels__5e434:not(:has(.panel__5dec7))>[class^="wrapper_"]>[class^="container_"] {
         background-color: var(--color-panel-dark);
     }
 
@@ -258,7 +258,7 @@
         background-color: var(--color-bg-dark2);
     }
 
-    .searchResultsWrap_a9e706 .container_ea2f50 {
+    .searchResultsWrap_a9e706 .container__4216d {
         background: #0f0f10;
     }
 
@@ -415,7 +415,7 @@
         margin-left: unset;
     }
 
-    .panels_c48ade {
+    .panels__5e434 {
         border: var(--color-border-light) solid;
         border-width: 1px 1px 1px;
         box-shadow: 1px 2px 5px var(--color-shadow-light);
@@ -425,10 +425,10 @@
         background-color: var(--color-panel-light);
     }
 
-    .panels_c48ade>[class^="container_"],
+    .panels__5e434>[class^="container_"],
     .panel__5dec7,
-    .panels_c48ade:has(.panel__5dec7)>[class^="wrapper_"]>[class^="container_"],
-    .panels_c48ade:not(:has(.panel__5dec7))>[class^="wrapper_"]>[class^="container_"] {
+    .panels__5e434:has(.panel__5dec7)>[class^="wrapper_"]>[class^="container_"],
+    .panels__5e434:not(:has(.panel__5dec7))>[class^="wrapper_"]>[class^="container_"] {
         background-color: var(--color-panel-light);
     }
 
@@ -539,7 +539,7 @@
         background-color: var(--color-bg-light1);
     }
 
-    .searchResultsWrap_a9e706 .container_ea2f50 {
+    .searchResultsWrap_a9e706 .container__4216d {
         background: #f5f1ec;
     }
 
@@ -600,21 +600,30 @@ div:hover>.avatarDecoration__44b0c {
     display: none !important;
 }
 
-.sidebar_c48ade {
-    .sidebarList_c48ade {
+.sidebar__5e434 {
+    .sidebarList__5e434 {
         border-radius: 0 !important;
         max-width: 101px;
         min-width: 101px;
         transition: all 0.8s 0.2s ease;
     }
 
-    .sidebarList_c48ade:has(.container__551b0) {
+    .sidebarList__5e434:has(.container__551b0) {
         max-width: 120px;
     }
 
-    &:hover .sidebarList_c48ade {
+    &:hover .sidebarList__5e434 {
         max-width: 300px;
         min-width: 300px;
+    }
+
+    .platform-icons-wrapper {
+        opacity: 0;
+        transition: all 0.8s 0.2s ease;
+    }
+
+    &:hover .platform-icons-wrapper {
+        opacity: 1;
     }
 
     .avatarWrapper__37e49 {
@@ -698,7 +707,7 @@ div:hover>.avatarDecoration__44b0c {
         opacity: 0;
     }
 
-    .panels_c48ade {
+    .panels__5e434 {
         transform: translate(21px, 700px);
         max-width: 290px;
         border-radius: 32px;
@@ -706,7 +715,7 @@ div:hover>.avatarDecoration__44b0c {
         transition: transform 0.8s 0.2s ease;
     }
 
-    &:hover .panels_c48ade {
+    &:hover .panels__5e434 {
         transform: translate(71px, 0px);
     }
 
@@ -747,7 +756,7 @@ div:hover>.avatarDecoration__44b0c {
         }
     }
 
-    .panels_c48ade:has(.container_e131a9, .mediaControls, #vc-spotify-player)>.container__37e49 {
+    .panels__5e434:has(.container_e131a9, .mediaControls, #vc-spotify-player)>.container__37e49 {
         border-radius: 0 0 32px 32px;
     }
 
@@ -757,15 +766,15 @@ div:hover>.avatarDecoration__44b0c {
         margin: 0px;
     }
 
-    .panels_c48ade:not(:has(.container_e131a9))>#vc-spotify-player,
+    .panels__5e434:not(:has(.container_e131a9))>#vc-spotify-player,
     .panel__5dec7,
-    .panels_c48ade:not(:has(.panel__5dec7)) .container_e131a9 {
+    .panels__5e434:not(:has(.panel__5dec7)) .container_e131a9 {
         border-radius: 32px 32px 0 0;
     }
 
-    .panels_c48ade:has(div > .container_e131a9)>#vc-spotify-player,
-    .panels_c48ade:has(.mediaControls) .panel__5dec7,
-    .panels_c48ade:has(.panel__5dec7, .mediaControls) .container_e131a9 {
+    .panels__5e434:has(div > .container_e131a9)>#vc-spotify-player,
+    .panels__5e434:has(.mediaControls) .panel__5dec7,
+    .panels__5e434:has(.panel__5dec7, .mediaControls) .container_e131a9 {
         border-radius: 0 0 0 0;
     }
 
@@ -824,21 +833,21 @@ div:hover>.avatarDecoration__44b0c {
         padding: 5px;
     }
 
-    .panels_c48ade:not(:has(.panel__5dec7)) {
+    .panels__5e434:not(:has(.panel__5dec7)) {
         .rtcConnectionStatusWrapper__06d62 {
             margin-left: 4px;
-            margin-top: 3px;
+            margin-top: 4px;
         }
     }
 
-    .panels_c48ade:has(.panel__5dec7) {
+    .panels__5e434:has(.panel__5dec7) {
         .rtcConnectionStatusWrapper__06d62 {
             margin-left: 0px;
         }
 
         .gameWrapper__5dec7 {
             margin-left: 8px;
-            margin-top: 3px;
+            margin-top: 4px;
         }
     }
 
@@ -915,7 +924,7 @@ div:hover>.avatarDecoration__44b0c {
         scrollbar-width: none !important;
     }
 
-    .privateChannels__35e86 {
+    .privateChannels_e6b769 {
         margin-bottom: -400px;
         transition: all 0.8s 0.2s ease;
 
@@ -930,12 +939,11 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     .content_d125d2 {
-
         .interactive__972a0:active::before,
         .interactiveSelected__972a0::before {
             content: "";
             transition: all 0.8s 0.2s ease;
-            width: 97.5%;
+            width: 100%;
             height: 100%;
             background: var(--background-modifier-selected);
             position: absolute;
@@ -1049,8 +1057,8 @@ div:hover>.avatarDecoration__44b0c {
             margin-bottom: 15px;
         }
 
-        .privateChannels__35e86 {
-            margin-bottom: 25px;
+        .privateChannels_e6b769 {
+            margin-bottom: -33px;
         }
 
         .layout__20a53 {
@@ -1060,8 +1068,8 @@ div:hover>.avatarDecoration__44b0c {
         }
     }
 
-    .privateChannels__35e86 {
-        transform: translateY(-175px);
+    .privateChannels_e6b769 {
+        transform: translateY(-229px);
         transition: all 0.8s 0.2s ease;
     }
 
@@ -1086,8 +1094,8 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     &:hover {
-        .privateChannels__35e86 {
-            transform: translateY(10px);
+        .privateChannels_e6b769 {
+            transform: translateY(-49px);
         }
 
         .scroller__629e4>.content_d125d2 {
@@ -1334,7 +1342,7 @@ div:hover>.avatarDecoration__44b0c {
     transform: translateX(0px);
 }
 
-.container_c48ade:hover .nowPlayingColumn__133bf,
+.tabBody__133bf:hover .nowPlayingColumn__133bf,
 .headerFull__00943>*:not(.wrapper__44b0c, img) {
     margin-right: 0;
 }
@@ -1401,14 +1409,11 @@ body,
 .appMount__51fd7,
 .app__160d8,
 .bg__960e4,
-.sidebar_c48ade,
-.layer__960e4,
+.wrapper_ef3116,
 .container__2637a,
 .guilds_c48ade,
-.privateChannels__35e86,
-.container__551b0,
+.privateChannels_e6b769,
 .scroller__99e7c,
-.sidebar_c48ade:after,
 .itemsContainer_ef3116 {
     background: var(--app-background) !important;
 }
@@ -1469,7 +1474,7 @@ body,
     top: -27px;
 }
 
-.searchResultsWrap_a9e706 .container_ea2f50:has(.pageControlContainer_c15210) {
+.searchResultsWrap_a9e706 .container__4216d:has(.pageControlContainer_c15210) {
     position: sticky;
     bottom: 0px;
     z-index: 999;
@@ -1615,7 +1620,7 @@ body:has(.winButtons_c38106) .bar_c38106 {
     }
 }
 
-.sidebarList_c48ade {
+.sidebarList__5e434 {
     margin-top: 0px;
 }
 
@@ -1625,19 +1630,19 @@ body:has(.winButtons_c38106) {
     }
 }
 
-.base_c48ade {
+.base__5e434 {
     margin-top: -33px;
 }
 
-body:has(.winButtons_c38106, #legcordNavControls) .guilds_c48ade {
+body:has(.winButtons_c38106, #legcordNavControls) .itemsContainer_ef3116 {
     margin-top: 37px;
 }
 
-.guilds_c48ade {
+.itemsContainer_ef3116 {
     margin-top: 10px;
 }
 
-.base_c48ade:has(.notice__6e2b9) .sidebarList_c48ade {
+.base_c48ade:has(.notice__6e2b9) .sidebarList__5e434 {
     margin-top: 0px;
 }
 
