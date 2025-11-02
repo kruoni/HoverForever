@@ -939,6 +939,7 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     .content_d125d2 {
+
         .interactive__972a0:active::before,
         .interactiveSelected__972a0::before {
             content: "";
@@ -1069,7 +1070,7 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     .privateChannels_e6b769 {
-        transform: translateY(-229px);
+        transform: translateY(-101px);
         transition: all 0.8s 0.2s ease;
     }
 
@@ -1122,6 +1123,72 @@ div:hover>.avatarDecoration__44b0c {
     &>:hover .modeSelected__2ea32 .link__2ea32::before,
     &>:hover .modeSelected__2ea32:hover .link__2ea32::before {
         opacity: 1;
+    }
+
+    .privateChannels_e6b769 {
+        .content_d125d2 {
+
+            >div:nth-of-type(-n+4),
+            >li:nth-of-type(-n+1) {
+                display: inline-block;
+                transition: all 0.8s 0.2s ease;
+
+                [href="/shop"] {
+                    padding-inline: 0;
+                    transition: all 0.8s 0.2s ease;                    
+                }
+
+                .content__20a53,
+                .countDown__61bcd {
+                    display: none;
+                }
+            }
+
+            >div:nth-of-type(-n+4) {
+                max-width: 0;
+                min-width: 0;
+                margin: 0;
+            }
+
+            >li:nth-of-type(-n+1) {
+                max-width: 0;
+                min-width: 0;
+                margin: 0;
+                margin-left: 0;
+                margin-right: 0px;
+            }
+        }
+    }
+
+    &:hover .privateChannels_e6b769 {
+        .content_d125d2 {
+
+            >div:nth-of-type(-n+4),
+            >li:nth-of-type(-n+1) {
+                display: inline-block;
+                padding-top: 11px;
+
+                [href="/shop"] {
+                    padding-inline: var(--space-xs) 0;
+                }
+            }
+
+            >div:nth-of-type(-n+4) {
+                max-width: 50px;
+                min-width: 50px;
+            }
+
+            >li:nth-of-type(-n+1) {
+                max-width: 42px;
+                min-width: 42px;
+                margin-left: 8px;
+                margin-right: 0px;
+            }
+
+            .friendsButtonContainer_e6b769 {
+                margin-left: -4px !important;
+            }
+        }
     }
 }
 
