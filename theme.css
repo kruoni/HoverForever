@@ -1135,7 +1135,7 @@ div:hover>.avatarDecoration__44b0c {
 
                 [href="/shop"] {
                     padding-inline: 0;
-                    transition: all 0.8s 0.2s ease;                    
+                    transition: all 0.8s 0.2s ease;
                 }
 
                 .content__20a53,
@@ -1353,7 +1353,8 @@ div:hover>.avatarDecoration__44b0c {
     .voiceSectionDetails__00943,
     .partyMemberKnown_e45a82,
     .headerSimple__00943> :not(.wrapper__44b0c),
-    .applicationStreamingSection__00943>*:not(.wrapper__44b0c) {
+    .applicationStreamingSection__00943>*:not(.wrapper__44b0c),
+    .xboxSection__00943>div {
         opacity: 0;
         transition: all 1.5s ease;
     }
@@ -1394,7 +1395,8 @@ div:hover>.avatarDecoration__44b0c {
         .partyMemberKnown_e45a82,
         .applicationStreamingSection__00943>*:not(.wrapper__44b0c),
         .headerSimple__00943> :not(.wrapper__44b0c),
-        .activitySection__00943>*:not(.activitySectionAssets__00943) {
+        .activitySection__00943>*:not(.activitySectionAssets__00943),
+        .xboxSection__00943>div {
             opacity: 1;
         }
     }
