@@ -940,8 +940,8 @@ div:hover>.avatarDecoration__44b0c {
 
     .dm__972a0 {
 
-        .interactive__972a0:active::before:not(:has(.container__4bbc6)),
-        .interactiveSelected__972a0::before:not(:has(.container__4bbc6)) {
+        .interactive__972a0:not(:has(.container__4bbc6)):active::before,
+        .interactiveSelected__972a0:not(:has(.container__4bbc6))::before {
             content: "";
             transition: all 0.8s 0.2s ease;
             width: 288px;
@@ -981,8 +981,8 @@ div:hover>.avatarDecoration__44b0c {
 
     &:hover .dm__972a0 {
 
-        .interactive__972a0:active::before:not(:has(.container__4bbc6)),
-        .interactiveSelected__972a0::before:not(:has(.container__4bbc6)) {
+        .interactive__972a0:not(:has(.container__4bbc6)):active::before,
+        .interactiveSelected__972a0:not(:has(.container__4bbc6))::before {
             opacity: 1;
         }
 
