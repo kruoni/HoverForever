@@ -26,6 +26,23 @@ Save this link as a file and you'll get a .css file ready to be used:
 https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/visual-refresh/discord-theme.css
 ```
 
+# Now Without Hovering! I present UnDiscorded (I don't have a better name): I will probably make another repository for this!
+
+1- With QuickCSS (or any CSS editors from your client):
+```css
+@import url("https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/visual-refresh/discord-theme-nohover.css");
+```
+2- With the raw link (for use with Vencord's online theme, or any other online import using raw links):
+```
+https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/visual-refresh/discord-theme-nohover.css
+```
+3- Save as a css file:
+
+Save this link as a file and you'll get a .css file ready to be used: 
+```
+https://raw.githubusercontent.com/kruoni/HoverForever/refs/heads/visual-refresh/discord-theme-nohover.css
+```
+
 # Customization
 
 ### The :root variables are: 
