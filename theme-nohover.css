@@ -868,10 +868,9 @@ div:hover>.avatarDecoration__44b0c {
 
 .privateChannels_e6b769 {
     .content_d125d2 {
-
-
         >div:nth-of-type(-n+4),
-        >li:nth-of-type(-n+2) {
+        &:has([href="/message-requests"])>li:nth-of-type(-n+2),
+        >li:nth-of-type(-n+1) {
             display: inline-block;
             padding-top: 11px;
 
@@ -919,6 +918,7 @@ div:hover>.avatarDecoration__44b0c {
             min-width: 50px;
         }
 
+        &:has([href="/message-requests"])>li:nth-of-type(-n+2),
         >li:nth-of-type(-n+1) {
             max-width: 42px;
             min-width: 42px;
