@@ -1177,7 +1177,8 @@ div:hover>.avatarDecoration__44b0c {
         .content_d125d2 {
 
             >div:nth-of-type(-n+4),
-            >li:nth-of-type(-n+2) {
+            &:has([href="/message-requests"])>li:nth-of-type(-n+2),
+            >li:nth-of-type(-n+1) {
                 display: inline-block;
                 transition: all 0.8s 0.2s ease;
 
@@ -1229,7 +1230,8 @@ div:hover>.avatarDecoration__44b0c {
                 margin: 0;
             }
 
-            >li:nth-of-type(-n+2) {
+            &:has([href="/message-requests"])>li:nth-of-type(-n+2),
+            >li:nth-of-type(-n+1) {
                 max-width: 0;
                 min-width: 0;
                 margin: 0;
@@ -1243,7 +1245,8 @@ div:hover>.avatarDecoration__44b0c {
         .content_d125d2 {
 
             >div:nth-of-type(-n+4),
-            >li:nth-of-type(-n+2) {
+            &:has([href="/message-requests"])>li:nth-of-type(-n+2),
+            >li:nth-of-type(-n+1) {
                 display: inline-block;
                 padding-top: 11px;
 
@@ -1262,7 +1265,8 @@ div:hover>.avatarDecoration__44b0c {
                 min-width: 50px;
             }
 
-            >li:nth-of-type(-n+2) {
+            &:has([href="/message-requests"])>li:nth-of-type(-n+2),
+            >li:nth-of-type(-n+1) {
                 max-width: 42px;
                 min-width: 42px;
                 margin-left: 8px;
