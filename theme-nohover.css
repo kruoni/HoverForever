@@ -871,7 +871,7 @@ div:hover>.avatarDecoration__44b0c {
 
 
         >div:nth-of-type(-n+4),
-        >li:nth-of-type(-n+1) {
+        >li:nth-of-type(-n+2) {
             display: inline-block;
             padding-top: 11px;
 
@@ -881,7 +881,9 @@ div:hover>.avatarDecoration__44b0c {
 
             .content__20a53,
             .countDown__61bcd,
-            .newBadge__4ed1a {
+            .newBadge__4ed1a,
+            .premiumTrialBadge__4c1e4,
+            .numberBadge__2b1f5 {
                 display: none;
             }
 
@@ -922,6 +924,10 @@ div:hover>.avatarDecoration__44b0c {
             min-width: 42px;
             margin-left: 8px;
             margin-right: 0px;
+        }
+
+        &:has([href="/message-requests"]) .friendsButtonContainer_e6b769 {
+            margin-left: -25px !important;
         }
 
         .friendsButtonContainer_e6b769 {
