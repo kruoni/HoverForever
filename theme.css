@@ -1177,7 +1177,7 @@ div:hover>.avatarDecoration__44b0c {
         .content_d125d2 {
 
             >div:nth-of-type(-n+4),
-            >li:nth-of-type(-n+1) {
+            >li:nth-of-type(-n+2) {
                 display: inline-block;
                 transition: all 0.8s 0.2s ease;
 
@@ -1186,11 +1186,13 @@ div:hover>.avatarDecoration__44b0c {
                     transition: all 0.8s 0.2s ease;
                 }
 
-                .content__20a53,
-                .countDown__61bcd,
-                .newBadge__4ed1a {
-                    display: none;
-                }
+            .content__20a53,
+            .countDown__61bcd,
+            .newBadge__4ed1a,
+            .premiumTrialBadge__4c1e4,
+            .numberBadge__2b1f5 {
+                display: none;
+            }
 
 
                 .interactive__972a0:active::before,
@@ -1227,7 +1229,7 @@ div:hover>.avatarDecoration__44b0c {
                 margin: 0;
             }
 
-            >li:nth-of-type(-n+1) {
+            >li:nth-of-type(-n+2) {
                 max-width: 0;
                 min-width: 0;
                 margin: 0;
@@ -1241,7 +1243,7 @@ div:hover>.avatarDecoration__44b0c {
         .content_d125d2 {
 
             >div:nth-of-type(-n+4),
-            >li:nth-of-type(-n+1) {
+            >li:nth-of-type(-n+2) {
                 display: inline-block;
                 padding-top: 11px;
 
@@ -1260,16 +1262,20 @@ div:hover>.avatarDecoration__44b0c {
                 min-width: 50px;
             }
 
-            >li:nth-of-type(-n+1) {
+            >li:nth-of-type(-n+2) {
                 max-width: 42px;
                 min-width: 42px;
                 margin-left: 8px;
                 margin-right: 0px;
             }
 
-            .friendsButtonContainer_e6b769 {
-                margin-left: -4px !important;
-            }
+        &:has([href="/message-requests"]) .friendsButtonContainer_e6b769 {
+            margin-left: -25px !important;
+        }
+
+        .friendsButtonContainer_e6b769 {
+            margin-left: -4px !important;
+        }
         }
     }
 }
