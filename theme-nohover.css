@@ -153,8 +153,7 @@
 
     .panel__5dec7,
     .panels__5e434>[class^="container_"],
-    .panels__5e434:has(.panel__5dec7)>[class^="wrapper_"]>[class^="container_"],
-    .panels__5e434:not(:has(.panel__5dec7))>[class^="wrapper_"]>[class^="container_"] {
+    .panels__5e434>[class^="wrapper_"]>[class^="container_"] {
         background-color: var(--color-panel-dark);
     }
 
@@ -427,8 +426,7 @@
 
     .panels__5e434>[class^="container_"],
     .panel__5dec7,
-    .panels__5e434:has(.panel__5dec7)>[class^="wrapper_"]>[class^="container_"],
-    .panels__5e434:not(:has(.panel__5dec7))>[class^="wrapper_"]>[class^="container_"] {
+    .panels__5e434>[class^="wrapper_"]>[class^="container_"] {
         background-color: var(--color-panel-light);
     }
 
@@ -787,6 +785,10 @@ div:hover>.avatarDecoration__44b0c {
         }
     }
 
+    .container__4bbc6 {
+        max-width: 100%;
+    }
+
     .dm__972a0 {
 
         .interactive__972a0:not(:has(.container__4bbc6)):active::before,
@@ -951,7 +953,7 @@ div:hover>.avatarDecoration__44b0c {
     }
 
     .section__00943 {
-        width: 88.5%;
+        width: 91%;
         margin-left: 0;
     }
 
