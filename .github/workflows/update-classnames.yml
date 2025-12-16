@@ -14,10 +14,4 @@ jobs:
               uses: fedeericodl/discord-update-classnames@v1
               with:
                   files: "src/theme-nohover.css"
-            - ignore-class-names: vc-spotify-player 
-                                  vc-spotify-album-expanded-wrapper
-                                  vc-spotify-album-image
-                                  legcordNavControls
-                                  mediaControls
-            - report-outdated: true
                                   
