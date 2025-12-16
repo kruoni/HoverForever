@@ -18,6 +18,6 @@ jobs:
               with:
                   files: "src/theme-nohover.css"
                   token: ${{ secrets.GITHUB_TOKEN }}
-                  target-branch: visual-refresh
+                  target-branch: class-update
                   commit-message: 'chore: update Discord class names (automated)'
                   pr-title: Classes Updates
