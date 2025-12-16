@@ -1,3 +1,9 @@
+> [!IMPORTANT]
+> Discord pushed an update that changed how classes' names work, once again.
+> I do not have the time and do not want to rework the theme's messy code.
+>
+>  The repository will be archived (16/12/25).
+
 # Discord Theme where hovering is key! 
 
 Activity Column           |  User Profile | Sidebar | General Preview
