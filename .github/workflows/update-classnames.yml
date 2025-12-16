@@ -4,6 +4,9 @@ on:
         - cron: "0 0 * * *" # Daily check
     workflow_dispatch:
 
+permissions:
+    pull-requests: write-all
+
 jobs:
     update:
         runs-on: ubuntu-latest
@@ -14,4 +17,7 @@ jobs:
               uses: fedeericodl/discord-update-classnames@main
               with:
                   files: "src/theme-nohover.css"
-                                  
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  target-branch: visual-refresh
+                  commit-message: 'chore: update Discord class names (automated)'
+                  pr-title: Classes Updates
