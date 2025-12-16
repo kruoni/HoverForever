@@ -16,8 +16,8 @@ jobs:
             - name: Run Class Name Updater
               uses: fedeericodl/discord-update-classnames@main
               with:
-                  files: "theme-nohover.css"
+                  files: "theme.css"
                   token: ${{ secrets.GITHUB_TOKEN }}
                   target-branch: class-update
                   commit-message: 'chore: update Discord class names (automated)'
-                  pr-title: Classes Updates
+                  pr-title: 'Class Updates'
