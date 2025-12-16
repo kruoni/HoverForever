@@ -5,7 +5,7 @@ on:
     workflow_dispatch:
 
 permissions:
-    pull-requests: write-all
+    pull-requests: read|write
 
 jobs:
     update:
